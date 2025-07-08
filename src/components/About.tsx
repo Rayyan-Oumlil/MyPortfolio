@@ -69,36 +69,36 @@ const About = () => {
             {/* Content */}
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-foreground mb-6">
-                Passionate Developer & Designer
+                Student & Aspiring Developer
               </h3>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With over 5 years of experience in web development, I specialize in creating 
-                modern, responsive applications using the latest technologies. My journey began 
-                with a curiosity for how things work and evolved into a passion for building 
-                digital experiences that make a difference.
+                Currently pursuing a B.Sc. in Computer Science at Université de Montréal, 
+                I bring a strong foundation in mathematics, physics, and programming from my 
+                French Baccalaureate background. My multicultural experience spans Qatar, 
+                Morocco, and Canada, giving me a unique global perspective.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I believe in the power of clean, efficient code and beautiful design working 
-                together to create something truly special. When I'm not coding, you'll find 
-                me exploring new technologies, contributing to open source projects, or enjoying 
-                a good cup of coffee while sketching out ideas.
+                I'm passionate about leveraging technology to create meaningful impact in society. 
+                Through internships and personal projects, I've developed expertise in full-stack 
+                development, database management, and collaborative software solutions. When I'm not 
+                coding, you'll find me on the football field or strategizing over a chess board.
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">50+</div>
+                  <div className="text-3xl font-bold gradient-text">5+</div>
                   <div className="text-sm text-muted-foreground">Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">5+</div>
-                  <div className="text-sm text-muted-foreground">Years</div>
+                  <div className="text-3xl font-bold gradient-text">4</div>
+                  <div className="text-sm text-muted-foreground">Languages</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold gradient-text">100%</div>
-                  <div className="text-sm text-muted-foreground">Passion</div>
+                  <div className="text-sm text-muted-foreground">Dedication</div>
                 </div>
               </div>
             </div>

@@ -28,39 +28,39 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, inventory management, and real-time order tracking.",
+      title: "MaVille - Smart City Roadwork App",
+      description: "A CLI-based application for coordinating roadwork between residents, contractors, and the city. Features real-time issue tracking, robust object-oriented design, and SQL database integration for efficient communication.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Docker"],
-      liveUrl: "https://demo-ecommerce.com",
-      githubUrl: "https://github.com/alexjohnson/ecommerce",
+      technologies: ["Java", "UML", "SQL", "CLI", "Object-Oriented Design"],
+      liveUrl: "https://github.com/rayyanoumlil/maville",
+      githubUrl: "https://github.com/rayyanoumlil/maville",
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features. Built with modern React patterns and WebSocket integration.",
+      title: "Inventory Management System",
+      description: "Comprehensive desktop application for managing products, customers, suppliers, purchases, and sales. Built with Java Swing for the GUI and JDBC for database communication, featuring full CRUD operations and authentication.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "TypeScript", "Socket.io", "MongoDB", "Tailwind"],
-      liveUrl: "https://taskmanager-demo.com",
-      githubUrl: "https://github.com/alexjohnson/taskmanager",
+      technologies: ["Java", "MySQL", "Swing", "JDBC", "Authentication"],
+      liveUrl: "https://github.com/rayyanoumlil/inventory-system",
+      githubUrl: "https://github.com/rayyanoumlil/inventory-system",
       featured: true
     },
     {
-      title: "Weather Dashboard",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed analytics. Features responsive design and smooth animations.",
+      title: "Shop&Ship E-Commerce Website",
+      description: "Multilingual online store with complete order processing and payment integration. Built using WordPress and WooCommerce with Mailchimp for marketing automation and newsletter management.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "D3.js", "OpenWeather API", "CSS3"],
-      liveUrl: "https://weather-dashboard.com",
-      githubUrl: "https://github.com/alexjohnson/weather",
+      technologies: ["WordPress", "WooCommerce", "Mailchimp", "SEO", "Responsive Design"],
+      liveUrl: "https://shopandship-demo.com",
+      githubUrl: "https://github.com/rayyanoumlil/shopandship",
       featured: false
     },
     {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing modern design principles, smooth animations, and optimized performance. Built with React and Tailwind CSS.",
+      title: "Secure File-Sharing System",
+      description: "Internal file-sharing system developed during internship at 3GCOM. Implemented security features and collaborative tools to enhance software deployment workflows in a corporate environment.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      liveUrl: "https://alexjohnson.dev",
-      githubUrl: "https://github.com/alexjohnson/portfolio",
+      technologies: ["Security", "File Management", "Collaboration Tools", "Deployment"],
+      liveUrl: "#",
+      githubUrl: "#",
       featured: false
     }
   ];
@@ -255,7 +255,7 @@ const Projects = () => {
               asChild
               className="border-primary/20 hover:bg-primary/10 hover:text-primary"
             >
-              <a href="https://github.com/alexjohnson" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/rayyanoumlil" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5 mr-2" />
                 View All Projects on GitHub
               </a>

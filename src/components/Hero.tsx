@@ -7,9 +7,9 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
   
   const roles = [
-    "Full Stack Developer",
-    "UI/UX Designer", 
-    "Frontend Specialist",
+    "Computer Science Student",
+    "Full Stack Developer", 
+    "Software Engineer",
     "Problem Solver"
   ];
   
@@ -82,7 +82,7 @@ const Hero = () => {
           
           {/* Name */}
           <h1 className="text-6xl md:text-8xl font-bold mb-6 gradient-text">
-            Alex Johnson
+            Rayyan Oumlil
           </h1>
           
           {/* Dynamic Role */}
@@ -96,8 +96,8 @@ const Hero = () => {
           
           {/* Description */}
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            I craft beautiful, functional web experiences that make a difference. 
-            Passionate about clean code, innovative design, and solving complex problems.
+            Computer Science student with a passion for technology's impact on society. 
+            Eager to contribute to innovative projects and build solutions that make a difference.
           </p>
           
           {/* CTA Buttons */}
@@ -123,7 +123,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/rayyanoumlil" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/20 backdrop-blur-md border border-border hover:bg-card/30 transition-all duration-300 hover:scale-110"
@@ -131,7 +131,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/rayyan-oumlil" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/20 backdrop-blur-md border border-border hover:bg-card/30 transition-all duration-300 hover:scale-110"
@@ -139,7 +139,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="mailto:alex@example.com"
+              href="mailto:rayyanoumlil@gmail.com"
               className="p-3 rounded-full bg-card/20 backdrop-blur-md border border-border hover:bg-card/30 transition-all duration-300 hover:scale-110"
             >
               <Mail className="w-6 h-6" />

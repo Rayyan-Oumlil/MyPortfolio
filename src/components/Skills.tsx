@@ -25,48 +25,48 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Programming Languages",
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "JavaScript", level: 92 },
-        { name: "HTML/CSS", level: 98 }
+        { name: "Java", level: 90 },
+        { name: "Python", level: 85 },
+        { name: "JavaScript", level: 80 },
+        { name: "HTML/CSS", level: 90 },
+        { name: "SQL", level: 85 },
+        { name: "Bash/Shell", level: 75 }
       ],
       gradient: "var(--gradient-primary)"
     },
     {
-      title: "Backend",
+      title: "Frameworks & Tools",
       skills: [
-        { name: "Node.js", level: 88 },
-        { name: "Python", level: 80 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 82 },
-        { name: "REST APIs", level: 90 },
-        { name: "GraphQL", level: 75 }
+        { name: "FastAPI", level: 80 },
+        { name: "Streamlit", level: 85 },
+        { name: "jQuery", level: 75 },
+        { name: "Swing", level: 88 },
+        { name: "Maven", level: 82 },
+        { name: "Docker", level: 70 }
       ],
       gradient: "var(--gradient-accent)"
     },
     {
-      title: "Tools & Others",
+      title: "Databases & Systems",
       skills: [
-        { name: "Git/GitHub", level: 95 },
-        { name: "Docker", level: 78 },
-        { name: "AWS", level: 72 },
-        { name: "Figma", level: 85 },
-        { name: "Jest", level: 80 },
-        { name: "Webpack", level: 75 }
+        { name: "MySQL", level: 90 },
+        { name: "MongoDB", level: 80 },
+        { name: "PostgreSQL", level: 85 },
+        { name: "Linux", level: 85 },
+        { name: "Azure", level: 75 },
+        { name: "Git", level: 88 }
       ],
       gradient: "linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)))"
     }
   ];
 
   const certifications = [
-    "AWS Certified Developer",
-    "React Professional",
-    "Google Analytics Certified",
-    "Scrum Master Certified"
+    "IELTS Band 7 (English)",
+    "French C2 Proficiency",
+    "Spanish SIELE B2",
+    "Arabic Native Speaker"
   ];
 
   return (

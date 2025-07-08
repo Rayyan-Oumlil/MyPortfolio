@@ -16,17 +16,17 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "https://github.com/alexjohnson",
+      href: "https://github.com/rayyanoumlil",
       label: "GitHub"
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/alexjohnson",
+      href: "https://linkedin.com/in/rayyan-oumlil",
       label: "LinkedIn"
     },
     {
       icon: Mail,
-      href: "mailto:alex@example.com",
+      href: "mailto:rayyanoumlil@gmail.com",
       label: "Email"
     }
   ];
@@ -37,10 +37,10 @@ const Footer = () => {
         <div className="py-12 grid md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold gradient-text">Alex Johnson</h3>
+            <h3 className="text-2xl font-bold gradient-text">Rayyan Oumlil</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Full Stack Developer passionate about creating beautiful, 
-              functional web experiences that make a difference.
+              Computer Science student passionate about creating innovative 
+              solutions and leveraging technology to make a positive impact on society.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -93,7 +93,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-border flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-muted-foreground">
-            © 2024 Alex Johnson. All rights reserved.
+            © 2024 Rayyan Oumlil. All rights reserved.
           </p>
           <div className="flex items-center text-sm text-muted-foreground">
             <span>Made with</span>

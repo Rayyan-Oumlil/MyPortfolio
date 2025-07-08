@@ -49,20 +49,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "alex@example.com",
-      link: "mailto:alex@example.com"
+      value: "rayyanoumlil@gmail.com",
+      link: "mailto:rayyanoumlil@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+1 (438) 493-0288",
+      link: "tel:+14384930288"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
-      link: "https://maps.google.com/?q=San Francisco, CA"
+      value: "Montreal, Canada",
+      link: "https://maps.google.com/?q=Montreal, Canada"
     }
   ];
 
@@ -70,19 +70,19 @@ const Contact = () => {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/alexjohnson",
+      url: "https://github.com/rayyanoumlil",
       color: "hover:text-gray-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/alexjohnson",
+      url: "https://linkedin.com/in/rayyan-oumlil",
       color: "hover:text-blue-400"
     },
     {
       icon: Twitter,
-      name: "Twitter",
-      url: "https://twitter.com/alexjohnson",
+      name: "Twitter", 
+      url: "https://twitter.com/rayyanoumlil",
       color: "hover:text-blue-400"
     }
   ];
