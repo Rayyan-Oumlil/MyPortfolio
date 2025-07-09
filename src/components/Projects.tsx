@@ -30,23 +30,23 @@ const Projects = () => {
     {
       title: "MaVille - Smart City Roadwork App",
       description: "A CLI-based application for coordinating roadwork between residents, contractors, and the city. Features real-time issue tracking, robust object-oriented design, and SQL database integration for efficient communication.",
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
       technologies: ["Java", "UML", "SQL", "CLI", "Object-Oriented Design"],
       featured: true
     },
     {
       title: "Inventory Management System",
       description: "Comprehensive desktop application for managing products, customers, suppliers, purchases, and sales. Built with Java Swing for the GUI and JDBC for database communication, featuring full CRUD operations and authentication.",
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
       technologies: ["Java", "MySQL", "Swing", "JDBC", "Authentication"],
       featured: true
     },
     {
       title: "Shop&Ship E-Commerce Website",
       description: "Multilingual online store with complete order processing and payment integration. Built using WordPress and WooCommerce with Mailchimp for marketing automation and newsletter management.",
-      image: "/api/placeholder/600/400",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       technologies: ["WordPress", "WooCommerce", "Mailchimp", "SEO", "Responsive Design"],
-      featured: false
+      featured: true
     }
   ];
 
@@ -132,9 +132,11 @@ const Projects = () => {
                 {/* Project Image */}
                 <div className={`card-hover ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                   <Card className="overflow-hidden border-border bg-card/20 backdrop-blur-sm">
-                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                      <Eye className="w-16 h-16 text-muted-foreground" />
-                    </div>
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full aspect-video object-cover"
+                    />
                   </Card>
                 </div>
               </div>

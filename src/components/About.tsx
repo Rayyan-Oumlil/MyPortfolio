@@ -86,6 +86,35 @@ const About = () => {
                 coding, you'll find me on the football field or strategizing over a chess board.
               </p>
 
+              {/* Certifications */}
+              <div className="pt-6">
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Certifications</h4>
+                <div className="flex flex-wrap gap-2">
+                  <div className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm border border-primary/20">
+                    CS50: Introduction to Computer Science (Harvard)
+                  </div>
+                </div>
+              </div>
+
+              {/* Languages */}
+              <div className="pt-6">
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Languages</h4>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">English</span>
+                    <span className="text-foreground">Advanced (IELTS Band 7)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">French</span>
+                    <span className="text-foreground">Proficient (C2)</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Spanish</span>
+                    <span className="text-foreground">Upper Intermediate (SIELE B2)</span>
+                  </div>
+                </div>
+              </div>
+
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-8">
                 <div className="text-center">
@@ -93,7 +122,7 @@ const About = () => {
                   <div className="text-sm text-muted-foreground">Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">4</div>
+                  <div className="text-3xl font-bold gradient-text">3</div>
                   <div className="text-sm text-muted-foreground">Languages</div>
                 </div>
                 <div className="text-center">

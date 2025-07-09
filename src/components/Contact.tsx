@@ -255,11 +255,11 @@ const Contact = () => {
               <Card className="p-6 bg-primary/5 border-primary/20">
                 <div className="flex items-center mb-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse" />
-                  <span className="font-semibold text-foreground">Available for freelance</span>
+                  <span className="font-semibold text-foreground">Available for internship</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  I'm currently available for freelance projects and open to discussing 
-                  new opportunities. Let's build something great together!
+                  I'm currently seeking internship or summer opportunities for Fall 2025. 
+                  Let's discuss how I can contribute to your team!
                 </p>
               </Card>
             </div>
