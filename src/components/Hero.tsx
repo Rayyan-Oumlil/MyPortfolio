@@ -90,7 +90,7 @@ const Hero = () => {
           
           {/* Description */}
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            I'm passionate about how technology can positively impact society. I enjoy working on innovative, meaningful projects that solve real-world problems, and I'm always eager to keep learning and building solutions that make a difference.
+            I'm paxssionate about how technology can positively impact society. I enjoy working on innovative, meaningful projects that solve real-world problems, and I'm always eager to keep learning and building solutions that make a difference.
           </p>
           
           {/* CTA Buttons */}
