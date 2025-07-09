@@ -11,33 +11,33 @@ const Hero = () => {
 
   useEffect(() => {
     const currentRole = roles[currentRoleIndex];
-    let index = 0;
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const pauseBeforeDelete = 2000;
+    const pauseBeforeType = 500;
 
-    const typeText = () => {
-      if (index < currentRole.length) {
-        setText(currentRole.substring(0, index + 1));
-        index++;
-        setTimeout(typeText, 100);
+    let isDeleting = false;
+    let charIndex = 0;
+
+    const typeLoop = () => {
+      if (!isDeleting && charIndex <= currentRole.length) {
+        setText(currentRole.slice(0, charIndex));
+        charIndex++;
+        setTimeout(typeLoop, typingSpeed);
+      } else if (isDeleting && charIndex >= 0) {
+        setText(currentRole.slice(0, charIndex));
+        charIndex--;
+        setTimeout(typeLoop, deletingSpeed);
       } else {
-        // Wait before erasing
-        setTimeout(() => {
-          const eraseText = () => {
-            if (index > 0) {
-              setText(currentRole.substring(0, index - 1));
-              index--;
-              setTimeout(eraseText, 50);
-            } else {
-              // Restart typing again (force rerun)
-              typeText();
-            }
-          };
-          eraseText();
-        }, 2000);
+        isDeleting = !isDeleting;
+        setTimeout(typeLoop, isDeleting ? pauseBeforeDelete : pauseBeforeType);
       }
     };
 
-    typeText();
-  }, []); // ⬅️ Ne dépend plus de currentRoleIndex
+    typeLoop();
+  }, []);
+
+
 
   // Clignotement du curseur
   useEffect(() => {
