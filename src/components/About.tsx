@@ -75,55 +75,14 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Currently pursuing a B.Sc. in Computer Science at Université de Montréal, 
                 I bring a strong foundation in mathematics, physics, and programming from my 
-                French Baccalaureate background. My multicultural experience spans Qatar, 
-                Morocco, and Canada, giving me a unique global perspective.
+                French Baccalaureate background.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm passionate about leveraging technology to create meaningful impact in society. 
-                Through internships and personal projects, I've developed expertise in full-stack 
-                development, database management, and collaborative software solutions. When I'm not 
-                coding, you'll find me on the football field or strategizing over a chess board.
+                My multicultural experience spans Qatar, Morocco, and Canada, giving me a 
+                unique global perspective. I'm passionate about leveraging technology to create 
+                meaningful impact in society.
               </p>
-
-              {/* Education */}
-              <div className="pt-6">
-                <h4 className="text-lg font-semibold mb-4 text-foreground">Education</h4>
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between items-start mb-1">
-                      <span className="font-medium text-foreground">Université de Montréal</span>
-                      <span className="text-sm text-muted-foreground">2024 – Present</span>
-                    </div>
-                    <div className="text-sm text-muted-foreground">B.Sc. in Computer Science</div>
-                    <div className="text-sm text-muted-foreground">Montreal, Canada</div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between items-start mb-1">
-                      <span className="font-medium text-foreground">Lycée Franco-Qatarien Voltaire</span>
-                      <span className="text-sm text-muted-foreground">2021 – 2024</span>
-                    </div>
-                    <div className="text-sm text-muted-foreground">French Baccalaureate: Mathematics, Physics-Chemistry, Digital Sciences</div>
-                    <div className="text-sm text-muted-foreground">Doha, Qatar</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Experience */}
-              <div className="pt-6">
-                <h4 className="text-lg font-semibold mb-4 text-foreground">Experience</h4>
-                <div>
-                  <div className="flex justify-between items-start mb-1">
-                    <span className="font-medium text-foreground">Summer Intern</span>
-                    <span className="text-sm text-muted-foreground">August 2023</span>
-                  </div>
-                  <div className="text-sm text-muted-foreground">3GCOM, Rabat, Morocco</div>
-                  <div className="text-sm text-muted-foreground mt-1">
-                    • Implemented a secure internal file-sharing system<br/>
-                    • Suggested collaborative tools to enhance software deployment workflows
-                  </div>
-                </div>
-              </div>
 
               {/* Languages */}
               <div className="pt-6">
@@ -144,19 +103,13 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">5+</div>
-                  <div className="text-sm text-muted-foreground">Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">3</div>
-                  <div className="text-sm text-muted-foreground">Languages</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">100%</div>
-                  <div className="text-sm text-muted-foreground">Dedication</div>
+              {/* Interests */}
+              <div className="pt-6">
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Interests & Activities</h4>
+                <div className="space-y-2 text-muted-foreground">
+                  <div>• Football - Participated in World Schools Football Cup (Barcelona, 2023)</div>
+                  <div>• Chess - Competitor in National Chess Tournament</div>
+                  <div>• Community Service - Volunteer for Breast Cancer Awareness Campaign</div>
                 </div>
               </div>
             </div>

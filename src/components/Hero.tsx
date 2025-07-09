@@ -7,10 +7,7 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
   
   const roles = [
-    "Computer Science Student",
-    "Full Stack Developer", 
-    "Software Engineer",
-    "Problem Solver"
+    "Computer Science Student"
   ];
   
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -123,7 +120,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             <a 
-              href="https://github.com/rayyanoumlil" 
+              href="https://github.com/Rayyan-Oumlil" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/20 backdrop-blur-md border border-border hover:bg-card/30 transition-all duration-300 hover:scale-110"
@@ -131,7 +128,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com/in/rayyan-oumlil" 
+              href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/20 backdrop-blur-md border border-border hover:bg-card/30 transition-all duration-300 hover:scale-110"

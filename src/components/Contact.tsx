@@ -70,13 +70,13 @@ const Contact = () => {
     {
       icon: Github,
       name: "GitHub",
-      url: "https://github.com/rayyanoumlil",
+      url: "https://github.com/Rayyan-Oumlil",
       color: "hover:text-gray-400"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/rayyan-oumlil",
+      url: "https://www.linkedin.com/in/rayyan-oumlil-871b192b6/",
       color: "hover:text-blue-400"
     },
     {
