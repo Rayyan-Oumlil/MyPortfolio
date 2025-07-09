@@ -21,7 +21,7 @@ const Footer = () => {
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/rayyan-oumlil",
+      href: "https://www.linkedin.com/in/rayyan-oumlil-871b192b6/",
       label: "LinkedIn"
     },
     {

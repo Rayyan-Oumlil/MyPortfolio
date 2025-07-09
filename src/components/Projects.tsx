@@ -32,8 +32,6 @@ const Projects = () => {
       description: "A CLI-based application for coordinating roadwork between residents, contractors, and the city. Features real-time issue tracking, robust object-oriented design, and SQL database integration for efficient communication.",
       image: "/api/placeholder/600/400",
       technologies: ["Java", "UML", "SQL", "CLI", "Object-Oriented Design"],
-      liveUrl: "https://github.com/rayyanoumlil/maville",
-      githubUrl: "https://github.com/rayyanoumlil/maville",
       featured: true
     },
     {
@@ -41,8 +39,6 @@ const Projects = () => {
       description: "Comprehensive desktop application for managing products, customers, suppliers, purchases, and sales. Built with Java Swing for the GUI and JDBC for database communication, featuring full CRUD operations and authentication.",
       image: "/api/placeholder/600/400",
       technologies: ["Java", "MySQL", "Swing", "JDBC", "Authentication"],
-      liveUrl: "https://github.com/rayyanoumlil/inventory-system",
-      githubUrl: "https://github.com/rayyanoumlil/inventory-system",
       featured: true
     },
     {
@@ -50,17 +46,6 @@ const Projects = () => {
       description: "Multilingual online store with complete order processing and payment integration. Built using WordPress and WooCommerce with Mailchimp for marketing automation and newsletter management.",
       image: "/api/placeholder/600/400",
       technologies: ["WordPress", "WooCommerce", "Mailchimp", "SEO", "Responsive Design"],
-      liveUrl: "https://shopandship-demo.com",
-      githubUrl: "https://github.com/rayyanoumlil/shopandship",
-      featured: false
-    },
-    {
-      title: "Secure File-Sharing System",
-      description: "Internal file-sharing system developed during internship at 3GCOM. Implemented security features and collaborative tools to enhance software deployment workflows in a corporate environment.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Security", "File Management", "Collaboration Tools", "Deployment"],
-      liveUrl: "#",
-      githubUrl: "#",
       featured: false
     }
   ];
@@ -133,26 +118,12 @@ const Projects = () => {
                     
                     <div className="flex gap-4">
                       <Button 
-                        variant="ghost" 
-                        size="sm"
-                        asChild
-                        className="hover:bg-primary/10 hover:text-primary"
-                      >
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4 mr-2" />
-                          Code
-                        </a>
-                      </Button>
-                      <Button 
                         variant="outline" 
                         size="sm"
-                        asChild
-                        className="border-primary/20 hover:bg-primary/10 hover:text-primary"
+                        className="border-primary/20 hover:bg-primary/10 hover:text-primary cursor-default"
                       >
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Live Demo
-                        </a>
+                        <Eye className="w-4 h-4 mr-2" />
+                        View Project
                       </Button>
                     </div>
                   </div>
@@ -219,22 +190,9 @@ const Projects = () => {
                         <Button 
                           variant="ghost" 
                           size="sm"
-                          asChild
-                          className="h-8 w-8 p-0 hover:bg-primary/10 hover:text-primary"
+                          className="h-8 w-8 p-0 hover:bg-primary/10 hover:text-primary cursor-default"
                         >
-                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                            <Github className="w-4 h-4" />
-                          </a>
-                        </Button>
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          asChild
-                          className="h-8 w-8 p-0 hover:bg-primary/10 hover:text-primary"
-                        >
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
+                          <Eye className="w-4 h-4" />
                         </Button>
                       </div>
                     </div>
@@ -247,18 +205,16 @@ const Projects = () => {
           {/* Call to Action */}
           <div className="text-center mt-16">
             <p className="text-lg text-muted-foreground mb-6">
-              Want to see more of my work?
+              Want to discuss a project?
             </p>
             <Button 
               variant="outline" 
               size="lg"
-              asChild
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="border-primary/20 hover:bg-primary/10 hover:text-primary"
             >
-              <a href="https://github.com/rayyanoumlil" target="_blank" rel="noopener noreferrer">
-                <Github className="w-5 h-5 mr-2" />
-                View All Projects on GitHub
-              </a>
+              <ExternalLink className="w-5 h-5 mr-2" />
+              Get In Touch
             </Button>
           </div>
         </div>
