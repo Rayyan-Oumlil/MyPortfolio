@@ -23,50 +23,31 @@ const Skills = () => {
     return () => observer.disconnect();
   }, []);
 
-  const skillCategories = [
+  const technicalSkills = [
     {
-      title: "Programming Languages",
-      skills: [
-        { name: "Java", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "JavaScript", level: 80 },
-        { name: "HTML/CSS", level: 90 },
-        { name: "SQL", level: 85 },
-        { name: "Bash/Shell", level: 75 }
-      ],
-      gradient: "var(--gradient-primary)"
+      category: "Languages",
+      items: ["Java", "Python", "HTML/CSS", "JavaScript", "SQL", "Bash/Shell", "LaTeX"]
     },
     {
-      title: "Frameworks & Tools",
-      skills: [
-        { name: "FastAPI", level: 80 },
-        { name: "Streamlit", level: 85 },
-        { name: "jQuery", level: 75 },
-        { name: "Swing", level: 88 },
-        { name: "Maven", level: 82 },
-        { name: "Docker", level: 70 }
-      ],
-      gradient: "var(--gradient-accent)"
+      category: "Tools",
+      items: ["Git", "VS Code", "IntelliJ", "Jupyter", "Docker", "SketchUp", "Figma", "RESTful APIs", "Maven", "Nmap"]
     },
     {
-      title: "Databases & Systems",
-      skills: [
-        { name: "MySQL", level: 90 },
-        { name: "MongoDB", level: 80 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "Linux", level: 85 },
-        { name: "Azure", level: 75 },
-        { name: "Git", level: 88 }
-      ],
-      gradient: "linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)))"
+      category: "Databases",
+      items: ["MySQL", "MongoDB", "PostgreSQL"]
+    },
+    {
+      category: "Frameworks & Libraries",
+      items: ["Streamlit", "jQuery", "FastAPI", "Pandas", "Numpy", "Swing"]
+    },
+    {
+      category: "Artificial Intelligence",
+      items: ["Private & Public LLMs", "LLM Proxies", "RAG", "MLOPS", "Prompt Engineering"]
+    },
+    {
+      category: "Systems & Hardware",
+      items: ["Windows", "Linux", "Azure", "Arduino", "Raspberry Pi", "3D Printing"]
     }
-  ];
-
-  const certifications = [
-    "IELTS Band 7 (English)",
-    "French C2 Proficiency",
-    "Spanish SIELE B2",
-    "Arabic Native Speaker"
   ];
 
   return (
@@ -85,73 +66,38 @@ const Skills = () => {
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 gradient-text">Skills & Expertise</h2>
+            <h2 className="text-5xl font-bold mb-6 gradient-text">Technical Skills</h2>
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive toolkit built through years of hands-on experience and continuous learning
+              A comprehensive toolkit built through hands-on experience and continuous learning
             </p>
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {skillCategories.map((category, categoryIndex) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {technicalSkills.map((skillGroup, groupIndex) => (
               <Card 
-                key={categoryIndex}
-                className="p-8 card-hover border-border bg-card"
-                style={{ animationDelay: `${categoryIndex * 0.2}s` }}
+                key={groupIndex}
+                className="p-6 card-hover border-border bg-card"
+                style={{ animationDelay: `${groupIndex * 0.1}s` }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-center gradient-accent-text">
-                  {category.title}
+                <h3 className="text-xl font-bold mb-4 gradient-accent-text">
+                  {skillGroup.category}
                 </h3>
                 
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-foreground">
-                          {skill.name}
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      
-                      {/* Progress Bar */}
-                      <div className="h-2 bg-muted rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full transition-all duration-1000 ease-out"
-                          style={{ 
-                            width: isVisible ? `${skill.level}%` : '0%',
-                            background: category.gradient,
-                            transitionDelay: `${categoryIndex * 0.2 + skillIndex * 0.1}s`
-                          }}
-                        />
-                      </div>
-                    </div>
+                <div className="flex flex-wrap gap-2">
+                  {skillGroup.items.map((skill, skillIndex) => (
+                    <Badge 
+                      key={skillIndex}
+                      variant="secondary"
+                      className="text-xs bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                    >
+                      {skill}
+                    </Badge>
                   ))}
                 </div>
               </Card>
             ))}
-          </div>
-
-          {/* Certifications */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-8 text-foreground">
-              Certifications & Achievements
-            </h3>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              {certifications.map((cert, index) => (
-                <Badge 
-                  key={index}
-                  variant="secondary"
-                  className="px-4 py-2 text-sm bg-card/50 backdrop-blur-sm border border-border hover:bg-card/70 transition-all duration-300"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {cert}
-                </Badge>
-              ))}
-            </div>
           </div>
         </div>
       </div>

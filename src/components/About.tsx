@@ -86,12 +86,41 @@ const About = () => {
                 coding, you'll find me on the football field or strategizing over a chess board.
               </p>
 
-              {/* Certifications */}
+              {/* Education */}
               <div className="pt-6">
-                <h4 className="text-lg font-semibold mb-4 text-foreground">Certifications</h4>
-                <div className="flex flex-wrap gap-2">
-                  <div className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm border border-primary/20">
-                    CS50: Introduction to Computer Science (Harvard)
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Education</h4>
+                <div className="space-y-4">
+                  <div>
+                    <div className="flex justify-between items-start mb-1">
+                      <span className="font-medium text-foreground">Université de Montréal</span>
+                      <span className="text-sm text-muted-foreground">2024 – Present</span>
+                    </div>
+                    <div className="text-sm text-muted-foreground">B.Sc. in Computer Science</div>
+                    <div className="text-sm text-muted-foreground">Montreal, Canada</div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between items-start mb-1">
+                      <span className="font-medium text-foreground">Lycée Franco-Qatarien Voltaire</span>
+                      <span className="text-sm text-muted-foreground">2021 – 2024</span>
+                    </div>
+                    <div className="text-sm text-muted-foreground">French Baccalaureate: Mathematics, Physics-Chemistry, Digital Sciences</div>
+                    <div className="text-sm text-muted-foreground">Doha, Qatar</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Experience */}
+              <div className="pt-6">
+                <h4 className="text-lg font-semibold mb-4 text-foreground">Experience</h4>
+                <div>
+                  <div className="flex justify-between items-start mb-1">
+                    <span className="font-medium text-foreground">Summer Intern</span>
+                    <span className="text-sm text-muted-foreground">August 2023</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground">3GCOM, Rabat, Morocco</div>
+                  <div className="text-sm text-muted-foreground mt-1">
+                    • Implemented a secure internal file-sharing system<br/>
+                    • Suggested collaborative tools to enhance software deployment workflows
                   </div>
                 </div>
               </div>

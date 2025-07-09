@@ -50,8 +50,6 @@ const Projects = () => {
     }
   ];
 
-  const featuredProjects = projects.filter(p => p.featured);
-  const otherProjects = projects.filter(p => !p.featured);
 
   return (
     <section 
@@ -77,8 +75,8 @@ const Projects = () => {
           </div>
 
           {/* Featured Projects */}
-          <div className="space-y-16 mb-24">
-            {featuredProjects.map((project, index) => (
+          <div className="space-y-16">
+            {projects.map((project, index) => (
               <div 
                 key={index}
                 className={`grid lg:grid-cols-2 gap-12 items-center ${
@@ -143,66 +141,6 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Other Projects Grid */}
-          <div>
-            <h3 className="text-3xl font-bold mb-12 text-center gradient-accent-text">
-              Other Notable Projects
-            </h3>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {otherProjects.map((project, index) => (
-                <Card 
-                  key={index}
-                  className="card-hover border-border bg-card overflow-hidden"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                    <Eye className="w-12 h-12 text-muted-foreground" />
-                  </div>
-                  
-                  <div className="p-6 space-y-4">
-                    <div>
-                      <h4 className="text-xl font-bold mb-2 text-foreground">
-                        {project.title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                        <Badge 
-                          key={techIndex}
-                          variant="secondary"
-                          className="text-xs bg-muted/50 text-muted-foreground"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <Badge variant="secondary" className="text-xs bg-muted/50 text-muted-foreground">
-                          +{project.technologies.length - 3}
-                        </Badge>
-                      )}
-                    </div>
-                    
-                    <div className="flex justify-between items-center pt-2">
-                      <div className="flex gap-2">
-                        <Button 
-                          variant="ghost" 
-                          size="sm"
-                          className="h-8 w-8 p-0 hover:bg-primary/10 hover:text-primary cursor-default"
-                        >
-                          <Eye className="w-4 h-4" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
 
           {/* Call to Action */}
           <div className="text-center mt-16">
