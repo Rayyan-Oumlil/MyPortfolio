@@ -110,6 +110,7 @@ const About = () => {
                   <div>• Football - Participated in World Schools Football Cup (Barcelona, 2023)</div>
                   <div>• Chess - Competitor in National Chess Tournament</div>
                   <div>• Community Service - Volunteer for Breast Cancer Awareness Campaign</div>
+                  <div>• Generation Amazing Tournament (Qatar Foundation, 2022)</div>
                 </div>
               </div>
             </div>

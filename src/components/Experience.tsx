@@ -25,13 +25,14 @@ const Experience = () => {
 
   const experience = [
     {
-      title: "Summer Intern",
+      title: "Summer Intern – Software & Systems Support",
       company: "3GCOM",
       location: "Rabat, Morocco",
       period: "August 2023",
       achievements: [
-        "Implemented a secure internal file-sharing system",
-        "Suggested collaborative tools to enhance software deployment workflows"
+        "Designed and implemented a secure internal file-sharing system to facilitate protected document access across teams.\n",
+        "Analyzed internal deployment workflows and proposed collaborative tools (e.g., Git-based versioning, shared drives) to improve efficiency and traceability.\n",
+          "Gained hands-on experience in systems administration and IT best practices in a professional environment.\n"
       ]
     }
   ];

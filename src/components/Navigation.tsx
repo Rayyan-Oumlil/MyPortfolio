@@ -43,7 +43,7 @@ const Navigation = () => {
             onClick={() => scrollToSection('hero')}
             className="text-2xl font-bold gradient-text hover:scale-105 transition-transform"
           >
-            Rayyan.dev
+            Rayyan Oumlil
           </button>
 
           {/* Desktop Navigation */}

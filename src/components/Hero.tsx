@@ -5,17 +5,14 @@ import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 const Hero = () => {
   const [text, setText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  
-  const roles = [
-    "Computer Science Student"
-  ];
-  
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  
+
+  const roles = ["Computer Science Student"];
+  const currentRoleIndex = 0; // fixe, puisqu'on n’a qu’un seul rôle
+
   useEffect(() => {
     const currentRole = roles[currentRoleIndex];
     let index = 0;
-    
+
     const typeText = () => {
       if (index < currentRole.length) {
         setText(currentRole.substring(0, index + 1));
@@ -30,23 +27,23 @@ const Hero = () => {
               index--;
               setTimeout(eraseText, 50);
             } else {
-              // Move to next role
-              setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+              // Restart typing again (force rerun)
+              typeText();
             }
           };
           eraseText();
         }, 2000);
       }
     };
-    
+
     typeText();
-  }, [currentRoleIndex]);
-  
+  }, []); // ⬅️ Ne dépend plus de currentRoleIndex
+
+  // Clignotement du curseur
   useEffect(() => {
     const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
+      setShowCursor((prev) => !prev);
     }, 500);
-    
     return () => clearInterval(cursorInterval);
   }, []);
 
@@ -74,7 +71,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Greeting */}
           <p className="text-xl mb-4 text-muted-foreground animate-fade-in">
-            Hi there! 👋 I'm
+            Hi there! I'm
           </p>
           
           {/* Name */}
@@ -93,8 +90,7 @@ const Hero = () => {
           
           {/* Description */}
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            Computer Science student with a passion for technology's impact on society. 
-            Eager to contribute to innovative projects and build solutions that make a difference.
+            I'm a Computer Science student at Université de Montréal, passionate about how technology can positively impact society. I enjoy working on innovative, meaningful projects that solve real-world problems, and I'm always eager to keep learning and building solutions that make a difference.
           </p>
           
           {/* CTA Buttons */}
@@ -144,13 +140,7 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Scroll Indicator */}
-        <div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
-          onClick={() => scrollToSection('about')}
-        >
-          <ChevronDown className="w-8 h-8 text-muted-foreground hover:text-foreground transition-colors" />
-        </div>
+
       </div>
     </section>
   );
