@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Courses = () => {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
+    const carouselRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -21,6 +24,12 @@ const Courses = () => {
 
         return () => observer.disconnect();
     }, []);
+
+    const scroll = (offset: number) => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({ left: offset, behavior: 'smooth' });
+        }
+    };
 
     const courses = [
         { title: "Calculus 1", code: "MAT 1400" },
@@ -61,20 +70,45 @@ const Courses = () => {
                         </p>
                     </div>
 
-                    {/* Courses Grid */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {courses.map((course, index) => (
-                            <Card
-                                key={index}
-                                className="p-6 card-hover border-border bg-card text-center"
-                                style={{ animationDelay: `${index * 0.1}s` }}
-                            >
-                                <h3 className="text-xl font-bold text-foreground mb-2">
-                                    {course.title}
-                                </h3>
-                                <p className="text-sm text-muted-foreground">{course.code}</p>
-                            </Card>
-                        ))}
+                    {/* Courses Carousel */}
+                    <div className="relative">
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => scroll(-250)}
+                            className="absolute left-0 top-1/2 -translate-y-1/2 z-10"
+                        >
+                            <ChevronLeft className="w-6 h-6" />
+                        </Button>
+                        <div
+                            ref={carouselRef}
+                            className="hide-scrollbar flex gap-6 overflow-x-auto px-12 py-2 scroll-smooth snap-x snap-mandatory"
+                        >
+                            {courses.map((course, index) => (
+                                <div
+                                    key={index}
+                                    className="flip-card w-36 h-36 shrink-0 snap-center"
+                                    style={{ animationDelay: `${index * 0.1}s` }}
+                                >
+                                    <div className="flip-card-inner">
+                                        <Card className="flip-card-front card-hover border-border bg-card flex items-center justify-center text-lg font-bold" >
+                                            {course.code}
+                                        </Card>
+                                        <Card className="flip-card-back card-hover border-border bg-card flex items-center justify-center p-2 text-center" >
+                                            {course.title}
+                                        </Card>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => scroll(250)}
+                            className="absolute right-0 top-1/2 -translate-y-1/2 z-10"
+                        >
+                            <ChevronRight className="w-6 h-6" />
+                        </Button>
                     </div>
                 </div>
             </div>

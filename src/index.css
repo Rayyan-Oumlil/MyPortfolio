@@ -176,4 +176,32 @@ All colors MUST be HSL.
     @apply animate-pulse ml-1;
     color: hsl(var(--primary));
   }
+
+  /* Flip Card */
+  .flip-card {
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    @apply relative w-full h-full transition-transform duration-500;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front,
+  .flip-card-back {
+    @apply absolute inset-0 flex items-center justify-center rounded-lg;
+    backface-visibility: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
