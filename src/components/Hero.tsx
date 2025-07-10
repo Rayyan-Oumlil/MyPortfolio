@@ -62,89 +62,72 @@ const Hero = () => {
         <div className="absolute bottom-1/3 right-1/4 w-40 h-40 border border-muted-foreground/10 rounded-full" />
       </div>
 
-      {/* Main Content Grid */}
+      {/* Main Content - Centered */}
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
           
-          {/* Left Side - Text Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <span className="text-sm font-medium text-primary">Available for Opportunities</span>
-            </div>
-            
-            {/* Name & Intro */}
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-                Hi there I'm Rayyan Oumlil
-              </h1>
-            </div>
-            
-            {/* Description */}
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-              I'm a computer science student at University of Montreal passionate about how technology can positively impact society. I enjoy working on innovative, meaningful projects that solve real-world problems.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg"
-                onClick={() => scrollToSection('projects')}
-                className="px-8 py-6 text-lg font-semibold"
-              >
-                View My Work
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => scrollToSection('contact')}
-                className="px-8 py-6 text-lg font-semibold"
-              >
-                Get In Touch
-              </Button>
-            </div>
+          {/* Small greeting */}
+          <p className="text-lg text-muted-foreground/80">
+            Hi there
+          </p>
+          
+          {/* Cool name with gradient and effects */}
+          <div className="relative">
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
+              I'm Rayyan Oumlil
+            </h1>
+            {/* Decorative underline */}
+            <div className="h-1 w-32 bg-gradient-to-r from-primary to-accent mx-auto mt-4 rounded-full"></div>
           </div>
           
-          {/* Right Side - Profile & Social */}
-          <div className="flex flex-col items-center lg:items-end space-y-8">
-            {/* Profile Card */}
-            <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl border border-border/50 backdrop-blur-sm flex items-center justify-center">
-                <div className="w-60 h-60 bg-card/30 rounded-xl border border-border flex items-center justify-center">
-                  <div className="text-6xl font-bold text-primary/40">RO</div>
-                </div>
-              </div>
-              
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent rounded-full"></div>
-            </div>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a 
-                href="https://github.com/Rayyan-Oumlil" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="mailto:rayyanoumlil@gmail.com"
-                className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
+          {/* Description paragraph */}
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            I'm a computer science student at University of Montreal passionate about how technology can positively impact society. I enjoy working on innovative, meaningful projects that solve real-world problems.
+          </p>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            <Button 
+              size="lg"
+              onClick={() => scrollToSection('projects')}
+              className="px-8 py-6 text-lg font-semibold"
+            >
+              View My Work
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => scrollToSection('contact')}
+              className="px-8 py-6 text-lg font-semibold"
+            >
+              Get In Touch
+            </Button>
+          </div>
+          
+          {/* Social Links */}
+          <div className="flex justify-center space-x-6 pt-8">
+            <a 
+              href="https://github.com/Rayyan-Oumlil" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
+            >
+              <Github className="w-5 h-5" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a 
+              href="mailto:rayyanoumlil@gmail.com"
+              className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
           </div>
           
         </div>
