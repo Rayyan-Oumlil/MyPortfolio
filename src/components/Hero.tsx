@@ -66,10 +66,12 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           
-          {/* Small greeting */}
-          <p className="text-lg text-muted-foreground/80">
-            Hi there
-          </p>
+          {/* Small greeting - subtle and integrated */}
+          <div className="mb-4">
+            <p className="text-base text-muted-foreground/60 font-light">
+              Hi there
+            </p>
+          </div>
           
           {/* Cool name with gradient and effects */}
           <div className="relative">
