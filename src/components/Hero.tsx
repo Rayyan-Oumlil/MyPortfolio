@@ -73,23 +73,16 @@ const Hero = () => {
               <span className="text-sm font-medium text-primary">Available for Opportunities</span>
             </div>
             
-            {/* Name & Title */}
+            {/* Name & Intro */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-                Rayyan Oumlil
+                Hi there I'm Rayyan Oumlil
               </h1>
-              <div className="text-2xl md:text-3xl text-muted-foreground">
-                <span>I'm a </span>
-                <span className="text-primary font-semibold">
-                  {text}
-                  {showCursor && <span className="animate-pulse">|</span>}
-                </span>
-              </div>
             </div>
             
             {/* Description */}
             <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-              I'm passionate about how technology can positively impact society. I enjoy working on innovative, meaningful projects that solve real-world problems.
+              I'm a computer science student at University of Montreal passionate about how technology can positively impact society. I enjoy working on innovative, meaningful projects that solve real-world problems.
             </p>
             
             {/* CTA Buttons */}
