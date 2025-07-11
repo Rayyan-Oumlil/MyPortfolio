@@ -37,7 +37,7 @@ const Hero = () => {
     };
 
     typeText();
-  }, []); // ⬅️ Ne dépend plus de currentRoleIndex
+  }, []);
 
   // Clignotement du curseur
   useEffect(() => {
