@@ -93,12 +93,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-border flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-sm text-muted-foreground">
-            © 2024 Rayyan Oumlil. All rights reserved.
+            © 2025 Rayyan Oumlil. All rights reserved.
           </p>
           <div className="flex items-center text-sm text-muted-foreground">
-            <span>Made with</span>
-            <Heart className="w-4 h-4 mx-1 text-red-500" />
-            <span>using React & Tailwind CSS</span>
+            <span>Made using React & Tailwind CSS</span>
           </div>
         </div>
       </div>
