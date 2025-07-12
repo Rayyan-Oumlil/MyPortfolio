@@ -34,7 +34,6 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 
-				// 🔥 AJOUTÉS :
 				'ping-short': 'ping 0.5s ease-in-out',
 				'fade-in': 'fadeIn 1s ease-in-out forwards',
 			},
