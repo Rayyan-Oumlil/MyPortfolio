@@ -25,8 +25,8 @@ const Secret = () => {
             <HeartsBackground />
             <div className="container mx-auto space-y-16 relative z-10">
                 <header className="text-center space-y-4">
-                    <h1 className="text-5xl font-bold">Pour Inas</h1>
-                    <p className="text-lg">Quelques souvenirs juste pour nous deux.</p>
+                    <h1 className="text-5xl font-bold">Pour toi Inas, Mon amour</h1>
+                    <p className="text-lg">Quelques souvenirs juste pour nous deux mv.</p>
                 </header>
 
                 <section className="space-y-6">
@@ -64,21 +64,21 @@ const Secret = () => {
                     </div>
                 </section>
                 <section className="space-y-8 text-center max-w-3xl mx-auto">
-                    <h2 className="text-3xl font-semibold">Quelques mots doux</h2>
+                    <h2 className="text-3xl font-semibold">Quelques mots pour toi</h2>
                     <p className="text-lg text-rose-100 leading-relaxed italic animate-fade-in">
-                        "Quand je suis avec toi, le temps s’arrête et le monde devient plus doux."
+                        "Je t'aime tellement."
                     </p>
                     <p className="text-lg text-rose-100 leading-relaxed italic animate-fade-in delay-500">
-                        "Ton sourire est mon endroit préféré."
+                        "Tu me manques trop."
                     </p>
                     <p className="text-lg text-rose-100 leading-relaxed italic animate-fade-in delay-1000">
-                        "Je n’ai pas besoin d’un conte de fées, j’ai juste besoin de toi."
+                        "J’ai juste besoin de toi."
                     </p>
                 </section>
 
 
                 <section className="space-y-6">
-                    <h2 className="text-center text-3xl font-semibold">Notre vidéo</h2>
+                    <h2 className="text-center text-3xl font-semibold">Notre vidéo memorable hhh</h2>
                     <div className="relative">
                         <video
                             controls
