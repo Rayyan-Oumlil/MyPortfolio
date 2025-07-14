@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
-const Project = () => {
+const Projects = () => {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
 
@@ -122,4 +122,4 @@ const Project = () => {
     );
 };
 
-export default Project;
+export default Projects;

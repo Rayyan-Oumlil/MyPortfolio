@@ -8,7 +8,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Certifications from "@/components/Certifications";
-import Project from "@/components/Project";
+import Projects from "@/components/Projects.tsx";
 
 
 
@@ -27,7 +27,7 @@ const Index = () => {
         <Experience />
         <Skills />
         <Certifications />
-        <Project />
+        <Projects />
         <Contact />
       </main>
       <Footer />
