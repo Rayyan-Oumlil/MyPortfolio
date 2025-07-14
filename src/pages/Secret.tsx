@@ -3,7 +3,6 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const imageSources = [
-    "/Souvenir1.png",
     "/Souvenir2.jpeg",
     "/Souvenir3.jpeg",
     "/Souvenir4.jpeg",

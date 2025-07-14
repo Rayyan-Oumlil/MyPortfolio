@@ -26,29 +26,30 @@ const Skills = () => {
   const technicalSkills = [
     {
       category: "Languages",
-      items: ["Java", "Python", "HTML/CSS", "JavaScript", "SQL", "Bash/Shell", "LaTeX"]
+      items: ["Java", "Python", "HTML/CSS", "JavaScript", "TypeScript", "SQL", "Bash/Shell", "LaTeX"]
     },
     {
       category: "Tools",
-      items: ["Git", "VS Code", "IntelliJ", "Jupyter", "Docker", "SketchUp", "Figma", "RESTful APIs", "Maven", "Nmap"]
+      items: ["Git", "VS Code", "IntelliJ", "Jupyter", "Docker", "SketchUp", "Figma", "RESTful APIs", "Postman", "Vercel", "Nmap"]
     },
     {
       category: "Databases",
-      items: ["MySQL", "MongoDB", "PostgreSQL"]
+      items: ["MySQL", "SQLite", "MongoDB", "FAISS"]
     },
     {
       category: "Frameworks & Libraries",
-      items: ["Streamlit", "jQuery", "FastAPI", "Pandas", "Numpy", "Swing"]
+      items: ["React", "Vite", "Streamlit", "FastAPI", "LangChain", "jQuery", "Swing", "SQLAlchemy", "Numpy"]
     },
     {
       category: "Artificial Intelligence",
-      items: ["Private & Public LLMs", "LLM Proxies", "RAG", "MLOPS", "Prompt Engineering"]
+      items: ["Private & Public LLMs", "LLM Proxies", "RAG", "Prompt Engineering", "MLOps"]
     },
     {
-      category: "Systems & Hardware",
-      items: ["Windows", "Linux", "Azure", "Arduino", "Raspberry Pi", "3D Printing"]
+      category: "Systems & DevOps",
+      items: ["Linux", "Windows", "Docker", "Azure", "Nginx", "Arduino", "Raspberry Pi", "3D Printing"]
     }
   ];
+
 
   return (
     <section 

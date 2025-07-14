@@ -28,24 +28,36 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "MaVille - Smart City Roadwork App",
-      description: "A CLI-based application for coordinating roadwork between residents, contractors, and the city. Features real-time issue tracking, robust object-oriented design, and SQL database integration for efficient communication.",
+      title: "Product Catalog – Fullstack E-Commerce App",
+      description: "Built a complete eCommerce app with a FastAPI backend and React + TypeScript frontend. Features include product browsing, cart, checkout, JWT authentication, and order history. Styled with Tailwind and ShadCN UI; includes Docker setup and SQLite DB with planned Stripe/MinIO integration.",
+      technologies: ["FastAPI", "React", "SQLite", "Tailwind", "ShadCN UI", "Docker", "JWT"],
+      period: "June 2025 – Present",
+      featured: true
+    },
+    {
+      title: "MaVille – Smart City Roadwork App",
+      description: "Developed a CLI-based app for coordinating roadwork between residents, contractors, and city officials. Designed use cases in UML and implemented a robust object-oriented structure with SQL integration for real-time issue tracking.",
       technologies: ["Java", "UML", "SQL", "CLI", "Object-Oriented Design"],
+      period: "May 2025 – Present",
+      featured: true
+    },
+    {
+      title: "RAG-based PDF Assistant",
+      description: "Developed a question-answering system over PDF documents using Retrieval-Augmented Generation (RAG). Implemented vector search with FAISS and multi-LLM support, and built a Streamlit UI with multi-doc upload and citation features.",
+      technologies: ["Python", "Streamlit", "FAISS", "LLMs", "RAG"],
+      period: "March 2025 – June 2025",
       featured: true
     },
     {
       title: "Inventory Management System",
-      description: "Comprehensive desktop application for managing products, customers, suppliers, purchases, and sales. Built with Java Swing for the GUI and JDBC for database communication, featuring full CRUD operations and authentication.",
+      description: "Built a desktop application for managing inventory, customers, suppliers, and orders. Included full CRUD operations, login authentication, and live stock tracking. GUI designed in Swing, with backend communication via JDBC.",
       technologies: ["Java", "MySQL", "Swing", "JDBC", "Authentication"],
-      featured: true
-    },
-    {
-      title: "Shop&Ship E-Commerce Website",
-      description: "Multilingual online store with complete order processing and payment integration. Built using WordPress and WooCommerce with Mailchimp for marketing automation and newsletter management.",
-      technologies: ["WordPress", "WooCommerce", "Mailchimp", "SEO", "Responsive Design"],
+      period: "December 2024 – March 2025",
       featured: true
     }
   ];
+
+
 
 
   return (
@@ -78,16 +90,15 @@ const Projects = () => {
                 <div key={index} className="flex justify-center">
                   <Card className="w-full max-w-3xl p-8 bg-card/50 backdrop-blur-sm border border-border shadow-md transition hover:shadow-lg">
                     <div className="space-y-4">
-                      <Badge
-                          variant="secondary"
-                          className="bg-primary/10 text-primary border-primary/20"
-                      >
-                        Featured Project
-                      </Badge>
 
                       <h3 className="text-2xl font-bold gradient-accent-text">
                         {project.title}
                       </h3>
+
+                      <p className="text-sm text-muted-foreground italic">
+                        {project.period}
+                      </p>
+
 
                       <p className="text-muted-foreground leading-relaxed">
                         {project.description}
@@ -108,7 +119,6 @@ const Projects = () => {
                   </Card>
                 </div>
             ))}
-
 
 
           </div>

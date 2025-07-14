@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   const [text, setText] = useState("");
@@ -66,45 +66,71 @@ const Hero = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
 
-            {/* Greeting - more prominent */}
-            <div className="mb-6">
-              <p className="text-2xl text-muted-foreground font-light tracking-wide">
-                Hi there
-              </p>
-            </div>
-
-            {/* Cool name with gradient and effects */}
-            <div className="relative">
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
-                I'm Rayyan Oumlil
-              </h1>
-              {/* Decorative underline */}
-              <div className="h-1 w-32 bg-gradient-to-r from-primary to-accent mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            {/* Description paragraph */}
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              I'm a computer science student at University of Montreal passionate about how technology can positively impact society. I enjoy working on innovative, meaningful projects that solve real-world problems.
+            {/* Greeting */}
+            <p className="text-xl text-muted-foreground tracking-wide font-light">
+              👋 Hey! I'm glad you're here.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+            {/* Big name with gradient */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
+              Rayyan Oumlil
+            </h1>
+
+            {/* Decorative underline */}
+            <div className="h-1 w-32 bg-gradient-to-r from-primary to-accent mx-auto mt-4 rounded-full" />
+
+            {/* Professional Identity */}
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto pt-4">
+              I’m a Computer Science student at the Université de Montréal with a passion for turning ideas into impactful digital solutions.
+            </p>
+
+            {/* About & Values */}
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              From designing clean, intuitive UIs to building scalable backend logic, I love solving real-world problems through code. Whether it's a smart city app or an AI-powered assistant, I care about clarity, performance, and people.
+            </p>
+
+            {/* Personal Statement */}
+            <p className="text-base text-muted-foreground italic max-w-2xl mx-auto">
+              My mission? To craft technology that’s not only functional — but meaningful.
+            </p>
+
+
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 flex-wrap">
+
+              {/* Button 1 – View My Work */}
               <Button
+                  variant="outline"
                   size="lg"
                   onClick={() => scrollToSection('projects')}
-                  className="px-8 py-6 text-lg font-semibold"
+                  className="px-8 py-6 text-lg font-semibold border-border text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
               >
                 View My Work
               </Button>
+
+              {/* Button 2 – Get In Touch */}
               <Button
                   variant="outline"
                   size="lg"
                   onClick={() => scrollToSection('contact')}
-                  className="px-8 py-6 text-lg font-semibold"
+                  className="px-8 py-6 text-lg font-semibold border-border text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
               >
                 Get In Touch
               </Button>
+
+              {/* Button 3 – Download CV */}
+              <a href="/RayyanCV.pdf" download>
+                <Button
+                    variant="outline"
+                    size="lg"
+                    className="px-8 py-6 text-lg font-semibold flex items-center gap-2 border-border text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
+                >
+                  <Download className="w-5 h-5"/>
+                  Download CV
+                </Button>
+              </a>
             </div>
+
 
             {/* Social Links */}
             <div className="flex justify-center space-x-6 pt-8">
@@ -114,7 +140,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-5 h-5"/>
               </a>
               <a
                   href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/"
@@ -122,13 +148,13 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5"/>
               </a>
               <a
                   href="mailto:rayyanoumlil@gmail.com"
                   className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"/>
               </a>
             </div>
 
