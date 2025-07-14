@@ -64,7 +64,7 @@ const Projects = () => {
     <section 
       id="projects"
       ref={sectionRef}
-      className="py-24 bg-section-bg relative overflow-hidden"
+      className="py-24 min-h-[50vh] bg-section-bg relative overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
