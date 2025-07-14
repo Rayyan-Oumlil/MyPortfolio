@@ -55,7 +55,7 @@ const Projects = () => {
 
     return (
         <section
-            id="project"
+            id="projects"
             ref={sectionRef}
             className="py-24 min-h-[50vh] bg-section-bg relative overflow-hidden"
         >
@@ -81,15 +81,15 @@ const Projects = () => {
 
                     {/* Project Cards */}
                     <div className="space-y-16">
-                        {projects.map((project, index) => (
+                        {projects.map((projects, index) => (
                             <div key={index} className="flex justify-center">
                                 <Card className="w-full max-w-3xl p-8 bg-card/50 backdrop-blur-sm border border-border shadow-md transition hover:shadow-lg">
                                     <div className="space-y-4">
-                                        <h3 className="text-2xl font-bold gradient-accent-text">{project.title}</h3>
-                                        <p className="text-sm text-muted-foreground italic">{project.period}</p>
-                                        <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+                                        <h3 className="text-2xl font-bold gradient-accent-text">{projects.title}</h3>
+                                        <p className="text-sm text-muted-foreground italic">{projects.period}</p>
+                                        <p className="text-muted-foreground leading-relaxed">{projects.description}</p>
                                         <div className="flex flex-wrap gap-2 pt-2">
-                                            {project.technologies.map((tech, i) => (
+                                            {projects.technologies.map((tech, i) => (
                                                 <Badge key={i} variant="outline" className="text-xs border-border bg-background/50">
                                                     {tech}
                                                 </Badge>
