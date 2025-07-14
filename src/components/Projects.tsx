@@ -43,7 +43,7 @@ const Projects = () => {
     },
     {
       title: "RAG-based PDF Assistant",
-      description: "Developed a question-answering system over PDF documents using Retrieval-Augmented Generation (RAG). Implemented vector search with FAISS and multi-LLM support, and built a Streamlit UI with multi-doc upload and citation features.",
+      description: "Developed a question answering system over PDF documents using Retrieval-Augmented Generation (RAG). Implemented vector search with FAISS and multi-LLM support, and built a Streamlit UI with multi-doc upload and citation features.",
       technologies: ["Python", "Streamlit", "FAISS", "LLMs", "RAG"],
       period: "March 2025 – June 2025",
       featured: true
