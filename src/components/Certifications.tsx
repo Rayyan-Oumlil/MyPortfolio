@@ -29,8 +29,19 @@ const Certifications = () => {
             title: "CS50x – Introduction to Computer Science",
             provider: "Harvard / edX",
             status: "In Progress",
+            logo: "/harvard.png", // (facultatif)
+            url: "https://cs50.harvard.edu/x/"
+        },
+        {
+            title: "AZ-900: Microsoft Azure Fundamentals",
+            provider: "Microsoft",
+            status: "In Progress",
+            logo: "/microsoft.png",
+            url: "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
+            skills: ["Microsoft Azure", "Cloud Computing"]
         }
     ];
+
 
     return (
         <section
@@ -58,29 +69,43 @@ const Certifications = () => {
                     {/* Certification Cards */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {certifications.map((cert, index) => (
-                            <Card
-                                key={index}
-                                className="p-6 card-hover border-border bg-card flex flex-col gap-4"
-                                style={{ animationDelay: `${index * 0.1}s` }}
-                            >
-                                <div>
-                                    <h3 className="text-xl font-bold text-foreground mb-1">{cert.title}</h3>
-                                    <p className="text-sm text-muted-foreground">{cert.provider}</p>
-                                </div>
-                                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                    {cert.status === "In Progress" ? (
-                                        <>
-                                            <Clock className="w-4 h-4 text-yellow-500" />
-                                            <span>In Progress</span>
-                                        </>
+                            <Card key={index} className="p-6 border-border bg-card flex gap-4 items-start">
+                                {cert.logo && (
+                                    <img src={cert.logo} alt={cert.provider} className="w-10 h-10 object-contain" />
+                                )}
+
+                                <div className="flex-1 space-y-1">
+                                    {cert.url ? (
+                                        <a
+                                            href={cert.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-lg font-semibold text-primary hover:underline"
+                                        >
+                                            {cert.title}
+                                        </a>
                                     ) : (
-                                        <>
-                                            <CheckCircle className="w-4 h-4 text-green-500" />
-                                            <span>Completed</span>
-                                        </>
+                                        <h3 className="text-lg font-semibold text-foreground">{cert.title}</h3>
+                                    )}
+
+                                    <p className="text-sm text-muted-foreground">{cert.provider}</p>
+
+                                    {cert.status && (
+                                        <p className="text-xs text-muted-foreground">{cert.status}</p>
+                                    )}
+
+                                    {cert.skills && (
+                                        <div className="flex flex-wrap gap-2 pt-2">
+                                            {cert.skills.map((skill, i) => (
+                                                <Badge key={i} variant="outline" className="text-xs">
+                                                    {skill}
+                                                </Badge>
+                                            ))}
+                                        </div>
                                     )}
                                 </div>
                             </Card>
+
                         ))}
                     </div>
                 </div>
