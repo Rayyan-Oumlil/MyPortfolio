@@ -8,64 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Portfolio Design System - Modern Professional Theme */
-    --background: 220 15% 3%;
-    --foreground: 220 15% 95%;
-
-    --card: 220 15% 6%;
-    --card-foreground: 220 15% 95%;
-
-    --popover: 220 15% 6%;
-    --popover-foreground: 220 15% 95%;
-
-    /* Primary - Electric Blue */
+    /* Softer light mode */
+    --background: 220 10% 92%; /* light gray */
+    --foreground: 220 15% 10%; /* nearly black for text in light mode */
+    --card: 220 10% 97%;
+    --card-foreground: 220 15% 10%;
+    --popover: 220 10% 97%;
+    --popover-foreground: 220 15% 10%;
     --primary: 217 91% 60%;
-    --primary-foreground: 220 15% 6%;
+    --primary-foreground: 220 10% 97%;
     --primary-glow: 217 91% 70%;
-
-    /* Secondary - Deep Purple */
     --secondary: 255 50% 65%;
-    --secondary-foreground: 220 15% 95%;
-
-    --muted: 220 15% 10%;
-    --muted-foreground: 220 15% 60%;
-
-    /* Accent - Warm Orange */
+    --secondary-foreground: 220 15% 10%;
+    --muted: 220 10% 85%;
+    --muted-foreground: 220 15% 40%;
     --accent: 35 100% 60%;
-    --accent-foreground: 220 15% 6%;
-
+    --accent-foreground: 220 10% 97%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 220 15% 95%;
-
-    --border: 220 15% 15%;
-    --input: 220 15% 10%;
+    --destructive-foreground: 220 10% 97%;
+    --border: 220 10% 80%;
+    --input: 220 10% 90%;
     --ring: 217 91% 60%;
-
     --radius: 0.75rem;
-
-    /* Portfolio Specific Colors */
-    --hero-gradient-start: 217 91% 20%;
-    --hero-gradient-end: 255 50% 25%;
-    --section-bg: 220 15% 4%;
+    --hero-gradient-start: 217 91% 80%;
+    --hero-gradient-end: 255 50% 85%;
+    --section-bg: 220 10% 96%; /* lighter gray for sections */
+    --navbar-bg: 220 10% 85%; /* medium gray for navbar in light mode */
     --text-highlight: 35 100% 60%;
-    
-    /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
-    
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
-    --shadow-card: 0 4px 20px hsl(220 15% 0% / 0.3);
-    
-    /* Animations */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    --shadow-card: 0 4px 20px hsl(220 10% 80% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .dark {
-    /* Same as root for dark-first design */
+    /* DARK THEME */
     --background: 220 15% 3%;
     --foreground: 220 15% 95%;
     --card: 220 15% 6%;
@@ -74,6 +55,7 @@ All colors MUST be HSL.
     --popover-foreground: 220 15% 95%;
     --primary: 217 91% 60%;
     --primary-foreground: 220 15% 6%;
+    --primary-glow: 217 91% 70%;
     --secondary: 255 50% 65%;
     --secondary-foreground: 220 15% 95%;
     --muted: 220 15% 10%;
@@ -85,6 +67,20 @@ All colors MUST be HSL.
     --border: 220 15% 15%;
     --input: 220 15% 10%;
     --ring: 217 91% 60%;
+    --radius: 0.75rem;
+    --hero-gradient-start: 217 91% 20%;
+    --hero-gradient-end: 255 50% 25%;
+    --section-bg: 220 15% 4%;
+    --navbar-bg: 220 15% 8%; /* dark gray for navbar in dark mode */
+    --text-highlight: 35 100% 60%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    --shadow-card: 0 4px 20px hsl(220 15% 0% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 }
 
@@ -110,6 +106,16 @@ All colors MUST be HSL.
     background: var(--gradient-primary);
     @apply rounded-full;
   }
+}
+
+html {
+  transition: background-color 0.4s, color 0.4s;
+}
+body, .bg-background, .bg-section-bg, .bg-card, .bg-primary, .bg-accent, .bg-muted, .bg-popover {
+  transition: background-color 0.4s, color 0.4s;
+}
+.text-foreground, .text-muted-foreground, .text-primary, .text-accent, .text-popover, .text-card {
+  transition: color 0.4s;
 }
 
 @layer components {
@@ -205,4 +211,15 @@ All colors MUST be HSL.
     scrollbar-width: none;
   }
 
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient-bg {
+  /* fallback in case inline style is overridden */
+  animation: gradientMove 10s ease-in-out infinite;
 }

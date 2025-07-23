@@ -1,20 +1,31 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react"
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('hero');
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('theme') as 'light' | 'dark') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+    return 'light';
+  });
   const scrollProgress = useScrollProgress();
 
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -31,15 +42,12 @@ const Navigation = () => {
         },
         { threshold: 0.3 }
     );
-
     navItems.forEach((item) => {
       const el = document.getElementById(item.href);
       if (el) observer.observe(el);
     });
-
     return () => observer.disconnect();
   }, []);
-
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -61,9 +69,8 @@ const Navigation = () => {
   return (
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-              ? 'bg-background/80 backdrop-blur-md border-b border-border'
-              : 'bg-transparent'
-      }`}>
+              ? 'backdrop-blur-md border-b border-border' : 'bg-transparent'
+      }`} style={{ background: isScrolled ? 'hsl(var(--navbar-bg) / 0.95)' : undefined }}>
         <div
             className="fixed top-0 left-0 h-1 bg-primary z-[9999]"
             style={{ width: `${scrollProgress}%` }}
@@ -84,13 +91,20 @@ const Navigation = () => {
                               ? 'text-white font-semibold'
                               : 'text-muted-foreground hover:text-white'
                       }`}
-
                   >
                     {item.label}
                     <span
                         className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"/>
                   </button>
               ))}
+              {/* Dark/Light Mode Toggle */}
+              <button
+                onClick={toggleTheme}
+                className="ml-4 p-2 rounded-lg bg-card/50 border border-border hover:bg-card/70 transition-colors"
+                aria-label="Toggle dark mode"
+              >
+                {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
             </div>
 
             {/* CTA Button */}
@@ -120,7 +134,8 @@ const Navigation = () => {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
               <div
-                  className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border">
+                  className="md:hidden absolute top-full left-0 right-0 backdrop-blur-md border-b border-border"
+                  style={{ background: 'hsl(var(--navbar-bg) / 0.98)' }}>
                 <div className="container mx-auto px-6 py-4 space-y-4">
                   {navItems.map((item) => (
                       <button
@@ -135,14 +150,22 @@ const Navigation = () => {
                         {item.label}
                       </button>
                   ))}
-                  <div className="pt-4 border-t border-border">
+                  {/* Dark/Light Mode Toggle in Mobile Menu */}
+                  <div className="pt-4 border-t border-border flex items-center justify-between">
                     <Button
                         variant="glass"
                         onClick={() => scrollToSection('contact')}
-                        className="w-full"
+                        className="w-auto"
                     >
                       Let's Talk
                     </Button>
+                    <button
+                      onClick={toggleTheme}
+                      className="ml-4 p-2 rounded-lg bg-card/50 border border-border hover:bg-card/70 transition-colors"
+                      aria-label="Toggle dark mode"
+                    >
+                      {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                    </button>
                   </div>
                 </div>
               </div>

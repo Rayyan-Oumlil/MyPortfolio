@@ -52,7 +52,7 @@ const Hero = () => {
   };
 
   return (
-      <section className="min-h-screen flex items-center justify-center relative bg-background pt-20">
+      <section className="min-h-[80vh] flex items-center justify-center relative bg-background pt-28 pb-16">
         {/* Geometric Background Pattern */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-20 -left-20 w-80 h-80 border border-primary/20 rounded-full" />
@@ -133,7 +133,7 @@ const Hero = () => {
 
 
             {/* Social Links */}
-            <div className="flex justify-center space-x-6 pt-8">
+            <div className="flex justify-center space-x-6 pt-8 mb-8">
               <a
                   href="https://github.com/Rayyan-Oumlil"
                   target="_blank"

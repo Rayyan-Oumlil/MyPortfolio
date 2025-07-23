@@ -41,10 +41,9 @@ const Education = () => {
   ];
 
   return (
-    <section 
+    <section
       id="education"
-      ref={sectionRef}
-      className="py-24 bg-section-bg relative overflow-hidden"
+      className="py-20 bg-section-bg relative overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
@@ -66,7 +65,7 @@ const Education = () => {
           {/* Education Timeline */}
           <div className="max-w-4xl mx-auto space-y-8">
             {education.map((edu, index) => (
-              <Card 
+              <Card
                 key={index}
                 className={`p-8 card-hover border-border bg-card ${
                   edu.current ? 'border-primary/20 bg-primary/5' : ''
@@ -75,13 +74,13 @@ const Education = () => {
               >
                 <div className="flex items-start gap-6">
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                    edu.current 
-                      ? 'bg-primary/20 text-primary' 
+                    edu.current
+                      ? 'bg-primary/20 text-primary'
                       : 'bg-muted/50 text-muted-foreground'
                   }`}>
                     <GraduationCap className="w-6 h-6" />
                   </div>
-                  
+
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                       <h3 className="text-2xl font-bold text-foreground">
@@ -94,11 +93,11 @@ const Education = () => {
                         </div>
                       )}
                     </div>
-                    
+
                     <p className="text-lg text-muted-foreground mb-4 font-medium">
                       {edu.degree}
                     </p>
-                    
+
                     <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
                         <MapPin className="w-4 h-4" />

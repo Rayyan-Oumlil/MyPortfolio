@@ -41,7 +41,7 @@ const Experience = () => {
     <section 
       id="experience"
       ref={sectionRef}
-      className="py-24 relative overflow-hidden"
+      className="py-20 relative overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">

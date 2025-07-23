@@ -50,7 +50,7 @@ const About = () => {
     <section 
       id="about"
       ref={sectionRef}
-      className="py-24 bg-section-bg relative overflow-hidden"
+      className="py-20 bg-section-bg relative overflow-hidden"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
