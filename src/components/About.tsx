@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Card } from "@/components/ui/card";
+import { Card } from "./ui/card";
 import { Code, Palette, Zap, Coffee } from "lucide-react";
 
 const About = () => {

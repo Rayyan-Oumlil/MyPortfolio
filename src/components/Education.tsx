@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Card } from "@/components/ui/card";
+import { Card } from "./ui/card";
 import { GraduationCap, MapPin, Calendar } from "lucide-react";
 
 const Education = () => {

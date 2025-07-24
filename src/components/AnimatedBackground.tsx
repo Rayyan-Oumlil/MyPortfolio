@@ -11,9 +11,10 @@ const AnimatedBackground: React.FC = () => (
       height: "100vh",
       zIndex: 0,
       pointerEvents: "none",
-      background: "linear-gradient(120deg, var(--primary), var(--secondary), var(--accent))",
+      background: "linear-gradient(120deg, #3a5fff, #7f53ff, #3a5fff, #232946)",
       backgroundSize: "200% 200%",
-      animation: "gradientMove 10s ease-in-out infinite",
+      animation: "gradientMove 12s ease-in-out infinite",
+      opacity: 0.7,
       transition: "background 1s"
     }}
     className="animated-gradient-bg"
