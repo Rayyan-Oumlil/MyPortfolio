@@ -53,14 +53,14 @@ const Hero = () => {
 
   return (
       <section className="min-h-[80vh] flex items-center justify-center relative bg-background pt-28 pb-16">
-        {/* Geometric Background Pattern */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* Geometric Background Pattern - Supprimé pour éviter le bleu */}
+        {/* <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-20 -left-20 w-80 h-80 border border-primary/20 rounded-full" />
           <div className="absolute top-1/4 right-10 w-32 h-32 bg-primary/5 rotate-45" />
           <div className="absolute bottom-20 left-1/4 w-24 h-24 border-2 border-accent/30 rounded-full" />
           <div className="absolute top-10 left-1/2 w-16 h-16 bg-secondary/10 rotate-12" />
           <div className="absolute bottom-1/3 right-1/4 w-40 h-40 border border-muted-foreground/10 rounded-full" />
-        </div>
+        </div> */}
 
         {/* Main Content - Centered */}
         <div className="container mx-auto px-6 relative z-10">

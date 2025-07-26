@@ -223,3 +223,354 @@ body, .bg-background, .bg-section-bg, .bg-card, .bg-primary, .bg-accent, .bg-mut
   /* fallback in case inline style is overridden */
   animation: gradientMove 10s ease-in-out infinite;
 }
+
+/* Curseur personnalisé */
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.5; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.1); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-10px) rotate(180deg); 
+  }
+}
+
+/* Nouvelles animations pour le curseur créatif */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-ring {
+  0% { 
+    opacity: 0.8; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 0.4; 
+    transform: scale(1.1); 
+  }
+  100% { 
+    opacity: 0.8; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(0px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(0px) rotate(-360deg); }
+}
+
+@keyframes trail-float {
+  0%, 100% { 
+    transform: translateY(0px) scale(1); 
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translateY(-15px) scale(1.2); 
+    opacity: 0.4;
+  }
+}
+
+/* Masquer le curseur par défaut */
+* {
+  cursor: none !important;
+}
+
+/* Garder le curseur normal pour les éléments interactifs sur mobile */
+@media (max-width: 768px) {
+  * {
+    cursor: auto !important;
+  }
+}
+
+/* Variables CSS pour les gradients */
+:root {
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-secondary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-tertiary: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --gradient-quaternary: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-quinary: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  --gradient-senary: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  --gradient-septenary: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  --gradient-octonary: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  --gradient-nonary: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  --gradient-denary: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+/* Classes utilitaires pour les gradients */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-accent-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-secondary-text {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-tertiary-text {
+  background: var(--gradient-tertiary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-quaternary-text {
+  background: var(--gradient-quaternary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-quinary-text {
+  background: var(--gradient-quinary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-senary-text {
+  background: var(--gradient-senary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-septenary-text {
+  background: var(--gradient-septenary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-octonary-text {
+  background: var(--gradient-octonary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-nonary-text {
+  background: var(--gradient-nonary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-denary-text {
+  background: var(--gradient-denary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Classes pour les backgrounds avec gradients */
+.gradient-bg {
+  background: var(--gradient-primary);
+}
+
+.gradient-accent-bg {
+  background: var(--gradient-accent);
+}
+
+.gradient-secondary-bg {
+  background: var(--gradient-secondary);
+}
+
+.gradient-tertiary-bg {
+  background: var(--gradient-tertiary);
+}
+
+.gradient-quaternary-bg {
+  background: var(--gradient-quaternary);
+}
+
+.gradient-quinary-bg {
+  background: var(--gradient-quinary);
+}
+
+.gradient-senary-bg {
+  background: var(--gradient-senary);
+}
+
+.gradient-septenary-bg {
+  background: var(--gradient-septenary);
+}
+
+.gradient-octonary-bg {
+  background: var(--gradient-octonary);
+}
+
+.gradient-nonary-bg {
+  background: var(--gradient-nonary);
+}
+
+.gradient-denary-bg {
+  background: var(--gradient-denary);
+}
+
+/* Variables pour les couleurs de section */
+:root {
+  --section-bg: #f8fafc;
+  --section-bg-dark: #0f172a;
+}
+
+.dark {
+  --section-bg: #0f172a;
+  --section-bg-dark: #020617;
+}
+
+.bg-section-bg {
+  background-color: var(--section-bg);
+}
+
+.bg-section-bg-dark {
+  background-color: var(--section-bg-dark);
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate-in {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Classes d'animation */
+.fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.6s ease-out;
+}
+
+.scale-in {
+  animation: scale-in 0.6s ease-out;
+}
+
+.rotate-in {
+  animation: rotate-in 0.6s ease-out;
+}
+
+/* États d'animation */
+.fade-in.visible,
+.slide-in-left.visible,
+.slide-in-right.visible,
+.scale-in.visible,
+.rotate-in.visible {
+  animation-play-state: running;
+}
+
+.fade-in:not(.visible),
+.slide-in-left:not(.visible),
+.slide-in-right:not(.visible),
+.scale-in:not(.visible),
+.rotate-in:not(.visible) {
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Sélection de texte */
+::selection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+::-moz-selection {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}

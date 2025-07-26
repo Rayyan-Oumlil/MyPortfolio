@@ -50,12 +50,8 @@ const About = () => {
     <section 
       id="about"
       ref={sectionRef}
-      className="py-20 bg-section-bg relative overflow-hidden"
+      className="py-20 relative overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20" />
-      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>

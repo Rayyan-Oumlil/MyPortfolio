@@ -44,13 +44,8 @@ const Education = () => {
     <section
       id="education"
       ref={sectionRef}
-      className="py-24 bg-section-bg relative overflow-hidden"
+      className="py-24 relative overflow-hidden"
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>

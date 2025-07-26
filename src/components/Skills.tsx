@@ -57,11 +57,11 @@ const Skills = () => {
       ref={sectionRef}
       className="py-20 relative overflow-hidden"
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0">
+      {/* Background Elements - Supprimés pour éviter le bleu */}
+      {/* <div className="absolute inset-0">
         <div className="absolute top-1/4 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-6 relative z-10">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
