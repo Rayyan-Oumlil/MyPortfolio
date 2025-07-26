@@ -28,14 +28,14 @@ const Projects = () => {
             description:
                 "Developed a Streamlit app to visualize and forecast stock prices using real-time data from Yahoo Finance. Implemented Linear Regression and Random Forest models for multi-day prediction and comparison of several stocks. Planned enhancements include LSTM models, backtesting, and portfolio analytics.",
             technologies: ["Python", "Streamlit", "Scikit-learn", "Plotly"],
-            period: "August 2023",
+            period: "July 2025 – Present",
         },
         {
             title: "FlexiShop – Fullstack E-Commerce App",
             description:
                 "Built a complete eCommerce app with FastAPI backend and React + TypeScript frontend. Implemented features like product browsing, cart, checkout, JWT auth, and order history. Styled with Tailwind + ShadCN UI; Docker setup, PostgreSQL, Stripe payment and planned MinIO integration.",
             technologies: ["FastAPI", "React", "PostgreSQL", "Tailwind", "ShadCN UI", "Docker", "JWT", "Stripe"],
-            period: "July 2025 – Present",
+            period: "June 2025 – Present",
         },
         {
             title: "MaVille – Smart City Roadwork App",
