@@ -27,34 +27,34 @@ const Projects = () => {
             title: "Stock Price Predictor",
             description:
                 "Developed a Streamlit app to visualize and forecast stock prices using real-time data from Yahoo Finance. Implemented Linear Regression and Random Forest models for multi-day prediction and comparison of several stocks. Planned enhancements include LSTM models, backtesting, and portfolio analytics.",
-            technologies: ["Python", "Streamlit", "Scikit-learn", "Plotly", "Yahoo Finance"],
-            period: "July 2025 – Present",
+            technologies: ["Python", "Streamlit", "Scikit-learn", "Plotly"],
+            period: "August 2023",
         },
         {
-            title: "Product Catalog – Fullstack E-Commerce App",
+            title: "FlexiShop – Fullstack E-Commerce App",
             description:
-                "Built a complete eCommerce app with a FastAPI backend and React + TypeScript frontend. Features include product browsing, cart, checkout, JWT authentication, and order history. Styled with Tailwind and ShadCN UI; includes Docker setup and SQLite DB with planned Stripe/MinIO integration.",
-            technologies: ["FastAPI", "React", "SQLite", "Tailwind", "ShadCN UI", "Docker", "JWT"],
-            period: "June 2025 – Present",
+                "Built a complete eCommerce app with FastAPI backend and React + TypeScript frontend. Implemented features like product browsing, cart, checkout, JWT auth, and order history. Styled with Tailwind + ShadCN UI; Docker setup, PostgreSQL, Stripe payment and planned MinIO integration.",
+            technologies: ["FastAPI", "React", "PostgreSQL", "Tailwind", "ShadCN UI", "Docker", "JWT", "Stripe"],
+            period: "July 2025 – Present",
         },
         {
             title: "MaVille – Smart City Roadwork App",
             description:
-                "Developed a CLI-based app for coordinating roadwork between residents, contractors, and city officials. Designed use cases in UML and implemented a robust object-oriented structure with SQL integration for real-time issue tracking.",
-            technologies: ["Java", "UML", "SQL", "CLI", "Object-Oriented Design"],
+                "Developed a CLI-based app for roadwork coordination between residents, contractors, and the city. Modeled use cases and implemented a robust object-oriented design. Integrated SQL database for real-time issue tracking.",
+            technologies: ["Java", "UML", "MySQL", "CLI", "Object-Oriented Design"],
             period: "May 2025 – Present",
         },
         {
             title: "RAG-based PDF Assistant",
             description:
-                "Developed a question answering system over PDF documents using Retrieval-Augmented Generation (RAG). Implemented vector search with FAISS and multi-LLM support, and built a Streamlit UI with multi-doc upload and citation features.",
+                "Developed a question-answering system over PDF documents using Retrieval-Augmented Generation. Implemented vector search with FAISS and document upload with multi-LLM support. Built interactive frontend in Streamlit with multi-doc support and citation features.",
             technologies: ["Python", "Streamlit", "FAISS", "LLMs", "RAG"],
             period: "March 2025 – June 2025",
         },
         {
             title: "Inventory Management System",
             description:
-                "Built a desktop application for managing inventory, customers, suppliers, and orders. Included full CRUD operations, login authentication, and live stock tracking. GUI designed in Swing, with backend communication via JDBC.",
+                "Built a desktop application for managing products, customers, suppliers, purchases, and sales. Implemented full CRUD operations, login authentication, and real-time stock updates. GUI designed with Swing and database communication via JDBC.",
             technologies: ["Java", "MySQL", "Swing", "JDBC", "Authentication"],
             period: "December 2024 – March 2025",
         },
