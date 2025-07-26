@@ -24,6 +24,13 @@ const Projects = () => {
 
     const projects = [
         {
+            title: "Stock Price Predictor",
+            description:
+                "Developed a Streamlit app to visualize and forecast stock prices using real-time data from Yahoo Finance. Implemented Linear Regression and Random Forest models for multi-day prediction and comparison of several stocks. Planned enhancements include LSTM models, backtesting, and portfolio analytics.",
+            technologies: ["Python", "Streamlit", "Scikit-learn", "Plotly", "Yahoo Finance"],
+            period: "July 2025 – Present",
+        },
+        {
             title: "Product Catalog – Fullstack E-Commerce App",
             description:
                 "Built a complete eCommerce app with a FastAPI backend and React + TypeScript frontend. Features include product browsing, cart, checkout, JWT authentication, and order history. Styled with Tailwind and ShadCN UI; includes Docker setup and SQLite DB with planned Stripe/MinIO integration.",
