@@ -50,7 +50,7 @@ const About = () => {
     <section 
       id="about"
       ref={sectionRef}
-      className="py-20 relative overflow-hidden"
+      className="py-16 relative overflow-hidden"
     >
 
       <div className="container mx-auto px-6 relative z-10">
@@ -61,9 +61,9 @@ const About = () => {
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Content */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-left">
               <h3 className="text-3xl font-bold text-foreground mb-6">
                 Student & Aspiring Developer
               </h3>
@@ -82,8 +82,8 @@ const About = () => {
 
               {/* Languages */}
               <div className="pt-6">
-                <h4 className="text-lg font-semibold mb-4 text-foreground">Languages</h4>
-                <div className="space-y-2">
+                <h4 className="text-lg font-semibold mb-4 text-foreground text-left">Languages</h4>
+                <div className="space-y-2 text-left">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">English</span>
                     <span className="text-foreground">Advanced (IELTS Band 7)</span>
@@ -99,37 +99,47 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Interests */}
-              <div className="pt-6">
-                <h4 className="text-lg font-semibold mb-4 text-foreground">Interests & Activities</h4>
-                <div className="space-y-2 text-muted-foreground">
-                  <div>• Football - Participated in World Schools Football Cup (Barcelona, 2023)</div>
-                  <div>• Chess - Competitor in National Chess Tournament</div>
-                  <div>• Community Service - Volunteer for Breast Cancer Awareness Campaign</div>
-                  <div>• Generation Amazing Tournament (Qatar Foundation, 2022)</div>
+              {/* Interests & Activities */}
+              <div className="pt-8">
+                <h4 className="text-lg font-semibold mb-4 text-foreground text-left">Interests & Activities</h4>
+                <div className="space-y-2 text-left">
+                  <div className="flex items-start gap-2">
+                    <span className="text-muted-foreground">•</span>
+                    <span className="text-foreground">Football - Participated in World Schools Football Cup (Barcelona, 2023)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-muted-foreground">•</span>
+                    <span className="text-foreground">Chess - Competitor in National Chess Tournament</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-muted-foreground">•</span>
+                    <span className="text-foreground">Community Service - Volunteer for Breast Cancer Awareness Campaign</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-muted-foreground">•</span>
+                    <span className="text-foreground">Generation Amazing Tournament (Qatar Foundation, 2022)</span>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Highlights Grid */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-6 text-left">
               {highlights.map((highlight, index) => (
                 <Card 
                   key={index}
-                  className="p-6 card-hover border-border bg-card"
+                  className="p-6 card-hover border-border bg-card text-left"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <highlight.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2">
-                      {highlight.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {highlight.description}
-                    </p>
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <highlight.icon className="w-6 h-6 text-primary" />
                   </div>
+                  <h4 className="text-lg font-semibold mb-2 text-foreground text-left">
+                    {highlight.title}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed text-left">
+                    {highlight.description}
+                  </p>
                 </Card>
               ))}
             </div>

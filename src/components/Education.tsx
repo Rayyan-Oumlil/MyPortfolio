@@ -44,7 +44,7 @@ const Education = () => {
     <section
       id="education"
       ref={sectionRef}
-      className="py-24 relative overflow-hidden"
+      className="py-16 relative overflow-hidden"
     >
 
       <div className="container mx-auto px-6 relative z-10">
@@ -59,11 +59,11 @@ const Education = () => {
           </div>
 
           {/* Education Timeline */}
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
             {education.map((edu, index) => (
               <Card
                 key={index}
-                className={`p-8 card-hover border-border bg-card ${
+                className={`p-4 md:p-8 card-hover border-border bg-card ${
                   edu.current ? 'border-primary/20 bg-primary/5' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.2}s` }}
@@ -79,7 +79,7 @@ const Education = () => {
 
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                      <h3 className="text-2xl font-bold text-foreground">
+                      <h3 className="text-2xl font-bold text-foreground text-left">
                         {edu.institution}
                       </h3>
                       {edu.current && (
@@ -90,11 +90,11 @@ const Education = () => {
                       )}
                     </div>
 
-                    <p className="text-lg text-muted-foreground mb-4 font-medium">
+                    <p className="text-lg text-muted-foreground mb-4 font-medium text-left">
                       {edu.degree}
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground">
+                    <div className="flex flex-col sm:flex-row gap-4 text-sm text-muted-foreground mb-6 text-left">
                       <div className="flex items-center gap-2">
                         <MapPin className="w-4 h-4" />
                         {edu.location}

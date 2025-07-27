@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Clock } from "lucide-react";
+import { CheckCircle, Clock, Calendar } from "lucide-react";
 
 const Certifications = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -47,7 +47,8 @@ const Certifications = () => {
         <section
             id="certifications"
             ref={sectionRef}
-            className="py-24 relative overflow-hidden"
+            className="py-16 relative overflow-hidden z-10 bg-background"
+            style={{ scrollMarginTop: '80px' }}
         >
             {/* Background Elements - Supprimés pour uniformité */}
             {/* <div className="absolute inset-0">
@@ -59,16 +60,16 @@ const Certifications = () => {
                     {/* Section Header */}
                     <div className="text-center mb-16">
                         <h2 className="text-5xl font-bold mb-6 gradient-text">Certifications</h2>
-                        <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: "var(--gradient-primary)" }} />
+                        <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
                         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                            Courses and certifications completed or currently in progress
+                            Professional certifications and achievements
                         </p>
                     </div>
 
                     {/* Certification Cards */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
                         {certifications.map((cert, index) => (
-                            <Card key={index} className="p-6 border-border bg-card flex gap-4 items-start">
+                                                          <Card key={index} className="p-4 md:p-6 border-border bg-card flex gap-4 items-start">
                                 {cert.logo && (
                                     <img src={cert.logo} alt={cert.provider} className="w-10 h-10 object-contain" />
                                 )}

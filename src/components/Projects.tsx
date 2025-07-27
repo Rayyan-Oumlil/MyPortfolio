@@ -64,11 +64,13 @@ const Projects = () => {
         <section
             id="projects"
             ref={sectionRef}
-            className="py-24 min-h-[50vh] relative overflow-hidden"
+            className="py-24 relative overflow-hidden z-10 bg-background"
+            style={{ scrollMarginTop: '80px', minHeight: '100vh' }}
+            data-testid="projects-section"
         >
 
-            <div className="container mx-auto px-6 relative z-10">
-                <div className={`fade-in ${isVisible ? "visible" : ""}`}>
+            <div className="container mx-auto px-6 relative z-20">
+                <div className={`fade-in ${isVisible ? "visible" : "visible"}`}>
                     {/* Section Header */}
                     <div className="text-center mb-16">
                         <h2 className="text-5xl font-bold mb-6 gradient-text">Projects</h2>
@@ -82,12 +84,12 @@ const Projects = () => {
                     </div>
 
                     {/* Project Cards */}
-                    <div className="space-y-16">
+                    <div className="space-y-8 md:space-y-16">
                         {projects.map((projects, index) => (
                             <div key={index} className="flex justify-center">
-                                <Card className="w-full max-w-3xl p-8 bg-card/50 backdrop-blur-sm border border-border shadow-md transition hover:shadow-lg">
+                                <Card className="w-full max-w-3xl p-4 md:p-8 bg-card/50 backdrop-blur-sm border border-border shadow-md transition hover:shadow-lg">
                                     <div className="space-y-4">
-                                        <h3 className="text-2xl font-bold gradient-accent-text">{projects.title}</h3>
+                                        <h3 className="text-xl md:text-2xl font-bold gradient-accent-text">{projects.title}</h3>
                                         <p className="text-sm text-muted-foreground italic">{projects.period}</p>
                                         <p className="text-muted-foreground leading-relaxed">{projects.description}</p>
                                         <div className="flex flex-wrap gap-2 pt-2">

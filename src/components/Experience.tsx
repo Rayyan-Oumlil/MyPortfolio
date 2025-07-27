@@ -30,9 +30,10 @@ const Experience = () => {
       location: "Rabat, Morocco",
       period: "August 2023",
       achievements: [
-        "Explored internal tech tools for secure document handling and lightweight DevOps workflows.",
-        "Helped set up a basic Git versioning process for internal files.",
-        "Learned from real-world deployment routines.",
+        "Wrote Bash and Python scripts to automate secure document archiving and transfers.",
+        "Helped set up a basic CI/CD pipeline using GitLab CI for staging deployments.",
+        "Tested Dockerized internal tools and assisted with deployment workflows.",
+        "Presented a working demo of the automation process to the DevOps team.",
       ]
     }
   ];
@@ -41,14 +42,14 @@ const Experience = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="py-24 relative overflow-hidden"
+      className="py-16 relative overflow-hidden"
     >
 
       <div className="container mx-auto px-6 relative z-10">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 gradient-text">Technical Experience</h2>
+            <h2 className="text-5xl font-bold mb-6 gradient-text">Experience</h2>
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Professional experience and internships
@@ -56,13 +57,13 @@ const Experience = () => {
           </div>
 
           {/* Experience Cards */}
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
             {experience.map((exp, index) => (
-              <Card
-                key={index}
-                className="p-8 card-hover border-border bg-card"
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
+                              <Card
+                  key={index}
+                  className="p-4 md:p-8 card-hover border-border bg-card"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
                 <div className="flex items-start gap-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Briefcase className="w-6 h-6 text-primary" />

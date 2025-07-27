@@ -36,16 +36,23 @@ const Navigation = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const id = entry.target.getAttribute('id');
-              if (id) setActiveSection(id);
+              if (id) {
+                console.log('Section active:', id);
+                setActiveSection(id);
+              }
             }
           });
         },
-        { threshold: 0.3 }
+        { threshold: 0.1, rootMargin: '-20% 0px -20% 0px' }
     );
+    
+    // Debug: vérifier toutes les sections
     navItems.forEach((item) => {
       const el = document.getElementById(item.href);
+      console.log(`Section ${item.href}:`, el ? 'Found' : 'NOT FOUND');
       if (el) observer.observe(el);
     });
+    
     return () => observer.disconnect();
   }, []);
 
@@ -61,8 +68,8 @@ const Navigation = () => {
     { label: 'Courses', href: 'courses' },
     { label: 'Experience', href: 'experience' },
     { label: 'Skills', href: 'skills' },
-    { label: 'Certifications', href: 'certifications' },
     { label: "Projects", href: "projects" },
+    { label: 'Certifications', href: 'certifications' },
     { label: 'Contact', href: 'contact' },
   ];
 

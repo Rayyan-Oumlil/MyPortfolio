@@ -4,6 +4,19 @@ const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Détecter si c'est un appareil mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || 'ontouchstart' in window);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
@@ -41,6 +54,11 @@ const CustomCursor = () => {
       });
     };
   }, []);
+
+  // Ne pas afficher le curseur sur mobile
+  if (isMobile) {
+    return null;
+  }
 
   return (
     <>

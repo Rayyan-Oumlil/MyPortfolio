@@ -91,7 +91,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-24 relative overflow-hidden"
+      className="py-16 relative overflow-hidden"
     >
       {/* Background Elements - Supprimés pour uniformité */}
       {/* <div className="absolute inset-0">
@@ -103,23 +103,22 @@ const Contact = () => {
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 gradient-text">Let's Work Together</h2>
+            <h2 className="text-5xl font-bold mb-6 gradient-text">Contact</h2>
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Have a project in mind or just want to chat? I'd love to hear from you. 
-              Let's create something amazing together!
+              Let's connect and discuss how we can work together
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <Card className="p-8 card-hover border-border bg-card">
+                          <Card className="p-4 md:p-8 card-hover border-border bg-card">
               <h3 className="text-2xl font-bold mb-6 gradient-accent-text">
                 Send a Message
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
                       Name
@@ -199,10 +198,10 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold mb-6 gradient-accent-text">
+                <h3 className="text-2xl font-bold mb-6 gradient-accent-text text-left">
                   Get in Touch
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-muted-foreground leading-relaxed mb-8 text-left">
                   I'm always open to discussing new opportunities, interesting projects, 
                   or just having a friendly chat about technology and design. Feel free to 
                   reach out through any of the channels below.
@@ -222,7 +221,7 @@ const Contact = () => {
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
                       <info.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
+                    <div className="text-left">
                       <div className="text-sm text-muted-foreground">{info.title}</div>
                       <div className="font-medium text-foreground">{info.value}</div>
                     </div>
@@ -232,7 +231,7 @@ const Contact = () => {
 
               {/* Social Links */}
               <div>
-                <h4 className="text-lg font-semibold mb-4 text-foreground">
+                <h4 className="text-lg font-semibold mb-4 text-foreground text-left">
                   Follow Me
                 </h4>
                 <div className="flex space-x-4">
@@ -257,7 +256,7 @@ const Contact = () => {
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse" />
                   <span className="font-semibold text-foreground">Available for internship</span>
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground text-left">
                   I'm currently seeking internship or summer opportunities for Fall 2025. 
                   Let's discuss how I can contribute to your team!
                 </p>

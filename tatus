@@ -1,0 +1,338 @@
+[1mdiff --git a/src/components/About.tsx b/src/components/About.tsx[m
+[1mindex 31fb970..03b0c37 100644[m
+[1m--- a/src/components/About.tsx[m
+[1m+++ b/src/components/About.tsx[m
+[36m@@ -50,7 +50,7 @@[m [mconst About = () => {[m
+     <section [m
+       id="about"[m
+       ref={sectionRef}[m
+[31m-      className="py-20 relative overflow-hidden"[m
+[32m+[m[32m      className="py-16 relative overflow-hidden"[m
+     >[m
+ [m
+       <div className="container mx-auto px-6 relative z-10">[m
+[36m@@ -61,9 +61,9 @@[m [mconst About = () => {[m
+             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />[m
+           </div>[m
+ [m
+[31m-          <div className="grid lg:grid-cols-2 gap-16 items-center">[m
+[32m+[m[32m          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">[m
+             {/* Content */}[m
+[31m-            <div className="space-y-6">[m
+[32m+[m[32m            <div className="space-y-6 text-left">[m
+               <h3 className="text-3xl font-bold text-foreground mb-6">[m
+                 Student & Aspiring Developer[m
+               </h3>[m
+[36m@@ -82,8 +82,8 @@[m [mconst About = () => {[m
+ [m
+               {/* Languages */}[m
+               <div className="pt-6">[m
+[31m-                <h4 className="text-lg font-semibold mb-4 text-foreground">Languages</h4>[m
+[31m-                <div className="space-y-2">[m
+[32m+[m[32m                <h4 className="text-lg font-semibold mb-4 text-foreground text-left">Languages</h4>[m
+[32m+[m[32m                <div className="space-y-2 text-left">[m
+                   <div className="flex justify-between">[m
+                     <span className="text-muted-foreground">English</span>[m
+                     <span className="text-foreground">Advanced (IELTS Band 7)</span>[m
+[36m@@ -99,37 +99,47 @@[m [mconst About = () => {[m
+                 </div>[m
+               </div>[m
+ [m
+[31m-              {/* Interests */}[m
+[31m-              <div className="pt-6">[m
+[31m-                <h4 className="text-lg font-semibold mb-4 text-foreground">Interests & Activities</h4>[m
+[31m-                <div className="space-y-2 text-muted-foreground">[m
+[31m-                  <div>• Football - Participated in World Schools Football Cup (Barcelona, 2023)</div>[m
+[31m-                  <div>• Chess - Competitor in National Chess Tournament</div>[m
+[31m-                  <div>• Community Service - Volunteer for Breast Cancer Awareness Campaign</div>[m
+[31m-                  <div>• Generation Amazing Tournament (Qatar Foundation, 2022)</div>[m
+[32m+[m[32m              {/* Interests & Activities */}[m
+[32m+[m[32m              <div className="pt-8">[m
+[32m+[m[32m                <h4 className="text-lg font-semibold mb-4 text-foreground text-left">Interests & Activities</h4>[m
+[32m+[m[32m                <div className="space-y-2 text-left">[m
+[32m+[m[32m                  <div className="flex items-start gap-2">[m
+[32m+[m[32m                    <span className="text-muted-foreground">•</span>[m
+[32m+[m[32m                    <span className="text-foreground">Football - Participated in World Schools Football Cup (Barcelona, 2023)</span>[m
+[32m+[m[32m                  </div>[m
+[32m+[m[32m                  <div className="flex items-start gap-2">[m
+[32m+[m[32m                    <span className="text-muted-foreground">•</span>[m
+[32m+[m[32m                    <span className="text-foreground">Chess - Competitor in National Chess Tournament</span>[m
+[32m+[m[32m                  </div>[m
+[32m+[m[32m                  <div className="flex items-start gap-2">[m
+[32m+[m[32m                    <span className="text-muted-foreground">•</span>[m
+[32m+[m[32m                    <span className="text-foreground">Community Service - Volunteer for Breast Cancer Awareness Campaign</span>[m
+[32m+[m[32m                  </div>[m
+[32m+[m[32m                  <div className="flex items-start gap-2">[m
+[32m+[m[32m                    <span className="text-muted-foreground">•</span>[m
+[32m+[m[32m                    <span className="text-foreground">Generation Amazing Tournament (Qatar Foundation, 2022)</span>[m
+[32m+[m[32m                  </div>[m
+                 </div>[m
+               </div>[m
+             </div>[m
+ [m
+             {/* Highlights Grid */}[m
+[31m-            <div className="grid grid-cols-2 gap-6">[m
+[32m+[m[32m            <div className="grid grid-cols-2 gap-6 text-left">[m
+               {highlights.map((highlight, index) => ([m
+                 <Card [m
+                   key={index}[m
+[31m-                  className="p-6 card-hover border-border bg-card"[m
+[32m+[m[32m                  className="p-6 card-hover border-border bg-card text-left"[m
+                   style={{ animationDelay: `${index * 0.1}s` }}[m
+                 >[m
+[31m-                  <div className="mb-4">[m
+[31m-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">[m
+[31m-                      <highlight.icon className="w-6 h-6 text-primary" />[m
+[31m-                    </div>[m
+[31m-                    <h4 className="text-lg font-semibold text-foreground mb-2">[m
+[31m-                      {highlight.title}[m
+[31m-                    </h4>[m
+[31m-                    <p className="text-sm text-muted-foreground leading-relaxed">[m
+[31m-                      {highlight.description}[m
+[31m-                    </p>[m
+[32m+[m[32m                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">[m
+[32m+[m[32m                    <highlight.icon className="w-6 h-6 text-primary" />[m
+                   </div>[m
+[32m+[m[32m                  <h4 className="text-lg font-semibold mb-2 text-foreground text-left">[m
+[32m+[m[32m                    {highlight.title}[m
+[32m+[m[32m                  </h4>[m
+[32m+[m[32m                  <p className="text-muted-foreground leading-relaxed text-left">[m
+[32m+[m[32m                    {highlight.description}[m
+[32m+[m[32m                  </p>[m
+                 </Card>[m
+               ))}[m
+             </div>[m
+[1mdiff --git a/src/components/Certifications.tsx b/src/components/Certifications.tsx[m
+[1mindex ec3b8e8..1c38f09 100644[m
+[1m--- a/src/components/Certifications.tsx[m
+[1m+++ b/src/components/Certifications.tsx[m
+[36m@@ -1,7 +1,7 @@[m
+ import { useEffect, useRef, useState } from "react";[m
+ import { Card } from "@/components/ui/card";[m
+ import { Badge } from "@/components/ui/badge";[m
+[31m-import { CheckCircle, Clock } from "lucide-react";[m
+[32m+[m[32mimport { CheckCircle, Clock, Calendar } from "lucide-react";[m
+ [m
+ const Certifications = () => {[m
+     const [isVisible, setIsVisible] = useState(false);[m
+[36m@@ -47,7 +47,8 @@[m [mconst Certifications = () => {[m
+         <section[m
+             id="certifications"[m
+             ref={sectionRef}[m
+[31m-            className="py-24 relative overflow-hidden"[m
+[32m+[m[32m            className="py-16 relative overflow-hidden z-10 bg-background"[m
+[32m+[m[32m            style={{ scrollMarginTop: '80px' }}[m
+         >[m
+             {/* Background Elements - Supprimés pour uniformité */}[m
+             {/* <div className="absolute inset-0">[m
+[36m@@ -59,16 +60,16 @@[m [mconst Certifications = () => {[m
+                     {/* Section Header */}[m
+                     <div className="text-center mb-16">[m
+                         <h2 className="text-5xl font-bold mb-6 gradient-text">Certifications</h2>[m
+[31m-                        <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: "var(--gradient-primary)" }} />[m
+[32m+[m[32m                        <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />[m
+                         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">[m
+[31m-                            Courses and certifications completed or currently in progress[m
+[32m+[m[32m                            Professional certifications and achievements[m
+                         </p>[m
+                     </div>[m
+ [m
+                     {/* Certification Cards */}[m
+[31m-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">[m
+[32m+[m[32m                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">[m
+                         {certifications.map((cert, index) => ([m
+[31m-                            <Card key={index} className="p-6 border-border bg-card flex gap-4 items-start">[m
+[32m+[m[32m                                                          <Card key={index} className="p-4 md:p-6 border-border bg-card flex gap-4 items-start">[m
+                                 {cert.logo && ([m
+                                     <img src={cert.logo} alt={cert.provider} className="w-10 h-10 object-contain" />[m
+                                 )}[m
+[1mdiff --git a/src/components/Contact.tsx b/src/components/Contact.tsx[m
+[1mindex 9b313e1..6681998 100644[m
+[1m--- a/src/components/Contact.tsx[m
+[1m+++ b/src/components/Contact.tsx[m
+[36m@@ -91,7 +91,7 @@[m [mconst Contact = () => {[m
+     <section[m
+       id="contact"[m
+       ref={sectionRef}[m
+[31m-      className="py-24 relative overflow-hidden"[m
+[32m+[m[32m      className="py-16 relative overflow-hidden"[m
+     >[m
+       {/* Background Elements - Supprimés pour uniformité */}[m
+       {/* <div className="absolute inset-0">[m
+[36m@@ -103,23 +103,22 @@[m [mconst Contact = () => {[m
+         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>[m
+           {/* Section Header */}[m
+           <div className="text-center mb-16">[m
+[31m-            <h2 className="text-5xl font-bold mb-6 gradient-text">Let's Work Together</h2>[m
+[32m+[m[32m            <h2 className="text-5xl font-bold mb-6 gradient-text">Contact</h2>[m
+             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />[m
+             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">[m
+[31m-              Have a project in mind or just want to chat? I'd love to hear from you. [m
+[31m-              Let's create something amazing together![m
+[32m+[m[32m              Let's connect and discuss how we can work together[m
+             </p>[m
+           </div>[m
+ [m
+[31m-          <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">[m
+[32m+[m[32m          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto">[m
+             {/* Contact Form */}[m
+[31m-            <Card className="p-8 card-hover border-border bg-card">[m
+[32m+[m[32m                          <Card className="p-4 md:p-8 card-hover border-border bg-card">[m
+               <h3 className="text-2xl font-bold mb-6 gradient-accent-text">[m
+                 Send a Message[m
+               </h3>[m
+               [m
+               <form onSubmit={handleSubmit} className="space-y-6">[m
+[31m-                <div className="grid md:grid-cols-2 gap-4">[m
+[32m+[m[32m                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">[m
+                   <div>[m
+                     <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">[m
+                       Name[m
+[36m@@ -199,10 +198,10 @@[m [mconst Contact = () => {[m
+             {/* Contact Info */}[m
+             <div className="space-y-8">[m
+               <div>[m
+[31m-                <h3 className="text-2xl font-bold mb-6 gradient-accent-text">[m
+[32m+[m[32m                <h3 className="text-2xl font-bold mb-6 gradient-accent-text text-left">[m
+                   Get in Touch[m
+                 </h3>[m
+[31m-                <p className="text-muted-foreground leading-relaxed mb-8">[m
+[32m+[m[32m                <p className="text-muted-foreground leading-relaxed mb-8 text-left">[m
+                   I'm always open to discussing new opportunities, interesting projects, [m
+                   or just having a friendly chat about technology and design. Feel free to [m
+                   reach out through any of the channels below.[m
+[36m@@ -222,7 +221,7 @@[m [mconst Contact = () => {[m
+                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">[m
+                       <info.icon className="w-6 h-6 text-primary" />[m
+                     </div>[m
+[31m-                    <div>[m
+[32m+[m[32m                    <div className="text-left">[m
+                       <div className="text-sm text-muted-foreground">{info.title}</div>[m
+                       <div className="font-medium text-foreground">{info.value}</div>[m
+                     </div>[m
+[36m@@ -232,7 +231,7 @@[m [mconst Contact = () => {[m
+ [m
+               {/* Social Links */}[m
+               <div>[m
+[31m-                <h4 className="text-lg font-semibold mb-4 text-foreground">[m
+[32m+[m[32m                <h4 className="text-lg font-semibold mb-4 text-foreground text-left">[m
+                   Follow Me[m
+                 </h4>[m
+                 <div className="flex space-x-4">[m
+[36m@@ -257,7 +256,7 @@[m [mconst Contact = () => {[m
+                   <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse" />[m
+                   <span className="font-semibold text-foreground">Available for internship</span>[m
+                 </div>[m
+[31m-                <p className="text-sm text-muted-foreground">[m
+[32m+[m[32m                <p className="text-sm text-muted-foreground text-left">[m
+                   I'm currently seeking internship or summer opportunities for Fall 2025. [m
+                   Let's discuss how I can contribute to your team![m
+                 </p>[m
+[1mdiff --git a/src/components/Courses.tsx b/src/components/Courses.tsx[m
+[1mindex 6952b96..ec27280 100644[m
+[1m--- a/src/components/Courses.tsx[m
+[1m+++ b/src/components/Courses.tsx[m
+[36m@@ -2,6 +2,7 @@[m [mimport { useEffect, useRef, useState } from "react";[m
+ import { Card } from "@/components/ui/card";[m
+ import { Button } from "@/components/ui/button";[m
+ import { ChevronLeft, ChevronRight } from "lucide-react";[m
+[32m+[m[32mimport { Calendar } from "lucide-react";[m
+ [m
+ const Courses = () => {[m
+     const [isVisible, setIsVisible] = useState(false);[m
+[36m@@ -35,67 +36,119 @@[m [mconst Courses = () => {[m
+         {[m
+             title: "Calculus 1",[m
+             code: "MAT 1400",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/mat-1400/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/mat-1400/",[m
+[32m+[m[32m            current: false,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Automne 2023",[m
+[32m+[m[32m            description: "Introduction to calculus, limits, derivatives, and integrals."[m
+         },[m
+         {[m
+             title: "Computer Architecture 1",[m
+             code: "IFT 1227",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-1227/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-1227/",[m
+[32m+[m[32m            current: true,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Hiver 2024",[m
+[32m+[m[32m            description: "Basic concepts of computer architecture, including CPU, memory, and I/O."[m
+         },[m
+         {[m
+             title: "Concepts of Programming Languages",[m
+             code: "IFT 2035",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-2035/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-2035/",[m
+[32m+[m[32m            current: false,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Automne 2023",[m
+[32m+[m[32m            description: "Introduction to programming languages, syntax, and basic programming concepts."[m
+         },[m
+         {[m
+             title: "Data Structures",[m
+             code: "IFT 2015",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-2015/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-2015/",[m
+[32m+[m[32m            current: false,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Automne 2023",[m
+[32m+[m[32m            description: "Data structures and algorithms, including arrays, linked lists, stacks, and queues."[m
+         },[m
+         {[m
+             title: "Discrete Structures in Computer Science",[m
+             code: "IFT 1065",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-1065/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-1065/",[m
+[32m+[m[32m            current: false,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Automne 2023",[m
+[32m+[m[32m            description: "Introduction to discrete mathematics and its applications in computer science."[m
+         },[m
+         {[m
+             title: "Introduction to Computer Systems",[m
+             code: "IFT 1215",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-1215/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-1215/",[m
+[32m+[m[32m            current: false,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Automne 2023",[m
+[32m+[m[32m            description: "Introduction to computer organization, assembly language, and basic programming."[m
+         },[m
+         {[m
+             title: "Introduction to Theoretical Computer Science",[m
+             code: "IFT 2105",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-2105/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-2105/",[m
+[32m+[m[32m            current: false,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Automne 2023",[m
+[32m+[m[32m            description: "Basic concepts of theoretical computer science, including algorithms and complexity."[m
+         },[m
+         {[m
+             title: "Linear Algebra",[m
+             code: "MAT 1600",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/mat-1600/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/mat-1600/",[m
+[32m+[m[32m            current: false,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Automne 2023",[m
+[32m+[m[32m            description: "Introduction to linear algebra, matrices, determinants, and systems of equations."[m
+         },[m
+         {[m
+             title: "Probability and Statistics",[m
+             code: "MAT 1978",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/mat-1978/"[m
+[32m+[m[32m            url: "https://admission.umontreal.ca/cours-et-horaires/cours/mat-1978/",[m
+[32m+[m[32m            current: false,[m
+[32m+[m[32m            provider: "Université de Montréal",[m
+[32m+[m[32m            period: "Automne 2023",[m
+[32m+[m[32m            description: "Introduction to probability theory and statistical methods."[m
+         },[m
+         {[m
+             title: "Programming 1",[m
+             code: "IFT 1015",[m
+[31m-            url: "https://admission.umontreal.ca/cours-et-horaires/cours/ift-1015/"[m
+[32m+[m[32m            url: "h

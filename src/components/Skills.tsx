@@ -34,11 +34,11 @@ const Skills = () => {
     },
     {
       category: "Databases",
-      items: ["MySQL", "SQLite", "MongoDB", "FAISS"]
+      items: ["MySQL", "PostgreSQL", "MongoDB", "FAISS", "SQLAlchemy"]
     },
     {
       category: "Frameworks & Libraries",
-      items: ["React", "Vite", "Streamlit", "FastAPI", "LangChain", "jQuery", "Swing", "SQLAlchemy", "Numpy"]
+      items: ["React", "Streamlit", "FastAPI", "Scikit-Learn", "LangChain", "Swing", "Pandas", "Numpy", "jQuery"]
     },
     {
       category: "Artificial Intelligence",
@@ -55,7 +55,7 @@ const Skills = () => {
     <section 
       id="skills"
       ref={sectionRef}
-      className="py-20 relative overflow-hidden"
+      className="py-16 relative overflow-hidden"
     >
       {/* Background Elements - Supprimés pour éviter le bleu */}
       {/* <div className="absolute inset-0">
@@ -67,7 +67,7 @@ const Skills = () => {
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-6 gradient-text">Technical Skills</h2>
+            <h2 className="text-5xl font-bold mb-6 gradient-text">Technical Experience</h2>
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A comprehensive toolkit built through hands-on experience and continuous learning
@@ -75,13 +75,13 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {technicalSkills.map((skillGroup, groupIndex) => (
-              <Card 
-                key={groupIndex}
-                className="p-6 card-hover border-border bg-card"
-                style={{ animationDelay: `${groupIndex * 0.1}s` }}
-              >
+                              <Card 
+                  key={groupIndex}
+                  className="p-4 md:p-6 card-hover border-border bg-card"
+                  style={{ animationDelay: `${groupIndex * 0.1}s` }}
+                >
                 <h3 className="text-xl font-bold mb-4 gradient-accent-text">
                   {skillGroup.category}
                 </h3>
