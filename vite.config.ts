@@ -10,8 +10,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    // lovable-tagger only in development mode
-    mode === 'development' && (await import("lovable-tagger")).componentTagger(),
+    // lovable-tagger only in development mode - removed for production compatibility
   ].filter(Boolean),
   resolve: {
     alias: {
