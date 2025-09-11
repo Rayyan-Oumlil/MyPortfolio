@@ -24,6 +24,13 @@ const Projects = () => {
 
     const projects = [
         {
+            title: "Task Management Dashboard",
+            description:
+                "Built a modern task management application with real-time collaboration features. Implemented drag-and-drop functionality, team workspaces, and progress analytics. Features include task assignments, due date tracking, file attachments, and notification system with dark/light theme support.",
+            technologies: ["React", "TypeScript", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
+            period: "January 2025 – Present",
+        },
+        {
             title: "Stock Price Predictor",
             description:
                 "Developed a Streamlit app to visualize and forecast stock prices using real-time data from Yahoo Finance. Implemented Linear Regression and Random Forest models for multi-day prediction and comparison of several stocks. Planned enhancements include LSTM models, backtesting, and portfolio analytics.",
