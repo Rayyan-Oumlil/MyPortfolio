@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Card } from "./ui/card";
-import { Code, Palette, Zap, Coffee } from "lucide-react";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,125 +22,81 @@ const About = () => {
     return () => observer.disconnect();
   }, []);
 
-  const highlights = [
-    {
-      icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable code that stands the test of time"
-    },
-    {
-      icon: Palette,
-      title: "Design Focus",
-      description: "Creating intuitive interfaces that users love to interact with"
-    },
-    {
-      icon: Zap,
-      title: "Performance",
-      description: "Building lightning-fast applications optimized for all devices"
-    },
-    {
-      icon: Coffee,
-      title: "Collaboration",
-      description: "Working closely with teams to bring ideas to life"
-    }
-  ];
 
   return (
     <section 
       id="about"
       ref={sectionRef}
-      className="py-16 relative overflow-hidden"
+      className="py-8 relative overflow-hidden"
     >
 
       <div className="container mx-auto px-6 relative z-10">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-5xl font-bold mb-6 gradient-text">About Me</h2>
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Content */}
-            <div className="space-y-6 text-left">
-              <h3 className="text-3xl font-bold text-foreground mb-6">
-                Student & Aspiring Developer
+          {/* Main Content */}
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-4xl font-bold text-foreground mb-6">
+                Computer Science Student & Full-Stack Developer
               </h3>
               
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Currently pursuing a B.Sc. in Computer Science at Université de Montréal, 
-                I bring a strong foundation in mathematics, physics, and programming from my 
-                French Baccalaureate background.
+                I'm passionate about AI/ML, mobile development, and creating meaningful 
+                technology solutions. My multicultural background spans Qatar, Morocco, 
+                and Canada, giving me a unique global perspective.
               </p>
-              
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                My multicultural experience spans Qatar, Morocco, and Canada, giving me a 
-                unique global perspective. I'm passionate about leveraging technology to create 
-                meaningful impact in society.
-              </p>
-
-              {/* Languages */}
-              <div className="pt-6">
-                <h4 className="text-lg font-semibold mb-4 text-foreground text-left">Languages</h4>
-                <div className="space-y-2 text-left">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">English</span>
-                    <span className="text-foreground">Advanced (IELTS Band 7)</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">French</span>
-                    <span className="text-foreground">Proficient (C2)</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Spanish</span>
-                    <span className="text-foreground">Upper Intermediate (SIELE B2)</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Interests & Activities */}
-              <div className="pt-8">
-                <h4 className="text-lg font-semibold mb-4 text-foreground text-left">Interests & Activities</h4>
-                <div className="space-y-2 text-left">
-                  <div className="flex items-start gap-2">
-                    <span className="text-muted-foreground">•</span>
-                    <span className="text-foreground">Football - Participated in World Schools Football Cup (Barcelona, 2023)</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-muted-foreground">•</span>
-                    <span className="text-foreground">Chess - Competitor in National Chess Tournament</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-muted-foreground">•</span>
-                    <span className="text-foreground">Community Service - Volunteer for Breast Cancer Awareness Campaign</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-muted-foreground">•</span>
-                    <span className="text-foreground">Generation Amazing Tournament (Qatar Foundation, 2022)</span>
-                  </div>
-                </div>
-              </div>
             </div>
 
-            {/* Highlights Grid */}
-            <div className="grid grid-cols-2 gap-6 text-left">
-              {highlights.map((highlight, index) => (
-                <Card 
-                  key={index}
-                  className="p-6 card-hover border-border bg-card text-left"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <highlight.icon className="w-6 h-6 text-primary" />
+
+            {/* Languages & Activities */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Languages */}
+              <Card className="p-5 border-border bg-card">
+                <h4 className="text-xl font-semibold mb-4 text-foreground text-center">Languages</h4>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">English</span>
+                    <span className="text-foreground font-medium">Advanced (IELTS Band 7)</span>
                   </div>
-                  <h4 className="text-lg font-semibold mb-2 text-foreground text-left">
-                    {highlight.title}
-                  </h4>
-                  <p className="text-muted-foreground leading-relaxed text-left">
-                    {highlight.description}
-                  </p>
-                </Card>
-              ))}
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">French</span>
+                    <span className="text-foreground font-medium">Proficient (C2)</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-muted-foreground">Spanish</span>
+                    <span className="text-foreground font-medium">Upper Intermediate (SIELE B2)</span>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Interests & Activities */}
+              <Card className="p-6 border-border bg-card md:col-span-2">
+                <h4 className="text-xl font-semibold mb-4 text-foreground text-center">Interests & Activities</h4>
+                <div className="space-y-3 text-left">
+                  <div className="flex items-start gap-3 text-left">
+                    <span className="text-primary mt-1 flex-shrink-0">•</span>
+                    <span className="text-foreground text-left">Football - World Schools Football Cup (Barcelona, 2023)</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-left">
+                    <span className="text-primary mt-1 flex-shrink-0">•</span>
+                    <span className="text-foreground text-left">Chess - National Tournament Competitor</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-left">
+                    <span className="text-primary mt-1 flex-shrink-0">•</span>
+                    <span className="text-foreground text-left">Community Service - Breast Cancer Awareness</span>
+                  </div>
+                  <div className="flex items-start gap-3 text-left">
+                    <span className="text-primary mt-1 flex-shrink-0">•</span>
+                    <span className="text-foreground text-left">Generation Amazing Tournament (Qatar Foundation)</span>
+                  </div>
+                </div>
+              </Card>
             </div>
           </div>
         </div>

@@ -26,27 +26,35 @@ const Skills = () => {
   const technicalSkills = [
     {
       category: "Languages",
-      items: ["Java", "Python", "HTML/CSS", "JavaScript", "TypeScript", "SQL", "Bash/Shell", "LaTeX"]
+      items: ["Java", "Python", "C++", "HTML/CSS", "JavaScript", "TypeScript", "SQL", "Bash/Shell"]
     },
     {
       category: "Tools",
-      items: ["Git", "VS Code", "IntelliJ", "Jupyter", "Docker", "SketchUp", "Figma", "RESTful APIs", "Postman", "Vercel", "Nmap"]
+      items: ["Git", "VS Code", "IntelliJ", "Jupyter", "Figma", "Firebase", "Supabase"]
     },
     {
       category: "Databases",
-      items: ["MySQL", "PostgreSQL", "MongoDB", "FAISS", "SQLAlchemy"]
+      items: ["MySQL", "PostgreSQL", "MongoDB", "FAISS"]
     },
     {
-      category: "Frameworks & Libraries",
-      items: ["React", "Streamlit", "FastAPI", "Scikit-Learn", "LangChain", "Swing", "Pandas", "Numpy", "jQuery"]
+      category: "Web & Mobile Frameworks",
+      items: ["React", "Flutter", "FastAPI", "Node.js", "Express", "Spring Boot"]
+    },
+    {
+      category: "Data Science & ML Libraries",
+      items: ["Scikit-Learn", "PyTorch", "TensorFlow", "Hugging Face Transformers", "LangChain", "Pandas", "Numpy", "Matplotlib"]
     },
     {
       category: "Artificial Intelligence",
-      items: ["Private & Public LLMs", "LLM Proxies", "RAG", "Prompt Engineering", "MLOps"]
+      items: ["LLMs", "RAG", "Prompt Engineering", "NLP", "MLOps"]
     },
     {
       category: "Systems & DevOps",
-      items: ["Linux", "Windows", "Docker", "Azure", "Nginx", "Arduino", "Raspberry Pi", "3D Printing"]
+      items: ["Linux", "Docker", "Azure", "GitHub Actions", "GitLab CI"]
+    },
+    {
+      category: "Methodologies",
+      items: ["Unit Testing", "Agile/Scrum", "CI/CD"]
     }
   ];
 
@@ -55,7 +63,7 @@ const Skills = () => {
     <section 
       id="skills"
       ref={sectionRef}
-      className="py-16 relative overflow-hidden"
+      className="py-8 relative overflow-hidden"
     >
       {/* Background Elements - Supprimés pour éviter le bleu */}
       {/* <div className="absolute inset-0">
@@ -66,7 +74,7 @@ const Skills = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-5xl font-bold mb-6 gradient-text">Technical Experience</h2>
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -75,7 +83,7 @@ const Skills = () => {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 md:gap-6">
             {technicalSkills.map((skillGroup, groupIndex) => (
                               <Card 
                   key={groupIndex}

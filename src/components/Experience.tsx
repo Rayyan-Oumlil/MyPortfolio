@@ -25,15 +25,15 @@ const Experience = () => {
 
   const experience = [
     {
-      title: "Technical Experience",
-      company: "3GCOM",
-      location: "Rabat, Morocco",
-      period: "August 2023",
+      title: "Full-Stack Mobile Developer Intern",
+      company: "Adven Consulting",
+      location: "Sherbrooke, QC, Canada",
+      period: "Sep 2025 – Present",
       achievements: [
-        "Wrote Bash and Python scripts to automate secure document archiving and transfers.",
-        "Helped set up a basic CI/CD pipeline using GitLab CI for staging deployments.",
-        "Tested Dockerized internal tools and assisted with deployment workflows.",
-        "Presented a working demo of the automation process to the DevOps team.",
+        "Developed a ride-hailing mobile app connecting drivers and clients with a team of interns.",
+        "Implemented the front end with Flutter and the back end with Node.js, Express, and Supabase.",
+        "Added real-time geolocation, in-app chat, authentication flows, and push notifications.",
+        "Worked with Agile/Scrum methodology, using GitHub Projects for task tracking and daily collaboration.",
       ]
     }
   ];
@@ -42,13 +42,13 @@ const Experience = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="py-16 relative overflow-hidden"
+      className="py-8 relative overflow-hidden"
     >
 
       <div className="container mx-auto px-6 relative z-10">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-5xl font-bold mb-6 gradient-text">Experience</h2>
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -71,7 +71,7 @@ const Experience = () => {
 
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                      <h3 className="text-2xl font-bold text-foreground">
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground">
                         {exp.title}
                       </h3>
                     </div>

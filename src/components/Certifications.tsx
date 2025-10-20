@@ -26,19 +26,52 @@ const Certifications = () => {
 
     const certifications = [
         {
-            title: "CS50x – Introduction to Computer Science",
-            provider: "Harvard / edX",
-            status: "In Progress",
-            logo: "/harvard.png", // (facultatif)
-            url: "https://cs50.harvard.edu/x/"
-        },
-        {
-            title: "AZ-900: Microsoft Azure Fundamentals",
+            title: "Microsoft Azure Fundamentals (AZ-900)",
             provider: "Microsoft",
-            status: "In Progress",
+            status: "Completed",
             logo: "/microsoft.png",
             url: "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
             skills: ["Microsoft Azure", "Cloud Computing"]
+        },
+        {
+            title: "IBM Full Stack Software Developer Professional Certificate",
+            provider: "IBM",
+            status: "Completed",
+            logo: "/ibm.png",
+            url: "https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer",
+            skills: ["Full Stack Development", "Software Engineering"]
+        },
+        {
+            title: "NVIDIA-Certified Generative AI LLMs (Exam Prep– Whizlabs)",
+            provider: "NVIDIA / Whizlabs",
+            status: "Completed",
+            logo: "/nvidia.png",
+            url: "https://www.coursera.org/account/accomplishments/specialization/certificate/E78WREH80WBT",
+            skills: ["Generative AI", "LLMs", "Machine Learning"]
+        },
+        {
+            title: "Oracle OCI Architect Associate",
+            provider: "Oracle",
+            status: "Completed",
+            logo: "/oracle.png",
+            url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=348CBC5F3147F8A0DE830CEB2B033A3934E1AA3C2405F280F8F4BE2D28ADDD20",
+            skills: ["Cloud Architecture", "Oracle Cloud Infrastructure"]
+        },
+        {
+            title: "Oracle OCI Generative AI Professional",
+            provider: "Oracle",
+            status: "Completed",
+            logo: "/oracle.png",
+            url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=B058329316CCE62FA1AEFAF0AC0C0581EACF5139534F6DACEF3BFC215C31A02F",
+            skills: ["Generative AI", "Oracle Cloud", "AI/ML"]
+        },
+        {
+            title: "Oracle OCI AI Foundations Associate",
+            provider: "Oracle",
+            status: "Completed",
+            logo: "/oracle.png",
+            url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=7D3A9FA3F593EB684B34D3F81266650608615D359FA12B06DCFC92637C39DD7D",
+            skills: ["AI Foundations", "Machine Learning", "Oracle Cloud"]
         }
     ];
 

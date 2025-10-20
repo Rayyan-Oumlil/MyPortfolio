@@ -5,7 +5,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Secret from "./pages/Secret";
 import CustomCursor from "./components/CustomCursor";
 import "./App.css";
 
@@ -22,7 +21,6 @@ function App() {
             <CustomCursor />
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/secret" element={<Secret />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Router>
