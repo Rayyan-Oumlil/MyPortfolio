@@ -1,47 +1,58 @@
-## How can I edit this code?
+# Portfolio
 
-There are several ways of editing your application.
+Personal portfolio website showcasing my projects, skills, and experience.
 
-**Use your preferred IDE**
+## Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Responsive design
+- Dark mode support
+- Smooth animations
+- Project showcase
+- Contact form
 
-Follow these steps:
+## Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Clone the repository:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+git clone https://github.com/Rayyan-Oumlil/my-portfolio.git
+cd my-portfolio
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+Install dependencies:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
+```
+
+## Development
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+Preview production build:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run preview
+```
 
-## What technologies are used for this project?
+## Tech Stack
 
-This project is built with:
+- **React** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI component library
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## License
+
+MIT

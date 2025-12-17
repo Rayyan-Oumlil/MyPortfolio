@@ -30,10 +30,18 @@ const Experience = () => {
       location: "Sherbrooke, QC, Canada",
       period: "Sep 2025 – Present",
       achievements: [
-        "Developed a ride-hailing mobile app connecting drivers and clients with a team of interns.",
-        "Implemented the front end with Flutter and the back end with Node.js, Express, and Supabase.",
-        "Added real-time geolocation, in-app chat, authentication flows, and push notifications.",
-        "Worked with Agile/Scrum methodology, using GitHub Projects for task tracking and daily collaboration.",
+        "Contributed to RoutIA, a Flutter platform for agricultural transport, building 6+ core features including authentication, workflows, real-time chat, GPS routing, and push notifications.",
+        "Collaborated with a team of four interns using GitHub Projects and Agile/Scrum practices, participating in debugging and automated testing covering 80%+ of critical workflows.",
+      ]
+    },
+    {
+      title: "AI Automation Extern",
+      company: "Wayfair",
+      location: "Remote",
+      period: "Oct 2025 – Dec 2025",
+      achievements: [
+        "Built 3+ multi-agent AI automation workflows using n8n, Gemini, and JavaScript, integrated into a Supabase Market Intelligence Dashboard for centralized monitoring.",
+        "Developed Trend and Competitor agents aggregating 50+ RSS feeds, Google Search, and Amazon data to surface market signals and competitive insights, reducing research time by 60%.",
       ]
     }
   ];

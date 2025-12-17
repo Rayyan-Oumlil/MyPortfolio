@@ -26,35 +26,23 @@ const Skills = () => {
   const technicalSkills = [
     {
       category: "Languages",
-      items: ["Java", "Python", "C++", "HTML/CSS", "JavaScript", "TypeScript", "SQL", "Bash/Shell"]
+      items: ["Java", "Python", "C++", "JavaScript", "TypeScript", "SQL"]
     },
     {
-      category: "Tools",
-      items: ["Git", "VS Code", "IntelliJ", "Jupyter", "Figma", "Firebase", "Supabase"]
+      category: "Web & Full-Stack Development",
+      items: ["React", "Next.js", "Flutter", "Node.js", "FastAPI", "Spring Boot"]
+    },
+    {
+      category: "AI & Machine Learning",
+      items: ["LLMs", "RAG pipelines", "LangChain", "LangGraph", "CrewAI", "Google ADK", "HuggingFace", "NLP", "Scikit-learn", "PyTorch", "TensorFlow", "Pandas", "NumPy", "Matplotlib", "OpenCV"]
     },
     {
       category: "Databases",
-      items: ["MySQL", "PostgreSQL", "MongoDB", "FAISS"]
+      items: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Firebase", "Supabase", "FAISS"]
     },
     {
-      category: "Web & Mobile Frameworks",
-      items: ["React", "Flutter", "FastAPI", "Node.js", "Express", "Spring Boot"]
-    },
-    {
-      category: "Data Science & ML Libraries",
-      items: ["Scikit-Learn", "PyTorch", "TensorFlow", "Hugging Face Transformers", "LangChain", "Pandas", "Numpy", "Matplotlib"]
-    },
-    {
-      category: "Artificial Intelligence",
-      items: ["LLMs", "RAG", "Prompt Engineering", "NLP", "MLOps"]
-    },
-    {
-      category: "Systems & DevOps",
-      items: ["Linux", "Docker", "Azure", "GitHub Actions", "GitLab CI"]
-    },
-    {
-      category: "Methodologies",
-      items: ["Unit Testing", "Agile/Scrum", "CI/CD"]
+      category: "DevOps & Cloud Systems",
+      items: ["Docker", "Git", "GitHub Actions", "Azure", "Google Cloud", "AWS", "CI/CD pipelines"]
     }
   ];
 

@@ -26,14 +26,6 @@ const Certifications = () => {
 
     const certifications = [
         {
-            title: "Microsoft Azure Fundamentals (AZ-900)",
-            provider: "Microsoft",
-            status: "Completed",
-            logo: "/microsoft.png",
-            url: "https://learn.microsoft.com/en-us/certifications/azure-fundamentals/",
-            skills: ["Microsoft Azure", "Cloud Computing"]
-        },
-        {
             title: "IBM Full Stack Software Developer Professional Certificate",
             provider: "IBM",
             status: "Completed",
@@ -42,8 +34,8 @@ const Certifications = () => {
             skills: ["Full Stack Development", "Software Engineering"]
         },
         {
-            title: "NVIDIA-Certified Generative AI LLMs (Exam Prep– Whizlabs)",
-            provider: "NVIDIA / Whizlabs",
+            title: "NVIDIA Certified — Generative AI LLMs",
+            provider: "NVIDIA",
             status: "Completed",
             logo: "/nvidia.png",
             url: "https://www.coursera.org/account/accomplishments/specialization/certificate/E78WREH80WBT",

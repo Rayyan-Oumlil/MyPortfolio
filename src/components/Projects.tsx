@@ -32,67 +32,67 @@ const Projects = () => {
 
     const projects = [
         {
-            title: "FlexiShop – Fullstack E-Commerce App",
+            title: "CustoFlow — Multi-Agent Customer Support System",
             description:
-                "Developed a complete e-commerce application with a FastAPI backend and a React + TypeScript frontend. Implemented product browsing, cart, checkout, JWT authentication, and order history. Styled with Tailwind + ShadCN UI; integrated Stripe and planned MinIO for file storage.",
-            technologies: ["FastAPI", "React", "PostgreSQL", "Tailwind", "ShadCN UI", "JWT", "Stripe"],
-            period: "July 2025",
-            github: "https://github.com/Rayyan-Oumlil/FlexiShop",
-            fullDetails: "Complete e-commerce solution with modern tech stack. Features include user authentication, product catalog, shopping cart, payment processing with Stripe, order management, and admin dashboard. Built with scalable architecture using FastAPI for backend API, React with TypeScript for frontend, PostgreSQL for data persistence, and Docker for containerization. Implemented JWT-based authentication, role-based access control, and responsive design with Tailwind CSS and ShadCN UI components."
+                "Built a multi-agent system automating 80%+ of queries, reducing response time from 2-4 hours to <10 seconds. Developed five specialized agents using Google ADK (routing, FAQ, orders, sentiment, escalation) with A2A communication, long-term memory with semantic search (FAISS), and automated ticketing workflows (LRO).",
+            technologies: ["FastAPI", "Next.js", "Google ADK", "Gemini", "Supabase", "FAISS", "Multi-Agent Systems"],
+            period: "2025",
+            github: "https://github.com/Rayyan-Oumlil/CustoFlow",
+            fullDetails: "Revolutionary customer support automation platform leveraging multi-agent AI architecture. The system uses Google ADK to coordinate five specialized agents that handle different aspects of customer queries: intelligent routing, FAQ responses, order management, sentiment analysis, and escalation handling. Features include agent-to-agent communication, long-term memory with FAISS-based semantic search, and automated ticketing workflows using Long-Running Operations (LRO). Built with FastAPI backend, Next.js frontend, and Supabase for data management. Achieved 80%+ automation rate and reduced response time from hours to seconds."
         },
         {
-            title: "MaVille – Roadwork Management App",
+            title: "MaVille — Roadwork Management Platform",
             description:
-                "Developed a Java CLI application to coordinate roadworks between residents, contractors, and the municipality. Designed with object-oriented principles using UML diagrams and a MySQL database, tested on 50+ simulated reports with 30% faster processing time. Collaborated in a team of 4.",
-            technologies: ["Java", "UML", "MySQL", "CLI", "Object-Oriented Design"],
-            period: "August 2025",
+                "Developed a full-stack municipal infrastructure platform with Spring Boot and Next.js enabling citizens to report roadwork issues, manage projects, and subscribe to updates with real-time WebSocket notifications. Implemented PostgreSQL database, secure authentication, file uploads, comment threads, and admin dashboards.",
+            technologies: ["Spring Boot", "Next.js", "PostgreSQL", "WebSocket", "Full-Stack Development"],
+            period: "2025",
             github: "https://github.com/Rayyan-Oumlil/MaVille-ift2255",
-            fullDetails: "Smart city management system for coordinating roadwork projects. The application handles communication between residents, contractors, and municipal authorities. Features include issue reporting, project tracking, scheduling optimization, and automated notifications. Built using Java with object-oriented design principles, UML modeling for system architecture, and MySQL for data management. Achieved 30% improvement in processing time through optimized algorithms and efficient database queries."
+            fullDetails: "Comprehensive smart city platform for managing municipal infrastructure and roadwork projects. The application enables citizens to report issues, track project progress, and receive real-time updates via WebSocket notifications. Features include secure user authentication, file upload capabilities, interactive comment threads, and comprehensive admin dashboards for project management. Built with Spring Boot for robust backend services, Next.js for modern frontend experience, and PostgreSQL for reliable data persistence. Includes real-time communication features for enhanced user engagement."
         },
         {
-            title: "AI-Powered PDF Q&A Assistant",
+            title: "ReguAI — Regulatory Intelligence Assistant",
             description:
-                "Built a Q&A assistant on PDF documents using Retrieval-Augmented Generation (RAG). Implemented vector search with FAISS and integrated multiple LLMs. Developed an interactive Streamlit interface with multi-document support.",
-            technologies: ["LangChain", "Python", "Streamlit", "FAISS", "LLMs", "RAG"],
-            period: "June 2025",
-            github: "https://github.com/Rayyan-Oumlil/RagPdfAssitant",
-            fullDetails: "Advanced document analysis system using state-of-the-art RAG technology. The application processes PDF documents, creates vector embeddings using FAISS for efficient similarity search, and provides accurate answers using multiple LLM providers. Features include document upload, chunking, embedding generation, semantic search, and interactive chat interface. Supports multiple document formats and provides source citations for transparency."
-        },
-        {
-            title: "Oil Price Forecasting with News Sentiment",
-            description:
-                "Built an end-to-end machine learning pipeline to forecast oil and gas prices using financial news sentiment. Scraped and processed daily financial headlines related to oil and natural gas markets. Applied FinBERT, a financial NLP model, to extract sentiment scores and engineered features with Scikit-learn. Trained an XGBoost model on 23 years of data to capture the relationship between sentiment and price movement.",
-            technologies: ["NLP", "FinBERT", "XGBoost", "Scikit-learn", "Python", "Pandas"],
-            period: "October 2025",
-            github: "https://github.com/Rayyan-Oumlil/News_Based_Oil_Price_Predictor",
-            fullDetails: "Comprehensive financial forecasting system that combines news sentiment analysis with machine learning to predict oil and gas prices. The system scrapes financial news from multiple sources, processes text using FinBERT for sentiment extraction, and engineers features for time series analysis. Uses XGBoost for regression modeling on 23 years of historical data. Achieves high accuracy by incorporating both technical indicators and sentiment factors in the prediction model."
+                "Built a GenAI-powered web application analyzing regulatory impact on S&P 500 portfolios, generating trading recommendations from 500 firms and 7+ global regulations. Developed for PolyFinances Datathon 2025 (Finalist). Implemented a retrieval pipeline with LangChain, document extraction using Bedrock and Textract, and interactive Streamlit dashboard for regulatory analysis.",
+            technologies: ["Python", "Bedrock", "LangChain", "LegalBERT", "Comprehend", "Streamlit", "GenAI"],
+            period: "2025",
+            github: "https://github.com/Rayyan-Oumlil/ReguAI",
+            fullDetails: "Advanced regulatory intelligence platform that analyzes the impact of global regulations on S&P 500 portfolios. The system processes regulatory documents from 7+ jurisdictions and generates actionable trading recommendations for 500+ firms. Built for PolyFinances Datathon 2025 where it reached the finals. Features include sophisticated document extraction using AWS Bedrock and Textract, intelligent retrieval pipeline with LangChain, legal document analysis with LegalBERT, and comprehensive sentiment analysis using AWS Comprehend. Includes an interactive Streamlit dashboard for visualizing regulatory impacts and trading insights."
         },
         {
             title: "Emotion Detection System",
             description:
-                "Developed a real-time facial emotion detection system using Convolutional Neural Networks (CNNs). Implemented image preprocessing, data augmentation, and model training on the FER2013 dataset with 7 emotions. Built a GUI-based live inference application using OpenCV for webcam-based emotion recognition. Achieved robust classification accuracy through optimized CNN architecture and performance visualization metrics.",
-            technologies: ["PyTorch", "OpenCV", "NumPy", "Python", "CNN", "Computer Vision"],
-            period: "October 2025",
+                "Developed a real-time facial emotion detection system using CNNs trained on FER2013 dataset with 7 emotions, and built a GUI application using OpenCV for webcam emotion recognition with optimized CNN architecture.",
+            technologies: ["PyTorch", "OpenCV", "NumPy", "Pandas", "CNN", "Computer Vision"],
+            period: "2025",
             github: "https://github.com/Rayyan-Oumlil/EmotionDetectionSystem",
-            fullDetails: "Real-time emotion recognition system using deep learning and computer vision. The application processes live video streams to detect and classify 7 different emotions (happy, sad, angry, fearful, surprised, disgusted, neutral). Built with PyTorch for model training, OpenCV for video processing, and custom CNN architecture optimized for facial emotion recognition. Features include real-time inference, confidence scoring, and performance visualization with accuracy metrics."
+            fullDetails: "Real-time emotion recognition system using deep learning and computer vision. The application processes live video streams to detect and classify 7 different emotions (happy, sad, angry, fearful, surprised, disgusted, neutral). Built with PyTorch for model training on the FER2013 dataset, OpenCV for video processing, and custom CNN architecture optimized for facial emotion recognition. Features include real-time inference, confidence scoring, and performance visualization with accuracy metrics."
         },
         {
-            title: "Stock Price Predictor",
+            title: "BuyBuddy — AI Shopping Assistant",
             description:
-                "Developed a Streamlit app to visualize and forecast stock prices using real-time data from Yahoo Finance. Implemented Linear Regression and Random Forest models for multi-day prediction and comparison of several stocks. Planned enhancements include LSTM models, backtesting, and portfolio analytics.",
-            technologies: ["Python", "Streamlit", "Scikit-learn", "Plotly", "Pandas", "Yahoo Finance API"],
-            period: "July 2025",
-            github: "https://github.com/Rayyan-Oumlil/StockPricePredictor",
-            fullDetails: "Comprehensive stock analysis and prediction platform with interactive visualizations. The application fetches real-time stock data, performs technical analysis, and provides price forecasts using multiple machine learning models. Features include historical data visualization, trend analysis, model comparison, and interactive charts. Built with Streamlit for the user interface, Scikit-learn for machine learning models, and Plotly for dynamic visualizations."
+                "Built an AI-powered shopping assistant with agents for query understanding, product research, and price comparison, coordinated through a LangGraph workflow with multi-LLM provider support.",
+            technologies: ["FastAPI", "React", "LangGraph", "SerperDev", "Multi-Agent Systems"],
+            period: "2025",
+            github: "https://github.com/Rayyan-Oumlil/BuyBuddy",
+            fullDetails: "Intelligent shopping assistant powered by AI agents that help users find the best products and prices. The system uses LangGraph to coordinate multiple specialized agents: one for understanding user queries, another for product research, and a third for price comparison across different retailers. Features include multi-LLM provider support for flexibility, SerperDev integration for web search capabilities, and a FastAPI backend with React frontend for seamless user experience. The LangGraph workflow ensures efficient agent coordination and task completion."
         },
         {
-            title: "Inventory Management App",
+            title: "AgentCareAI — Multi-Agent Mental Health System",
             description:
-                "Built a desktop application for managing products, customers, suppliers, purchases, and sales. Implemented full CRUD operations, login authentication, and real-time stock updates. GUI designed with Swing and database communication via JDBC.",
-            technologies: ["Java", "MySQL", "Swing", "JDBC", "Authentication", "Desktop App"],
-            period: "December 2024 – March 2025",
-            github: "https://github.com/Rayyan-Oumlil/InventoryManagementApp",
-            fullDetails: "Complete inventory management system for small to medium businesses. The application handles product catalog management, customer and supplier information, purchase orders, sales tracking, and inventory control. Features include user authentication, role-based access, real-time stock updates, automated reorder alerts, and comprehensive reporting. Built with Java Swing for the desktop interface, MySQL for data persistence, and JDBC for database connectivity."
+                "Developed a multi-agent AI system for mental health first-line workers (school nurses, social workers) working with high school students. Built 6 specialized agents (Red Flag, Coaching, Clinical Interview, De-escalation, Stat) using CrewAI framework. Achieved 3rd Place in Hackathon en Santé Numérique 2025.",
+            technologies: ["CrewAI", "Groq API", "Chroma", "React", "Tailwind CSS", "Multi-Agent Systems", "Python"],
+            period: "Nov 2025",
+            github: "https://github.com/Rayyan-Oumlil/AgentCareAI",
+            fullDetails: "Comprehensive multi-agent AI system designed to support mental health first-line workers in early detection, assessment, and referral of students in psychological distress. The system features 6 specialized agents: Red Flag Agent (determines need for higher authority referral), Coaching Agent (provides treatment guidance), Clinical Interview Agent (suggests questions for assessment), De-escalation Agent (manages crises), Stat Agent (provides regional statistics), and Global Impact Agent (tracks interaction patterns for policy insights). Built with CrewAI for agent collaboration, Groq API for fast inference, Chroma for vector storage, and React + Tailwind CSS for the frontend. Won 3rd Place in Hackathon en Santé Numérique 2025, demonstrating real-world impact in healthcare technology."
+        },
+        {
+            title: "FlexiShop — Full-Stack E-Commerce Platform",
+            description:
+                "Built a modern full-stack e-commerce platform with user authentication, product catalog, shopping cart, checkout, and order management. Implemented JWT authentication, PostgreSQL database, and responsive React frontend with ShadCN UI components. Features include product browsing, cart management, order history, and admin capabilities.",
+            technologies: ["FastAPI", "React", "TypeScript", "PostgreSQL", "JWT", "Tailwind CSS", "ShadCN UI"],
+            period: "2025",
+            github: "https://github.com/Rayyan-Oumlil/FlexiShop",
+            fullDetails: "Complete e-commerce solution built with modern technologies and best practices. The platform includes a robust FastAPI backend with SQLAlchemy ORM, JWT-based authentication, and RESTful API design. The frontend is built with React, TypeScript, Vite, Tailwind CSS, and ShadCN UI components for a beautiful, responsive user experience. Features include user registration and login, product catalog with browsing and search, shopping cart with add/remove/clear functionality, secure checkout process, order creation and management, order history tracking, and admin user capabilities. Planned enhancements include Stripe payment integration, product image uploads with MinIO/S3, and comprehensive admin dashboard for inventory and order management."
         },
     ];
 

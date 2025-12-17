@@ -10,16 +10,10 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    // lovable-tagger only in development mode - removed for production compatibility
-  ].filter(Boolean),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-    },
-  },
-  build: {
-    rollupOptions: {
-      external: mode === 'production' ? ['lovable-tagger'] : [],
     },
   },
 }));
