@@ -74,15 +74,6 @@ const Hackathons = () => {
                 className="p-6 card-hover border-border bg-card"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {hackathon.certificate && (
-                  <div className="mb-4">
-                    <img 
-                      src={hackathon.certificate} 
-                      alt={`${hackathon.name} certificate`}
-                      className="w-full h-auto rounded-lg border border-border"
-                    />
-                  </div>
-                )}
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0`}>
                     <hackathon.icon className={`w-6 h-6 ${hackathon.color}`} />
@@ -96,7 +87,16 @@ const Hackathons = () => {
                     <p className="text-lg font-semibold text-primary mb-2">{hackathon.achievement}</p>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed text-left">{hackathon.details}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed text-left mb-4">{hackathon.details}</p>
+                {hackathon.certificate && (
+                  <div className="mt-4">
+                    <img 
+                      src={hackathon.certificate} 
+                      alt={`${hackathon.name} certificate`}
+                      className="w-full h-auto rounded-lg border border-border"
+                    />
+                  </div>
+                )}
               </Card>
             ))}
           </div>

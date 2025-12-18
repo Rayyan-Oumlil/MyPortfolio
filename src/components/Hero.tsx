@@ -79,19 +79,12 @@ const Hero = () => {
             {/* Decorative underline */}
             <div className="h-1 w-32 bg-gradient-to-r from-primary to-accent mx-auto mt-4 rounded-full" />
 
-            {/* Professional Identity */}
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto pt-4">
-              I’m a Computer Science student at the Université de Montréal with a passion for turning ideas into impactful digital solutions.
-            </p>
-
-            {/* About & Values */}
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              From designing clean, intuitive UIs to building scalable backend logic, I love solving real-world problems through code. Whether it's a smart city app or an AI-powered assistant, I care about clarity, performance, and people.
-            </p>
-
-            {/* Personal Statement */}
-            <p className="text-base text-muted-foreground italic max-w-2xl mx-auto">
-              My mission? To craft technology that’s not only functional — but meaningful.
+            {/* About Description */}
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto pt-4">
+              Computer Science student at Université de Montréal focused on software engineering and applied AI. 
+              Experienced in building full-stack applications and agent-based AI systems, with hands-on work across 
+              cloud, backend, and ML tooling. Actively engaged in hackathons and real-world projects, delivering 
+              practical, user-focused solutions.
             </p>
 
 

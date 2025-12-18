@@ -168,10 +168,7 @@ const Projects = () => {
                                         
                                         <div className="space-y-2">
                                             <p className="text-muted-foreground leading-relaxed">
-                                                {expandedProjects[index] 
-                                                    ? projects.description 
-                                                    : projects.description.split(' ').slice(0, 20).join(' ') + '...'
-                                                }
+                                                {projects.description}
                                             </p>
                                             
                                             {!expandedProjects[index] && (
@@ -187,6 +184,11 @@ const Projects = () => {
                                         
                                         {expandedProjects[index] && (
                                             <>
+                                                {projects.fullDetails && (
+                                                    <p className="text-muted-foreground leading-relaxed mt-4">
+                                                        {projects.fullDetails}
+                                                    </p>
+                                                )}
                                                 <div className="flex flex-wrap gap-2 pt-2">
                                                     {projects.technologies.map((tech, i) => (
                                                         <Badge key={i} variant="outline" className="text-xs border-border bg-background/50">
