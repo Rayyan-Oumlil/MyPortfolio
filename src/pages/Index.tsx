@@ -2,13 +2,13 @@ import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Education from "../components/Education";
-import Courses from "../components/Courses";
 import Experience from "../components/Experience";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Certifications from "../components/Certifications";
 import Projects from "../components/Projects";
+import Hackathons from "../components/Hackathons";
 
 
 const Index = () => {
@@ -21,10 +21,10 @@ const Index = () => {
         </section>
         <About />
         <Education />
-        <Courses />
         <Experience />
         <Skills />
         <Projects />
+        <Hackathons />
         <Certifications />
         <Contact />
       </main>

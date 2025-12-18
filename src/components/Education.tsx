@@ -39,11 +39,7 @@ const Education = () => {
       period: "2024 – Present",
       current: true,
       activities: [
-        "UdeM AI — Artificial Intelligence Student Club",
-        "Calculum — Mathematics & Problem-Solving Student Club",
-        "CodeML Hackathon — PolyAI ML & AI Challenge (Oct. 2025)",
-        "Mil'HaQ Hackathon — Quantum AI Hackathon organized by Mila (Nov. 2025, Planned)",
-        "CodeJam Hackathon — 15th Edition | McGill University (Nov. 2025, planned)"
+        "UdeM AI — Artificial Intelligence Student Club, Calculum — Mathematics & Problem-Solving Club"
       ]
     },
     {

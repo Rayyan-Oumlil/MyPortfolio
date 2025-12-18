@@ -42,28 +42,12 @@ const Certifications = () => {
             skills: ["Generative AI", "LLMs", "Machine Learning"]
         },
         {
-            title: "Oracle OCI Architect Associate",
+            title: "Oracle OCI: Architect Associate, Generative AI Professional, AI Foundations Associate",
             provider: "Oracle",
             status: "Completed",
             logo: "/oracle.png",
             url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=348CBC5F3147F8A0DE830CEB2B033A3934E1AA3C2405F280F8F4BE2D28ADDD20",
-            skills: ["Cloud Architecture", "Oracle Cloud Infrastructure"]
-        },
-        {
-            title: "Oracle OCI Generative AI Professional",
-            provider: "Oracle",
-            status: "Completed",
-            logo: "/oracle.png",
-            url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=B058329316CCE62FA1AEFAF0AC0C0581EACF5139534F6DACEF3BFC215C31A02F",
-            skills: ["Generative AI", "Oracle Cloud", "AI/ML"]
-        },
-        {
-            title: "Oracle OCI AI Foundations Associate",
-            provider: "Oracle",
-            status: "Completed",
-            logo: "/oracle.png",
-            url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=7D3A9FA3F593EB684B34D3F81266650608615D359FA12B06DCFC92637C39DD7D",
-            skills: ["AI Foundations", "Machine Learning", "Oracle Cloud"]
+            skills: ["Cloud Architecture", "Generative AI", "AI Foundations", "Oracle Cloud"]
         }
     ];
 

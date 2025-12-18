@@ -38,7 +38,9 @@ const Projects = () => {
             technologies: ["FastAPI", "Next.js", "Google ADK", "Gemini", "Supabase", "FAISS", "Multi-Agent Systems"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/CustoFlow",
-            fullDetails: "Revolutionary customer support automation platform leveraging multi-agent AI architecture. The system uses Google ADK to coordinate five specialized agents that handle different aspects of customer queries: intelligent routing, FAQ responses, order management, sentiment analysis, and escalation handling. Features include agent-to-agent communication, long-term memory with FAISS-based semantic search, and automated ticketing workflows using Long-Running Operations (LRO). Built with FastAPI backend, Next.js frontend, and Supabase for data management. Achieved 80%+ automation rate and reduced response time from hours to seconds."
+            image: "/photos/custoflow/custoflow-logo.png",
+            diagram: "/photos/custoflow/system-overview-diagram.png",
+            fullDetails: "Multi-agent customer support automation platform leveraging Google ADK to coordinate five specialized agents that handle different aspects of customer queries: intelligent routing, FAQ responses, order management, sentiment analysis, and escalation handling. Features include agent-to-agent communication, long-term memory with FAISS-based semantic search, and automated ticketing workflows using Long-Running Operations (LRO). Built with FastAPI backend, Next.js frontend, and Supabase for data management. Achieved 80%+ automation rate and reduced response time from hours to seconds."
         },
         {
             title: "MaVille — Roadwork Management Platform",
@@ -47,7 +49,7 @@ const Projects = () => {
             technologies: ["Spring Boot", "Next.js", "PostgreSQL", "WebSocket", "Full-Stack Development"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/MaVille-ift2255",
-            fullDetails: "Comprehensive smart city platform for managing municipal infrastructure and roadwork projects. The application enables citizens to report issues, track project progress, and receive real-time updates via WebSocket notifications. Features include secure user authentication, file upload capabilities, interactive comment threads, and comprehensive admin dashboards for project management. Built with Spring Boot for robust backend services, Next.js for modern frontend experience, and PostgreSQL for reliable data persistence. Includes real-time communication features for enhanced user engagement."
+            fullDetails: "Comprehensive smart city platform for managing municipal infrastructure and roadwork projects. The application enables citizens to report issues, track project progress, and receive real-time updates via WebSocket notifications. Features include secure user authentication, file upload capabilities, interactive comment threads, and comprehensive admin dashboards for project management. Built with Spring Boot for robust backend services, Next.js for modern frontend experience, and PostgreSQL for reliable data persistence."
         },
         {
             title: "ReguAI — Regulatory Intelligence Assistant",
@@ -56,6 +58,7 @@ const Projects = () => {
             technologies: ["Python", "Bedrock", "LangChain", "LegalBERT", "Comprehend", "Streamlit", "GenAI"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/ReguAI",
+            image: "/photos/reguai/Logo.png",
             fullDetails: "Advanced regulatory intelligence platform that analyzes the impact of global regulations on S&P 500 portfolios. The system processes regulatory documents from 7+ jurisdictions and generates actionable trading recommendations for 500+ firms. Built for PolyFinances Datathon 2025 where it reached the finals. Features include sophisticated document extraction using AWS Bedrock and Textract, intelligent retrieval pipeline with LangChain, legal document analysis with LegalBERT, and comprehensive sentiment analysis using AWS Comprehend. Includes an interactive Streamlit dashboard for visualizing regulatory impacts and trading insights."
         },
         {
@@ -65,7 +68,7 @@ const Projects = () => {
             technologies: ["PyTorch", "OpenCV", "NumPy", "Pandas", "CNN", "Computer Vision"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/EmotionDetectionSystem",
-            fullDetails: "Real-time emotion recognition system using deep learning and computer vision. The application processes live video streams to detect and classify 7 different emotions (happy, sad, angry, fearful, surprised, disgusted, neutral). Built with PyTorch for model training on the FER2013 dataset, OpenCV for video processing, and custom CNN architecture optimized for facial emotion recognition. Features include real-time inference, confidence scoring, and performance visualization with accuracy metrics."
+            fullDetails: "Real-time emotion recognition system using deep learning and computer vision. The application processes live video streams to detect and classify 7 different emotions (happy, sad, angry, fearful, surprised, disgusted, neutral). Built with PyTorch for model training on the FER2013 dataset, OpenCV for video processing, and custom CNN architecture optimized for facial emotion recognition."
         },
         {
             title: "BuyBuddy — AI Shopping Assistant",
@@ -74,6 +77,7 @@ const Projects = () => {
             technologies: ["FastAPI", "React", "LangGraph", "SerperDev", "Multi-Agent Systems"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/BuyBuddy",
+            image: "/photos/buybuddy/logo5.png",
             fullDetails: "Intelligent shopping assistant powered by AI agents that help users find the best products and prices. The system uses LangGraph to coordinate multiple specialized agents: one for understanding user queries, another for product research, and a third for price comparison across different retailers. Features include multi-LLM provider support for flexibility, SerperDev integration for web search capabilities, and a FastAPI backend with React frontend for seamless user experience. The LangGraph workflow ensures efficient agent coordination and task completion."
         },
         {
@@ -88,11 +92,11 @@ const Projects = () => {
         {
             title: "FlexiShop — Full-Stack E-Commerce Platform",
             description:
-                "Built a modern full-stack e-commerce platform with user authentication, product catalog, shopping cart, checkout, and order management. Implemented JWT authentication, PostgreSQL database, and responsive React frontend with ShadCN UI components. Features include product browsing, cart management, order history, and admin capabilities.",
+                "Built a modern full-stack e-commerce platform with user authentication, product catalog, shopping cart, checkout, and order management. Implemented JWT authentication, PostgreSQL database, and responsive React frontend with ShadCN UI components.",
             technologies: ["FastAPI", "React", "TypeScript", "PostgreSQL", "JWT", "Tailwind CSS", "ShadCN UI"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/FlexiShop",
-            fullDetails: "Complete e-commerce solution built with modern technologies and best practices. The platform includes a robust FastAPI backend with SQLAlchemy ORM, JWT-based authentication, and RESTful API design. The frontend is built with React, TypeScript, Vite, Tailwind CSS, and ShadCN UI components for a beautiful, responsive user experience. Features include user registration and login, product catalog with browsing and search, shopping cart with add/remove/clear functionality, secure checkout process, order creation and management, order history tracking, and admin user capabilities. Planned enhancements include Stripe payment integration, product image uploads with MinIO/S3, and comprehensive admin dashboard for inventory and order management."
+            fullDetails: "Complete e-commerce solution built with modern technologies and best practices. The platform includes a robust FastAPI backend with SQLAlchemy ORM, JWT-based authentication, and RESTful API design. The frontend is built with React, TypeScript, Vite, Tailwind CSS, and ShadCN UI components for a beautiful, responsive user experience. Features include user registration and login, product catalog with browsing and search, shopping cart with add/remove/clear functionality, secure checkout process, order creation and management, order history tracking, and admin user capabilities."
         },
     ];
 
@@ -125,6 +129,17 @@ const Projects = () => {
                             <div key={index} className="flex justify-center">
                                 <Card className="w-full max-w-3xl p-4 md:p-8 bg-card/50 backdrop-blur-sm border border-border shadow-md transition hover:shadow-lg">
                                     <div className="space-y-4">
+                                        {/* Project Image */}
+                                        {projects.image && (
+                                            <div className="flex justify-center mb-4">
+                                                <img 
+                                                    src={projects.image} 
+                                                    alt={projects.title}
+                                                    className="max-w-full h-auto max-h-32 object-contain rounded-lg"
+                                                />
+                                            </div>
+                                        )}
+                                        
                                         <div className="flex items-center justify-between">
                                             <h3 className="text-xl md:text-2xl font-bold gradient-accent-text text-center flex-1">{projects.title}</h3>
                                             {projects.github && (
@@ -140,6 +155,17 @@ const Projects = () => {
                                             )}
                                         </div>
                                         <p className="text-sm text-muted-foreground italic">{projects.period}</p>
+                                        
+                                        {/* System Diagram for CustoFlow */}
+                                        {projects.diagram && expandedProjects[index] && (
+                                            <div className="my-4">
+                                                <img 
+                                                    src={projects.diagram} 
+                                                    alt={`${projects.title} system diagram`}
+                                                    className="w-full h-auto rounded-lg border border-border"
+                                                />
+                                            </div>
+                                        )}
                                         
                                         <div className="space-y-2">
                                             <p className="text-muted-foreground leading-relaxed">

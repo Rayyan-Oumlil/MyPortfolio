@@ -65,10 +65,10 @@ const Navigation = () => {
     { label: 'Home', href: 'hero' },
     { label: 'About', href: 'about' },
     { label: 'Education', href: 'education' },
-    { label: 'Courses', href: 'courses' },
     { label: 'Experience', href: 'experience' },
     { label: 'Skills', href: 'skills' },
     { label: "Projects", href: "projects" },
+    { label: 'Hackathons', href: 'hackathons' },
     { label: 'Certifications', href: 'certifications' },
     { label: 'Contact', href: 'contact' },
   ];

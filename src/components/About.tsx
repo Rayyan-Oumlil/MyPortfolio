@@ -41,62 +41,12 @@ const About = () => {
           {/* Main Content */}
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold text-foreground mb-6">
-                Computer Science Student & Full-Stack Developer
-              </h3>
-              
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                Currently pursuing a B.Sc. in Computer Science at Université de Montréal, 
-                I'm passionate about AI/ML, mobile development, and creating meaningful 
-                technology solutions. My multicultural background spans Qatar, Morocco, 
-                and Canada, giving me a unique global perspective.
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                Computer Science student at Université de Montréal focused on software engineering and applied AI. 
+                Experienced in building full-stack applications and agent-based AI systems, with hands-on work across 
+                cloud, backend, and ML tooling. Actively engaged in hackathons and real-world projects, delivering 
+                practical, user-focused solutions.
               </p>
-            </div>
-
-
-            {/* Languages & Activities */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Languages */}
-              <Card className="p-5 border-border bg-card">
-                <h4 className="text-xl font-semibold mb-4 text-foreground text-center">Languages</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">English</span>
-                    <span className="text-foreground font-medium">Advanced (IELTS Band 7)</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">French</span>
-                    <span className="text-foreground font-medium">Proficient (C2)</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Spanish</span>
-                    <span className="text-foreground font-medium">Upper Intermediate (SIELE B2)</span>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Interests & Activities */}
-              <Card className="p-6 border-border bg-card md:col-span-2">
-                <h4 className="text-xl font-semibold mb-4 text-foreground text-center">Interests & Activities</h4>
-                <div className="space-y-3 text-left">
-                  <div className="flex items-start gap-3 text-left">
-                    <span className="text-primary mt-1 flex-shrink-0">•</span>
-                    <span className="text-foreground text-left">Football - World Schools Football Cup (Barcelona, 2023)</span>
-                  </div>
-                  <div className="flex items-start gap-3 text-left">
-                    <span className="text-primary mt-1 flex-shrink-0">•</span>
-                    <span className="text-foreground text-left">Chess - National Tournament Competitor</span>
-                  </div>
-                  <div className="flex items-start gap-3 text-left">
-                    <span className="text-primary mt-1 flex-shrink-0">•</span>
-                    <span className="text-foreground text-left">Community Service - Breast Cancer Awareness</span>
-                  </div>
-                  <div className="flex items-start gap-3 text-left">
-                    <span className="text-primary mt-1 flex-shrink-0">•</span>
-                    <span className="text-foreground text-left">Generation Amazing Tournament (Qatar Foundation)</span>
-                  </div>
-                </div>
-              </Card>
             </div>
           </div>
         </div>

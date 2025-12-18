@@ -257,7 +257,7 @@ const Contact = () => {
                   <span className="font-semibold text-foreground">Available for internship</span>
                 </div>
                 <p className="text-sm text-muted-foreground text-left">
-                  I'm currently seeking internship or summer opportunities for Fall 2025. 
+                  I'm currently seeking summer internship opportunities for 2026. 
                   Let's discuss how I can contribute to your team!
                 </p>
               </Card>
