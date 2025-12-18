@@ -124,10 +124,9 @@ const Projects = () => {
                     </div>
 
                     {/* Project Cards */}
-                    <div className="space-y-8 md:space-y-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                         {projects.map((projects, index) => (
-                            <div key={index} className="flex justify-center">
-                                <Card className="w-full max-w-3xl p-4 md:p-8 bg-card/50 backdrop-blur-sm border border-border shadow-md transition hover:shadow-lg">
+                            <Card key={index} className="p-4 md:p-8 bg-card/50 backdrop-blur-sm border border-border shadow-md transition hover:shadow-lg">
                                     <div className="space-y-4">
                                         {/* Project Image */}
                                         {projects.image && (
@@ -207,7 +206,6 @@ const Projects = () => {
                                         )}
                                     </div>
                                 </Card>
-                            </div>
                         ))}
                     </div>
 

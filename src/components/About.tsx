@@ -40,7 +40,7 @@ const About = () => {
 
           {/* Main Content */}
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center">
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                 Computer Science student at Université de Montréal focused on software engineering and applied AI. 
                 Experienced in building full-stack applications and agent-based AI systems, with hands-on work across 

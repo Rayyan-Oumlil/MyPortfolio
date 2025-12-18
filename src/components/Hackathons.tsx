@@ -65,9 +65,6 @@ const Hackathons = () => {
           <div className="text-center mb-8">
             <h2 className="text-5xl font-bold mb-6 gradient-text">Hackathons & Competitions</h2>
             <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Competitive programming and hackathon achievements
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -97,7 +94,6 @@ const Hackathons = () => {
                       <span>{hackathon.period}</span>
                     </div>
                     <p className="text-lg font-semibold text-primary mb-2">{hackathon.achievement}</p>
-                    <p className="text-sm font-medium text-muted-foreground mb-3">{hackathon.description}</p>
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed text-left">{hackathon.details}</p>
