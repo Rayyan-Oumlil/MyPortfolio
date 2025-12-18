@@ -2,11 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const Projects = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const [expandedProjects, setExpandedProjects] = useState<{ [key: number]: boolean }>({});
     const sectionRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
@@ -23,80 +22,66 @@ const Projects = () => {
         return () => observer.disconnect();
     }, []);
 
-    const toggleExpanded = (index: number) => {
-        setExpandedProjects(prev => ({
-            ...prev,
-            [index]: !prev[index]
-        }));
-    };
-
     const projects = [
         {
             title: "CustoFlow — Multi-Agent Customer Support System",
             description:
-                "Built a multi-agent system automating 80%+ of queries, reducing response time from 2-4 hours to <10 seconds. Developed five specialized agents using Google ADK (routing, FAQ, orders, sentiment, escalation) with A2A communication, long-term memory with semantic search (FAISS), and automated ticketing workflows (LRO).",
+                "Multi-agent customer support automation platform leveraging Google ADK to coordinate five specialized agents that handle different aspects of customer queries: intelligent routing, FAQ responses, order management, sentiment analysis, and escalation handling. Features include agent-to-agent communication, long-term memory with FAISS-based semantic search, and automated ticketing workflows using Long-Running Operations (LRO). Built with FastAPI backend, Next.js frontend, and Supabase for data management. Achieved 80%+ automation rate and reduced response time from hours to seconds.",
             technologies: ["FastAPI", "Next.js", "Google ADK", "Gemini", "Supabase", "FAISS", "Multi-Agent Systems"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/CustoFlow",
             image: "/photos/custoflow/custoflow-logo.png",
-            diagram: "/photos/custoflow/system-overview-diagram.png",
-            fullDetails: "Multi-agent customer support automation platform leveraging Google ADK to coordinate five specialized agents that handle different aspects of customer queries: intelligent routing, FAQ responses, order management, sentiment analysis, and escalation handling. Features include agent-to-agent communication, long-term memory with FAISS-based semantic search, and automated ticketing workflows using Long-Running Operations (LRO). Built with FastAPI backend, Next.js frontend, and Supabase for data management. Achieved 80%+ automation rate and reduced response time from hours to seconds."
+            diagram: "/photos/custoflow/system-overview-diagram.png"
         },
         {
             title: "MaVille — Roadwork Management Platform",
             description:
-                "Developed a full-stack municipal infrastructure platform with Spring Boot and Next.js enabling citizens to report roadwork issues, manage projects, and subscribe to updates with real-time WebSocket notifications. Implemented PostgreSQL database, secure authentication, file uploads, comment threads, and admin dashboards.",
+                "Comprehensive smart city platform for managing municipal infrastructure and roadwork projects. The application enables citizens to report issues, track project progress, and receive real-time updates via WebSocket notifications. Features include secure user authentication, file upload capabilities, interactive comment threads, and comprehensive admin dashboards for project management. Built with Spring Boot for robust backend services, Next.js for modern frontend experience, and PostgreSQL for reliable data persistence.",
             technologies: ["Spring Boot", "Next.js", "PostgreSQL", "WebSocket", "Full-Stack Development"],
             period: "2025",
-            github: "https://github.com/Rayyan-Oumlil/MaVille-ift2255",
-            fullDetails: "Comprehensive smart city platform for managing municipal infrastructure and roadwork projects. The application enables citizens to report issues, track project progress, and receive real-time updates via WebSocket notifications. Features include secure user authentication, file upload capabilities, interactive comment threads, and comprehensive admin dashboards for project management. Built with Spring Boot for robust backend services, Next.js for modern frontend experience, and PostgreSQL for reliable data persistence."
+            github: "https://github.com/Rayyan-Oumlil/MaVille-ift2255"
         },
         {
             title: "ReguAI — Regulatory Intelligence Assistant",
             description:
-                "Built a GenAI-powered web application analyzing regulatory impact on S&P 500 portfolios, generating trading recommendations from 500 firms and 7+ global regulations. Developed for PolyFinances Datathon 2025 (Finalist). Implemented a retrieval pipeline with LangChain, document extraction using Bedrock and Textract, and interactive Streamlit dashboard for regulatory analysis.",
+                "Advanced regulatory intelligence platform that analyzes the impact of global regulations on S&P 500 portfolios. The system processes regulatory documents from 7+ jurisdictions and generates actionable trading recommendations for 500+ firms. Built for PolyFinances Datathon 2025 where it reached the finals. Features include sophisticated document extraction using AWS Bedrock and Textract, intelligent retrieval pipeline with LangChain, legal document analysis with LegalBERT, and comprehensive sentiment analysis using AWS Comprehend. Includes an interactive Streamlit dashboard for visualizing regulatory impacts and trading insights.",
             technologies: ["Python", "Bedrock", "LangChain", "LegalBERT", "Comprehend", "Streamlit", "GenAI"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/ReguAI",
-            image: "/photos/reguai/Logo.png",
-            fullDetails: "Advanced regulatory intelligence platform that analyzes the impact of global regulations on S&P 500 portfolios. The system processes regulatory documents from 7+ jurisdictions and generates actionable trading recommendations for 500+ firms. Built for PolyFinances Datathon 2025 where it reached the finals. Features include sophisticated document extraction using AWS Bedrock and Textract, intelligent retrieval pipeline with LangChain, legal document analysis with LegalBERT, and comprehensive sentiment analysis using AWS Comprehend. Includes an interactive Streamlit dashboard for visualizing regulatory impacts and trading insights."
+            image: "/photos/reguai/Logo.png"
         },
         {
             title: "Emotion Detection System",
             description:
-                "Developed a real-time facial emotion detection system using CNNs trained on FER2013 dataset with 7 emotions, and built a GUI application using OpenCV for webcam emotion recognition with optimized CNN architecture.",
+                "Real-time emotion recognition system using deep learning and computer vision. The application processes live video streams to detect and classify 7 different emotions (happy, sad, angry, fearful, surprised, disgusted, neutral). Built with PyTorch for model training on the FER2013 dataset, OpenCV for video processing, and custom CNN architecture optimized for facial emotion recognition.",
             technologies: ["PyTorch", "OpenCV", "NumPy", "Pandas", "CNN", "Computer Vision"],
             period: "2025",
-            github: "https://github.com/Rayyan-Oumlil/EmotionDetectionSystem",
-            fullDetails: "Real-time emotion recognition system using deep learning and computer vision. The application processes live video streams to detect and classify 7 different emotions (happy, sad, angry, fearful, surprised, disgusted, neutral). Built with PyTorch for model training on the FER2013 dataset, OpenCV for video processing, and custom CNN architecture optimized for facial emotion recognition."
+            github: "https://github.com/Rayyan-Oumlil/EmotionDetectionSystem"
         },
         {
             title: "BuyBuddy — AI Shopping Assistant",
             description:
-                "Built an AI-powered shopping assistant with agents for query understanding, product research, and price comparison, coordinated through a LangGraph workflow with multi-LLM provider support.",
+                "Intelligent shopping assistant powered by AI agents that help users find the best products and prices. The system uses LangGraph to coordinate multiple specialized agents: one for understanding user queries, another for product research, and a third for price comparison across different retailers. Features include multi-LLM provider support for flexibility, SerperDev integration for web search capabilities, and a FastAPI backend with React frontend for seamless user experience. The LangGraph workflow ensures efficient agent coordination and task completion.",
             technologies: ["FastAPI", "React", "LangGraph", "SerperDev", "Multi-Agent Systems"],
             period: "2025",
             github: "https://github.com/Rayyan-Oumlil/BuyBuddy",
-            image: "/photos/buybuddy/logo5.png",
-            fullDetails: "Intelligent shopping assistant powered by AI agents that help users find the best products and prices. The system uses LangGraph to coordinate multiple specialized agents: one for understanding user queries, another for product research, and a third for price comparison across different retailers. Features include multi-LLM provider support for flexibility, SerperDev integration for web search capabilities, and a FastAPI backend with React frontend for seamless user experience. The LangGraph workflow ensures efficient agent coordination and task completion."
+            image: "/photos/buybuddy/logo5.png"
         },
         {
             title: "AgentCareAI — Multi-Agent Mental Health System",
             description:
-                "Developed a multi-agent AI system for mental health first-line workers (school nurses, social workers) working with high school students. Built 6 specialized agents (Red Flag, Coaching, Clinical Interview, De-escalation, Stat) using CrewAI framework. Achieved 3rd Place in Hackathon en Santé Numérique 2025.",
+                "Comprehensive multi-agent AI system designed to support mental health first-line workers in early detection, assessment, and referral of students in psychological distress. The system features 6 specialized agents: Red Flag Agent (determines need for higher authority referral), Coaching Agent (provides treatment guidance), Clinical Interview Agent (suggests questions for assessment), De-escalation Agent (manages crises), Stat Agent (provides regional statistics), and Global Impact Agent (tracks interaction patterns for policy insights). Built with CrewAI for agent collaboration, Groq API for fast inference, Chroma for vector storage, and React + Tailwind CSS for the frontend. Won 3rd Place in Hackathon en Santé Numérique 2025, demonstrating real-world impact in healthcare technology.",
             technologies: ["CrewAI", "Groq API", "Chroma", "React", "Tailwind CSS", "Multi-Agent Systems", "Python"],
             period: "Nov 2025",
-            github: "https://github.com/Rayyan-Oumlil/AgentCareAI",
-            fullDetails: "Comprehensive multi-agent AI system designed to support mental health first-line workers in early detection, assessment, and referral of students in psychological distress. The system features 6 specialized agents: Red Flag Agent (determines need for higher authority referral), Coaching Agent (provides treatment guidance), Clinical Interview Agent (suggests questions for assessment), De-escalation Agent (manages crises), Stat Agent (provides regional statistics), and Global Impact Agent (tracks interaction patterns for policy insights). Built with CrewAI for agent collaboration, Groq API for fast inference, Chroma for vector storage, and React + Tailwind CSS for the frontend. Won 3rd Place in Hackathon en Santé Numérique 2025, demonstrating real-world impact in healthcare technology."
+            github: "https://github.com/Rayyan-Oumlil/AgentCareAI"
         },
         {
             title: "FlexiShop — Full-Stack E-Commerce Platform",
             description:
-                "Built a modern full-stack e-commerce platform with user authentication, product catalog, shopping cart, checkout, and order management. Implemented JWT authentication, PostgreSQL database, and responsive React frontend with ShadCN UI components.",
+                "Complete e-commerce solution built with modern technologies and best practices. The platform includes a robust FastAPI backend with SQLAlchemy ORM, JWT-based authentication, and RESTful API design. The frontend is built with React, TypeScript, Vite, Tailwind CSS, and ShadCN UI components for a beautiful, responsive user experience. Features include user registration and login, product catalog with browsing and search, shopping cart with add/remove/clear functionality, secure checkout process, order creation and management, order history tracking, and admin user capabilities.",
             technologies: ["FastAPI", "React", "TypeScript", "PostgreSQL", "JWT", "Tailwind CSS", "ShadCN UI"],
             period: "2025",
-            github: "https://github.com/Rayyan-Oumlil/FlexiShop",
-            fullDetails: "Complete e-commerce solution built with modern technologies and best practices. The platform includes a robust FastAPI backend with SQLAlchemy ORM, JWT-based authentication, and RESTful API design. The frontend is built with React, TypeScript, Vite, Tailwind CSS, and ShadCN UI components for a beautiful, responsive user experience. Features include user registration and login, product catalog with browsing and search, shopping cart with add/remove/clear functionality, secure checkout process, order creation and management, order history tracking, and admin user capabilities."
+            github: "https://github.com/Rayyan-Oumlil/FlexiShop"
         },
     ];
 
@@ -156,7 +141,7 @@ const Projects = () => {
                                         <p className="text-sm text-muted-foreground italic">{projects.period}</p>
                                         
                                         {/* System Diagram for CustoFlow */}
-                                        {projects.diagram && expandedProjects[index] && (
+                                        {projects.diagram && (
                                             <div className="my-4">
                                                 <img 
                                                     src={projects.diagram} 
@@ -166,46 +151,17 @@ const Projects = () => {
                                             </div>
                                         )}
                                         
-                                        <div className="space-y-2">
-                                            <p className="text-muted-foreground leading-relaxed">
-                                                {projects.description}
-                                            </p>
-                                            
-                                            {!expandedProjects[index] && (
-                                                <button
-                                                    onClick={() => toggleExpanded(index)}
-                                                    className="flex items-center gap-1 text-sm text-black dark:text-white hover:text-black/80 dark:hover:text-white/80 transition-colors"
-                                                >
-                                                    <ChevronDown className="w-4 h-4" />
-                                                    Show More
-                                                </button>
-                                            )}
-                                        </div>
+                                        <p className="text-muted-foreground leading-relaxed">
+                                            {projects.description}
+                                        </p>
                                         
-                                        {expandedProjects[index] && (
-                                            <>
-                                                {projects.fullDetails && (
-                                                    <p className="text-muted-foreground leading-relaxed mt-4">
-                                                        {projects.fullDetails}
-                                                    </p>
-                                                )}
-                                                <div className="flex flex-wrap gap-2 pt-2">
-                                                    {projects.technologies.map((tech, i) => (
-                                                        <Badge key={i} variant="outline" className="text-xs border-border bg-background/50">
-                                                            {tech}
-                                                        </Badge>
-                                                    ))}
-                                                </div>
-                                                
-                                                <button
-                                                    onClick={() => toggleExpanded(index)}
-                                                    className="flex items-center gap-1 text-sm text-black dark:text-white hover:text-black/80 dark:hover:text-white/80 transition-colors mt-2"
-                                                >
-                                                    <ChevronUp className="w-4 h-4" />
-                                                    Show Less
-                                                </button>
-                                            </>
-                                        )}
+                                        <div className="flex flex-wrap gap-2 pt-4">
+                                            {projects.technologies.map((tech, i) => (
+                                                <Badge key={i} variant="outline" className="text-xs border-border bg-background/50">
+                                                    {tech}
+                                                </Badge>
+                                            ))}
+                                        </div>
                                     </div>
                                 </Card>
                         ))}
