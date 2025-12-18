@@ -70,85 +70,24 @@ const Skills = () => {
             </p>
           </div>
 
-          {/* Skills Grid - Custom Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {/* Row 1: Languages and Web & Full-Stack */}
-            <Card className="p-4 md:p-6 card-hover border-border bg-card" style={{ animationDelay: '0s' }}>
-              <h3 className="text-xl font-bold mb-4 gradient-accent-text">Languages</h3>
-              <div className="flex gap-2 justify-start overflow-x-auto">
-                {technicalSkills[0].items.map((skill, skillIndex) => (
-                  <Badge 
-                    key={skillIndex}
-                    variant="secondary"
-                    className="text-xs bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors whitespace-nowrap min-w-[80px] text-center"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-
-            <Card className="p-4 md:p-6 card-hover border-border bg-card" style={{ animationDelay: '0.1s' }}>
-              <h3 className="text-xl font-bold mb-4 gradient-accent-text">Web & Full-Stack Development</h3>
-              <div className="flex gap-2 justify-start overflow-x-auto">
-                {technicalSkills[1].items.map((skill, skillIndex) => (
-                  <Badge 
-                    key={skillIndex}
-                    variant="secondary"
-                    className="text-xs bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors whitespace-nowrap min-w-[80px] text-center"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-
-            {/* Row 2: AI & ML - Full Width */}
-            <Card className="p-4 md:p-6 card-hover border-border bg-card md:col-span-2 lg:col-span-4" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-xl font-bold mb-4 gradient-accent-text">AI & Machine Learning</h3>
-              <div className="flex gap-2 justify-start overflow-x-auto">
-                {technicalSkills[2].items.map((skill, skillIndex) => (
-                  <Badge 
-                    key={skillIndex}
-                    variant="secondary"
-                    className="text-xs bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors whitespace-nowrap min-w-[80px] text-center"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-
-            {/* Row 3: Databases and DevOps */}
-            <Card className="p-4 md:p-6 card-hover border-border bg-card" style={{ animationDelay: '0.3s' }}>
-              <h3 className="text-xl font-bold mb-4 gradient-accent-text">Databases</h3>
-              <div className="flex gap-2 justify-start overflow-x-auto">
-                {technicalSkills[3].items.map((skill, skillIndex) => (
-                  <Badge 
-                    key={skillIndex}
-                    variant="secondary"
-                    className="text-xs bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors whitespace-nowrap min-w-[80px] text-center"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-
-            <Card className="p-4 md:p-6 card-hover border-border bg-card" style={{ animationDelay: '0.4s' }}>
-              <h3 className="text-xl font-bold mb-4 gradient-accent-text">DevOps & Cloud Systems</h3>
-              <div className="flex gap-2 justify-start overflow-x-auto">
-                {technicalSkills[4].items.map((skill, skillIndex) => (
-                  <Badge 
-                    key={skillIndex}
-                    variant="secondary"
-                    className="text-xs bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors whitespace-nowrap min-w-[80px] text-center"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
+          {/* Skills Grid - All 5 categories on one line */}
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 overflow-x-auto">
+            {technicalSkills.map((skillCategory, index) => (
+              <Card key={index} className="p-4 md:p-6 card-hover border-border bg-card flex-shrink-0 md:flex-1" style={{ animationDelay: `${index * 0.1}s` }}>
+                <h3 className="text-xl font-bold mb-4 gradient-accent-text">{skillCategory.category}</h3>
+                <div className="flex gap-2 justify-start overflow-x-auto">
+                  {skillCategory.items.map((skill, skillIndex) => (
+                    <Badge 
+                      key={skillIndex}
+                      variant="secondary"
+                      className="text-xs bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors whitespace-nowrap min-w-[80px] text-center"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
