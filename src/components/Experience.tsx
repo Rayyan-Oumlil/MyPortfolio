@@ -25,13 +25,13 @@ const Experience = () => {
 
   const experience = [
     {
-      title: "Full-Stack Mobile Developer Intern",
+      title: "Software Engineer Intern",
       company: "Adven Consulting",
       location: "Sherbrooke, QC, Canada",
-      period: "Sep 2025 – Present",
+      period: "Sep 2025 – Dec 2025",
       achievements: [
-        "Contributed to RoutIA, a Flutter platform for agricultural transport, building 6+ core features including authentication, workflows, real-time chat, GPS routing, and push notifications.",
-        "Collaborated with a team of four interns using GitHub Projects and Agile/Scrum practices, participating in debugging and automated testing covering 80%+ of critical workflows.",
+        "Developed backend services and RESTful APIs for RoutIA Flutter platform, implementing role-based authentication, workflow management systems, real-time chat services with WebSocket connections, and geolocation/routing services with Google Maps API using a Supabase backend.",
+        "Implemented comprehensive testing achieving 80%+ coverage and automated CI/CD pipelines with Github Actions ensuring code quality and reliability throughout the SDLC; Collaborated with cross-functional development teams on code reviews, technical documentation, and debugging in an Agile/Scrum environment.",
       ]
     },
     {

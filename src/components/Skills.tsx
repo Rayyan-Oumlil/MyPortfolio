@@ -26,23 +26,31 @@ const Skills = () => {
   const technicalSkills = [
     {
       category: "Languages",
-      items: ["Java", "Python", "C++", "JavaScript", "TypeScript", "SQL"]
+      items: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "Go"]
     },
     {
-      category: "Web & Full-Stack Development",
-      items: ["React", "Next.js", "Flutter", "Node.js", "FastAPI", "Spring Boot"]
+      category: "Backend & API Development",
+      items: ["Spring Boot", "FastAPI", "Node.js", "RESTful APIs", "Microservices", "WebSocket"]
     },
     {
-      category: "AI & Machine Learning",
-      items: ["LLMs", "RAG pipelines", "LangChain", "LangGraph", "CrewAI", "Google ADK", "HuggingFace", "NLP", "Scikit-learn", "PyTorch", "TensorFlow", "Pandas", "NumPy", "Matplotlib", "OpenCV"]
+      category: "Frontend",
+      items: ["React", "Next.js", "Angular", "Flutter", "TypeScript", "JavaScript", "HTML/CSS"]
     },
     {
       category: "Databases",
-      items: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Firebase", "Supabase", "FAISS"]
+      items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "FAISS", "Supabase"]
     },
     {
-      category: "DevOps & Cloud Systems",
-      items: ["Docker", "Git", "GitHub Actions", "Azure", "Google Cloud", "AWS", "CI/CD pipelines"]
+      category: "AI/ML",
+      items: ["PyTorch", "TensorFlow", "LangChain", "LangGraph", "Scikit-learn", "NLP", "Jupyter", "Matplotlib"]
+    },
+    {
+      category: "DevOps & Cloud",
+      items: ["Docker", "Git", "GitHub Actions", "CI/CD pipelines", "AWS", "Azure", "GitHub Projects"]
+    },
+    {
+      category: "Development Practices",
+      items: ["SDLC", "Microservices Architecture", "OOP", "Design Patterns", "Agile/Scrum", "TDD", "Unit Testing"]
     }
   ];
 

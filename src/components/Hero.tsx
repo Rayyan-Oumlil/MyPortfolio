@@ -76,6 +76,14 @@ const Hero = () => {
               Rayyan Oumlil
             </h1>
 
+            {/* Contact Information */}
+            <p className="text-lg text-muted-foreground mt-2">
+              rayyanoumlil@gmail.com $|$ +1-438-493-0288 $|$ Montreal, Canada $|$
+              <a href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a> $|$
+              <a href="https://www.rayyan-oumlil.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Website</a> $|$
+              <a href="https://github.com/Rayyan-Oumlil" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
+            </p>
+
             {/* Decorative underline */}
             <div className="h-1 w-32 bg-gradient-to-r from-primary to-accent mx-auto mt-4 rounded-full" />
 

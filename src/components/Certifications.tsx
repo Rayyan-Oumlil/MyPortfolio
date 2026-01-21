@@ -26,6 +26,14 @@ const Certifications = () => {
 
     const certifications = [
         {
+            title: "AWS Certified Cloud Practitioner",
+            provider: "Amazon Web Services",
+            status: "Completed",
+            logo: "/aws.png",
+            url: "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+            skills: ["Cloud Computing", "AWS", "Cloud Architecture"]
+        },
+        {
             title: "IBM Full Stack Software Developer Professional Certificate",
             provider: "IBM",
             status: "Completed",

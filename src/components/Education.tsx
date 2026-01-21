@@ -39,7 +39,8 @@ const Education = () => {
       period: "2024 – Present",
       current: true,
       activities: [
-        "UdeM AI — Artificial Intelligence Student Club, Calculum — Mathematics & Problem-Solving Club"
+        "UdeM AI — Artificial Intelligence Student Club, Calculum — Mathematics & Problem-Solving Club",
+        "Relevant Courses: Software Engineering, Web Design & Development, Data Structures and Algorithms, Databases, Programming, Operating Systems, Computer Architecture"
       ]
     },
     {
