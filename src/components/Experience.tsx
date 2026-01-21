@@ -33,16 +33,6 @@ const Experience = () => {
         "Developed backend services and RESTful APIs for RoutIA Flutter platform, implementing role-based authentication, workflow management systems, real-time chat services with WebSocket connections, and geolocation/routing services with Google Maps API using a Supabase backend.",
         "Implemented comprehensive testing achieving 80%+ coverage and automated CI/CD pipelines with Github Actions ensuring code quality and reliability throughout the SDLC; Collaborated with cross-functional development teams on code reviews, technical documentation, and debugging in an Agile/Scrum environment.",
       ]
-    },
-    {
-      title: "AI Automation Extern",
-      company: "Wayfair",
-      location: "Remote",
-      period: "Oct 2025 – Dec 2025",
-      achievements: [
-        "Built 3+ multi-agent AI automation workflows using n8n, Gemini, and JavaScript, integrated into a Supabase Market Intelligence Dashboard for centralized monitoring.",
-        "Developed Trend and Competitor agents aggregating 50+ RSS feeds, Google Search, and Amazon data to surface market signals and competitive insights, reducing research time by 60%.",
-      ]
     }
   ];
 
