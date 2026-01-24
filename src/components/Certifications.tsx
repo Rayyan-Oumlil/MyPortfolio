@@ -34,14 +34,6 @@ const Certifications = () => {
             skills: ["Cloud Computing", "AWS", "Cloud Architecture"]
         },
         {
-            title: "IBM Full Stack Software Developer Professional Certificate",
-            provider: "IBM",
-            status: "Completed",
-            logo: "/ibm.png",
-            url: "https://www.coursera.org/professional-certificates/ibm-full-stack-cloud-developer",
-            skills: ["Full Stack Development", "Software Engineering"]
-        },
-        {
             title: "NVIDIA Certified — Generative AI LLMs",
             provider: "NVIDIA",
             status: "Completed",
