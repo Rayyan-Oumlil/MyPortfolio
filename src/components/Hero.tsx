@@ -1,167 +1,163 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { ChevronDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
 
 const Hero = () => {
-  const [text, setText] = useState("");
-  const [showCursor, setShowCursor] = useState(true);
-
-  const roles = ["Computer Science Student"];
-  const currentRoleIndex = 0; // fixe, puisqu'on n’a qu’un seul rôle
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const currentRole = roles[currentRoleIndex];
-    let index = 0;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const typeText = () => {
-      if (index < currentRole.length) {
-        setText(currentRole.substring(0, index + 1));
-        index++;
-        setTimeout(typeText, 100);
-      } else {
-        // Wait before erasing
-        setTimeout(() => {
-          const eraseText = () => {
-            if (index > 0) {
-              setText(currentRole.substring(0, index - 1));
-              index--;
-              setTimeout(eraseText, 50);
-            } else {
-              // Restart typing again (force rerun)
-              typeText();
-            }
-          };
-          eraseText();
-        }, 2000);
-      }
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x0a0a0a, 5, 20);
+
+    const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
+    camera.position.set(0, 0, 7);
+
+    const geo = new THREE.IcosahedronGeometry(2.1, 1);
+    const wire = new THREE.WireframeGeometry(geo);
+    const wireMat = new THREE.LineBasicMaterial({ color: 0xF97316, transparent: true, opacity: 0.55 });
+    const ico = new THREE.LineSegments(wire, wireMat);
+    scene.add(ico);
+
+    const innerMat = new THREE.MeshBasicMaterial({ color: 0xF97316, transparent: true, opacity: 0.04, side: THREE.DoubleSide });
+    const innerMesh = new THREE.Mesh(geo, innerMat);
+    scene.add(innerMesh);
+
+    const particleCount = 1800;
+    const positions = new Float32Array(particleCount * 3);
+    for (let i = 0; i < particleCount; i++) {
+      const r = 3 + Math.random() * 9;
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos(Math.random() * 2 - 1);
+      positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+      positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+      positions[i * 3 + 2] = r * Math.cos(phi);
+    }
+    const pGeo = new THREE.BufferGeometry();
+    pGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    const pMat = new THREE.PointsMaterial({ color: 0xffffff, size: 0.018, transparent: true, opacity: 0.7, sizeAttenuation: true });
+    const points = new THREE.Points(pGeo, pMat);
+    scene.add(points);
+
+    const accentCount = 600;
+    const accentPos = new Float32Array(accentCount * 3);
+    for (let i = 0; i < accentCount; i++) {
+      const r = 6 + Math.random() * 6;
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos(Math.random() * 2 - 1);
+      accentPos[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+      accentPos[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+      accentPos[i * 3 + 2] = r * Math.cos(phi);
+    }
+    const aGeo = new THREE.BufferGeometry();
+    aGeo.setAttribute("position", new THREE.BufferAttribute(accentPos, 3));
+    const aMat = new THREE.PointsMaterial({ color: 0xF97316, size: 0.03, transparent: true, opacity: 0.55, sizeAttenuation: true });
+    const accentPoints = new THREE.Points(aGeo, aMat);
+    scene.add(accentPoints);
+
+    const resize = () => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
     };
+    resize();
+    window.addEventListener("resize", resize);
 
-    typeText();
+    const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+    const onMouseMove = (e: MouseEvent) => {
+      mouse.tx = (e.clientX / window.innerWidth) * 2 - 1;
+      mouse.ty = -(e.clientY / window.innerHeight) * 2 + 1;
+    };
+    window.addEventListener("mousemove", onMouseMove);
+
+    let scrollProgress = 0;
+    const onScroll = () => {
+      scrollProgress = Math.min(window.scrollY / window.innerHeight, 1.5);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const clock = new THREE.Clock();
+    let animId: number;
+
+    const animate = () => {
+      const t = clock.getElapsedTime();
+      mouse.x += (mouse.tx - mouse.x) * 0.05;
+      mouse.y += (mouse.ty - mouse.y) * 0.05;
+
+      ico.rotation.x = t * 0.12 + mouse.y * 0.5;
+      ico.rotation.y = t * 0.18 + mouse.x * 0.6;
+      innerMesh.rotation.copy(ico.rotation);
+
+      const s = 1 + Math.sin(t * 0.8) * 0.04;
+      ico.scale.setScalar(s);
+      innerMesh.scale.setScalar(s);
+
+      points.rotation.y = t * 0.04 + mouse.x * 0.2;
+      points.rotation.x = t * 0.02 + mouse.y * 0.15;
+      accentPoints.rotation.y = -t * 0.03 - mouse.x * 0.15;
+      accentPoints.rotation.x = -t * 0.015;
+
+      camera.position.z = 7 - scrollProgress * 1.5;
+      camera.position.x = mouse.x * 0.4;
+      camera.position.y = mouse.y * 0.3;
+      camera.lookAt(0, 0, 0);
+
+      canvas.style.opacity = String(Math.max(0, 1 - scrollProgress * 1.1));
+
+      renderer.render(scene, camera);
+      animId = requestAnimationFrame(animate);
+    };
+    animate();
+
+    return () => {
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("scroll", onScroll);
+      renderer.dispose();
+    };
   }, []);
-
-  // Clignotement du curseur
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
-    return () => clearInterval(cursorInterval);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
-      <section className="min-h-[80vh] flex items-center justify-center relative bg-background pt-28 pb-16">
-        {/* Geometric Background Pattern - Supprimé pour éviter le bleu */}
-        {/* <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-20 -left-20 w-80 h-80 border border-primary/20 rounded-full" />
-          <div className="absolute top-1/4 right-10 w-32 h-32 bg-primary/5 rotate-45" />
-          <div className="absolute bottom-20 left-1/4 w-24 h-24 border-2 border-accent/30 rounded-full" />
-          <div className="absolute top-10 left-1/2 w-16 h-16 bg-secondary/10 rotate-12" />
-          <div className="absolute bottom-1/3 right-1/4 w-40 h-40 border border-muted-foreground/10 rounded-full" />
-        </div> */}
-
-        {/* Main Content - Centered */}
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-
-            {/* Greeting */}
-            <p className="text-xl text-muted-foreground tracking-wide font-light">
-              👋 Hey! I'm glad you're here.
-            </p>
-
-            {/* Big name with gradient */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent leading-tight">
-              Rayyan Oumlil
-            </h1>
-
-            {/* Contact Information */}
-            <p className="text-lg text-muted-foreground mt-2">
-              rayyanoumlil@gmail.com | +1-438-493-0288 | Montreal, Canada |{" "}
-              <a href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a> |{" "}
-              <a href="https://www.rayyan-oumlil.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Website</a> |{" "}
-              <a href="https://github.com/Rayyan-Oumlil" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GitHub</a>
-            </p>
-
-            {/* Decorative underline */}
-            <div className="h-1 w-32 bg-gradient-to-r from-primary to-accent mx-auto mt-4 rounded-full" />
-
-            {/* About Description */}
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto pt-4">
-              Computer Science student at Université de Montréal focused on software engineering and applied AI. 
-              Experienced in building full-stack applications and agent-based AI systems, with hands-on work across 
-              cloud, backend, and ML tooling. Actively engaged in hackathons and real-world projects, delivering 
-              practical, user-focused solutions.
-            </p>
-
-
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 flex-wrap">
-
-              {/* Button 1 – View My Work */}
-              <Button
-                  variant="outline"
-                  size="lg"
-                  onClick={() => scrollToSection('projects')}
-                  className="px-8 py-6 text-lg font-semibold border-border text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
-              >
-                View My Work
-              </Button>
-
-              {/* Button 2 – Get In Touch */}
-              <Button
-                  variant="outline"
-                  size="lg"
-                  onClick={() => scrollToSection('contact')}
-                  className="px-8 py-6 text-lg font-semibold border-border text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
-              >
-                Get In Touch
-              </Button>
-
-              {/* Button 3 – Download CV */}
-              <a href="/RayyanCV.pdf" download>
-                <Button
-                    variant="outline"
-                    size="lg"
-                    className="px-8 py-6 text-lg font-semibold flex items-center gap-2 border-border text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-colors"
-                >
-                  <Download className="w-5 h-5"/>
-                  Download CV
-                </Button>
-              </a>
-            </div>
-
-
-            {/* Social Links */}
-            <div className="flex justify-center space-x-6 pt-8 mb-8">
-              <a
-                  href="https://github.com/Rayyan-Oumlil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
-              >
-                <Github className="w-5 h-5"/>
-              </a>
-              <a
-                  href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
-              >
-                <Linkedin className="w-5 h-5"/>
-              </a>
-              <a
-                  href="mailto:rayyanoumlil@gmail.com"
-                  className="w-12 h-12 rounded-xl bg-card border border-border hover:border-primary/50 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-primary/5"
-              >
-                <Mail className="w-5 h-5"/>
-              </a>
-            </div>
-
+    <section className="hero" id="index">
+      <canvas ref={canvasRef} id="hero-canvas" />
+      <div className="hero-content">
+        <div className="hero-meta">
+          <div className="meta-block">
+            <span>// Status</span>
+            <span>Currently at BNC</span>
+          </div>
+          <div className="meta-block" style={{ textAlign: "right" }}>
+            <span>// Based in</span>
+            <span>45.5019° N, 73.5674° W</span>
           </div>
         </div>
-      </section>
+
+        <h1 className="hero-name">
+          Rayyan <em>Oumlil</em>.
+        </h1>
+        <p className="hero-tagline">
+          Full Stack Engineer building production-grade AI systems. Currently shipping at National Bank of Canada.
+        </p>
+
+        <div className="hero-bottom">
+          <div className="scroll-indicator">
+            <span>Scroll</span>
+            <span className="bar" />
+            <span>02 →</span>
+          </div>
+          <div className="availability">
+            Currently shipping — National Bank of Canada
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

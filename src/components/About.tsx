@@ -1,52 +1,72 @@
-import { useEffect, useRef, useState } from "react";
-import { Card } from "./ui/card";
+import { useEffect, useRef } from "react";
 
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    const els = sectionRef.current?.querySelectorAll(".reveal");
+    if (!els) return;
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add("in"); observer.unobserve(e.target); }
+      }),
+      { threshold: 0.12 }
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
-
   return (
-    <section 
-      id="about"
-      ref={sectionRef}
-      className="py-8 relative overflow-hidden"
-    >
+    <section id="about" ref={sectionRef}>
+      <div className="section-header reveal">
+        <span className="idx">02 /</span>
+        <span>About</span>
+        <span className="line" />
+        <span>// who</span>
+      </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
-          {/* Section Header */}
-          <div className="text-center mb-8">
-            <h2 className="text-5xl font-bold mb-6 gradient-text">About Me</h2>
-            <div className="w-24 h-1 mx-auto mb-8 rounded-full" style={{ background: 'var(--gradient-primary)' }} />
+      <div className="about-grid">
+        <div className="about-lead reveal">
+          2nd year <em>CS student</em> at Université de Montréal. I build things that actually <em>ship</em> — from multi-agent AI systems to full-stack platforms. Competed in 5+ hackathons this year.
+        </div>
+
+        <div className="about-meta reveal">
+          <div>
+            <div className="label">Location</div>
+            <div className="val">Montréal, QC · Canada</div>
           </div>
-
-          {/* Main Content */}
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center">
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Computer Science student at Université de Montréal focused on software engineering and applied AI. 
-                Experienced in building full-stack applications and agent-based AI systems, with hands-on work across 
-                cloud, backend, and ML tooling. Actively engaged in hackathons and real-world projects, delivering 
-                practical, user-focused solutions.
-              </p>
+          <div>
+            <div className="label">Status</div>
+            <div className="val">Engaged · BNC Capital Markets</div>
+          </div>
+          <div>
+            <div className="label">Education</div>
+            <div className="val">Université de Montréal · CS, '28</div>
+          </div>
+          <div>
+            <div className="label">Languages</div>
+            <div className="val">EN · FR · AR</div>
+          </div>
+          <div>
+            <div className="label">Email</div>
+            <div className="val">
+              <a href="mailto:rayyanoumlil@gmail.com">rayyanoumlil@gmail.com</a>
+            </div>
+          </div>
+          <div>
+            <div className="label">Phone</div>
+            <div className="val">+1 438 493 0288</div>
+          </div>
+          <div>
+            <div className="label">GitHub</div>
+            <div className="val">
+              <a href="https://github.com/Rayyan-Oumlil" target="_blank" rel="noopener">Rayyan-Oumlil ↗</a>
+            </div>
+          </div>
+          <div>
+            <div className="label">LinkedIn</div>
+            <div className="val">
+              <a href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/" target="_blank" rel="noopener">rayyan-oumlil ↗</a>
             </div>
           </div>
         </div>
