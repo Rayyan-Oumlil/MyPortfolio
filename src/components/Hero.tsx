@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { useLang } from "../context/LanguageContext";
 
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { t } = useLang();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -143,17 +145,20 @@ const Hero = () => {
           Rayyan <em>Oumlil</em>.
         </h1>
         <p className="hero-tagline">
-          Full Stack Engineer building production-grade AI systems. Currently shipping at National Bank of Canada.
+          {t(
+            "Full Stack Engineer building production-grade AI systems. Currently shipping at National Bank of Canada.",
+            "Ingénieur Full Stack qui construit des systèmes IA en production. Actuellement à la Banque Nationale du Canada."
+          )}
         </p>
 
         <div className="hero-bottom">
           <div className="scroll-indicator">
-            <span>Scroll</span>
+            <span>{t("Scroll", "Défiler")}</span>
             <span className="bar" />
             <span>02 →</span>
           </div>
           <div className="availability">
-            Currently shipping — National Bank of Canada
+            {t("Currently shipping — National Bank of Canada", "En poste — Banque Nationale du Canada")}
           </div>
         </div>
       </div>

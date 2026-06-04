@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLang } from "../context/LanguageContext";
 
 const AWARDS = [
   { num: "01", lbl: "/ trophy",  title: "CS Games 2026",              sub: "22 Universities · 7 Trophies",     placement: "4th Overall" },
@@ -19,6 +20,7 @@ const MARQUEE = [
 
 const Hackathons = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { lang, t } = useLang();
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");
@@ -52,12 +54,15 @@ const Hackathons = () => {
     <section id="awards" ref={sectionRef}>
       <div className="section-header reveal">
         <span className="idx">05 /</span>
-        <span>Awards</span>
+        <span>{t("Awards", "Distinctions")}</span>
         <span className="line" />
         <span>// hackathons</span>
       </div>
       <h2 className="section-title reveal">
-        Trophy <em>shelf</em>.
+        {lang === "fr"
+          ? <><em>Récompenses</em>.</>
+          : <>Trophy <em>shelf</em>.</>
+        }
       </h2>
 
       <div className="marquee reveal" style={{ marginTop: 60 }}>

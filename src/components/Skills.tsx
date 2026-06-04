@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLang } from "../context/LanguageContext";
 
 const SKILL_GROUPS = [
   { label: "Languages",      count: "06", tags: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "Go"] },
@@ -64,6 +65,7 @@ const CERTS: Cert[] = [
 
 const Skills = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { lang, t } = useLang();
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -149,7 +151,10 @@ const Skills = () => {
         <span>// toolkit</span>
       </div>
       <h2 className="section-title reveal">
-        Tools I <em>actually</em> use.
+        {lang === "fr"
+          ? <>Outils que j'utilise <em>vraiment</em>.</>
+          : <>Tools I <em>actually</em> use.</>
+        }
       </h2>
 
       <div className="marquee reveal" style={{ marginTop: 60 }}>

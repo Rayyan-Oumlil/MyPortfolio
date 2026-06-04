@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
+import { useLang } from "../context/LanguageContext";
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { lang, t } = useLang();
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");
@@ -28,9 +30,10 @@ const Contact = () => {
       </div>
 
       <h2 className="reveal">
-        Let's <em>build</em>
-        <br />
-        something.
+        {lang === "fr"
+          ? <><em>Construisons</em><br />ensemble.</>
+          : <>Let's <em>build</em><br />something.</>
+        }
       </h2>
 
       <a className="email-btn reveal" href="mailto:rayyanoumlil@gmail.com">

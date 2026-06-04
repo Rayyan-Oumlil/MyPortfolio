@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { useLang } from "../context/LanguageContext";
 
 const NAV_ITEMS = [
   { label: "About",    href: "about" },
@@ -11,7 +12,7 @@ const NAV_ITEMS = [
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("index");
   const [clock, setClock] = useState("");
-  const [lang, setLang] = useState<"en" | "fr">("en");
+  const { lang, setLang } = useLang();
 
   useEffect(() => {
     const tick = () => {

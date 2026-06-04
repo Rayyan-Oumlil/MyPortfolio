@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { LanguageProvider } from "../context/LanguageContext";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -47,24 +48,26 @@ const Index = () => {
   }, []);
 
   return (
-    <div style={{ background: "var(--bg)", minHeight: "100vh", width: "100%" }}>
-      <div className="bg-grid" id="bgGrid" />
-      <div className="bg-noise" />
-      <div className="vignette" />
+    <LanguageProvider>
+      <div style={{ background: "var(--bg)", minHeight: "100vh", width: "100%" }}>
+        <div className="bg-grid" id="bgGrid" />
+        <div className="bg-noise" />
+        <div className="vignette" />
 
-      <Navigation />
+        <Navigation />
 
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Hackathons />
-        <Skills />
-        <Contact />
-      </main>
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Hackathons />
+          <Skills />
+          <Contact />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 };
 

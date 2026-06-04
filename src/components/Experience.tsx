@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLang } from "../context/LanguageContext";
 
 const EXPERIENCE = [
   {
@@ -29,6 +30,7 @@ const EXPERIENCE = [
 
 const Experience = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { lang, t } = useLang();
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");
@@ -47,12 +49,15 @@ const Experience = () => {
     <section id="work" ref={sectionRef}>
       <div className="section-header reveal">
         <span className="idx">03 /</span>
-        <span>Work</span>
+        <span>{t("Work", "Expérience")}</span>
         <span className="line" />
         <span>// experience</span>
       </div>
       <h2 className="section-title reveal">
-        Currently <em>shipping</em>.
+        {lang === "fr"
+          ? <>Actuellement <em>en production</em>.</>
+          : <>Currently <em>shipping</em>.</>
+        }
       </h2>
 
       <div className="exp-list" style={{ marginTop: 40 }}>

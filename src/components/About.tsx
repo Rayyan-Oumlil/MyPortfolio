@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
+import { useLang } from "../context/LanguageContext";
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const { lang, t } = useLang();
 
   useEffect(() => {
     const els = sectionRef.current?.querySelectorAll(".reveal");
@@ -20,14 +22,17 @@ const About = () => {
     <section id="about" ref={sectionRef}>
       <div className="section-header reveal">
         <span className="idx">02 /</span>
-        <span>About</span>
+        <span>{t("About", "À propos")}</span>
         <span className="line" />
         <span>// who</span>
       </div>
 
       <div className="about-grid">
         <div className="about-lead reveal">
-          2nd year <em>CS student</em> at Université de Montréal. I build things that actually <em>ship</em> — from multi-agent AI systems to full-stack platforms. Competed in 5+ hackathons this year.
+          {lang === "fr"
+            ? <>Étudiant en <em>2e année d'informatique</em> à l'Université de Montréal. Je construis des choses qui sont <em>livrées</em> — des systèmes IA multi-agents aux plateformes full-stack. 5+ hackathons cette année.</>
+            : <>2nd year <em>CS student</em> at Université de Montréal. I build things that actually <em>ship</em> — from multi-agent AI systems to full-stack platforms. Competed in 5+ hackathons this year.</>
+          }
         </div>
 
         <div className="about-meta reveal">
