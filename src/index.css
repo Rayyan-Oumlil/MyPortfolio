@@ -220,8 +220,8 @@ h2.section-title em {
 
 /* ---------- Hero ---------- */
 .hero {
-  height: 100vh;
-  min-height: 720px;
+  height: 100svh;
+  min-height: 640px;
   padding: 0 40px;
   max-width: none;
   display: flex;

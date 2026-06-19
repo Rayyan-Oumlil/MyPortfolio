@@ -62,13 +62,22 @@ const Hero = () => {
     scene.add(accentPoints);
 
     const resize = () => {
-      const w = window.innerWidth;
-      const h = window.innerHeight;
+      // Size from the canvas's own displayed box, not the window.
+      // Using window dimensions breaks on mobile (100vh vs visible height),
+      // when min-height kicks in, and with scrollbars/zoom — the camera
+      // aspect no longer matches what's on screen, distorting the sphere.
+      const w = canvas.clientWidth;
+      const h = canvas.clientHeight;
+      if (w === 0 || h === 0) return;
       renderer.setSize(w, h, false);
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
     };
     resize();
+    // ResizeObserver catches mobile URL-bar height changes and layout shifts
+    // that a window "resize" event misses.
+    const ro = new ResizeObserver(resize);
+    ro.observe(canvas);
     window.addEventListener("resize", resize);
 
     const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
@@ -119,6 +128,7 @@ const Hero = () => {
 
     return () => {
       cancelAnimationFrame(animId);
+      ro.disconnect();
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("scroll", onScroll);
