@@ -34,6 +34,14 @@ const Certifications = () => {
             skills: ["Cloud Computing", "AWS", "Cloud Architecture"]
         },
         {
+            title: "AWS Certified AI Practitioner",
+            provider: "Amazon Web Services",
+            status: "Completed",
+            logo: "/aws.png",
+            url: "https://aws.amazon.com/certification/certified-ai-practitioner/",
+            skills: ["Generative AI", "AWS", "Machine Learning"]
+        },
+        {
             title: "NVIDIA Certified — Generative AI LLMs",
             provider: "NVIDIA",
             status: "Completed",

@@ -411,6 +411,29 @@ h2.section-title em {
   margin-bottom: 14px;
 }
 .exp-main .company em { color: var(--accent); font-style: italic; }
+.exp-desc {
+  list-style: none;
+  max-width: 560px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.exp-desc li {
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--fg-dim);
+  padding-left: 14px;
+  position: relative;
+}
+.exp-desc li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--fg-dimmer);
+}
 .exp-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .exp-stack span {
   font-family: var(--mono);

@@ -3,10 +3,10 @@ import { useLang } from "../context/LanguageContext";
 
 const SKILL_GROUPS = [
   { label: "Languages",      count: "06", tags: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "Go"] },
-  { label: "Backend",        count: "05", tags: ["Spring Boot", "FastAPI", "Node.js", "WebSocket", "Microservices"] },
+  { label: "Backend",        count: "07", tags: ["Spring Boot", "FastAPI", "Node.js", "WebSocket", "Microservices", "GraphQL", "gRPC"] },
   { label: "Frontend",       count: "04", tags: ["React", "Next.js", "Flutter", "Angular"] },
-  { label: "AI / ML",        count: "07", tags: ["PyTorch", "LangChain", "LangGraph", "Google ADK", "CrewAI", "FAISS", "LegalBERT"] },
-  { label: "Cloud / DevOps", count: "05", tags: ["AWS", "Docker", "GitHub Actions", "CI/CD", "Azure"] },
+  { label: "AI / ML",        count: "09", tags: ["PyTorch", "LangChain", "LangGraph", "Google ADK", "CrewAI", "FAISS", "LegalBERT", "scikit-learn", "n8n"] },
+  { label: "Cloud / DevOps", count: "06", tags: ["AWS", "Docker", "Kubernetes", "GitHub Actions", "CI/CD", "Azure"] },
   { label: "Databases",      count: "05", tags: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Supabase"] },
 ];
 
@@ -33,6 +33,15 @@ const CERTS: Cert[] = [
     issuer: "Amazon Web Services",
   },
   {
+    logoEl: (
+      <div style={{ background: "#232f3e", borderRadius: 8, width: 54, height: 54, display: "grid", placeItems: "center", flexShrink: 0 }}>
+        <span style={{ color: "#FF9900", fontFamily: "var(--display)", fontSize: 9, fontWeight: 700 }}>aws</span>
+      </div>
+    ),
+    name: "AI Practitioner",
+    issuer: "Amazon Web Services",
+  },
+  {
     logoEl: <div className="cert-logo"><img src="/nvidia.png" alt="NVIDIA" /></div>,
     name: "Generative AI with LLMs",
     issuer: "NVIDIA",
@@ -51,15 +60,6 @@ const CERTS: Cert[] = [
     logoEl: <div className="cert-logo"><img src="/oracle.png" alt="Oracle" /></div>,
     name: "AI Foundations",
     issuer: "Oracle",
-  },
-  {
-    logoEl: (
-      <div style={{ background: "#0066cc", borderRadius: 8, width: 54, height: 54, display: "grid", placeItems: "center", flexShrink: 0 }}>
-        <span style={{ color: "#fff", fontFamily: "var(--display)", fontSize: 16, fontWeight: 700 }}>D</span>
-      </div>
-    ),
-    name: "LLMOps",
-    issuer: "DeepLearning.AI",
   },
 ];
 
