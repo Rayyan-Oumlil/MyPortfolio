@@ -43,7 +43,7 @@ const Contact = () => {
 
       <div className="contact-links reveal">
         <a href="https://github.com/Rayyan-Oumlil" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/rayyan-oumlil/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="tel:+14384930288">+1 438 493 0288</a>
       </div>
     </section>

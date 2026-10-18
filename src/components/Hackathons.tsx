@@ -3,7 +3,7 @@ import { useLang } from "../context/LanguageContext";
 
 const AWARDS = [
   { num: "01", lbl: "/ trophy",  title: "CS Games 2026",              sub: "22 Universities · 7 Trophies",     placement: "4th Overall" },
-  { num: "02", lbl: "/ medal",   title: "Hackathon Santé Numérique",  sub: "2025 · AgentCareAI",               placement: "3rd Place"   },
+  { num: "02", lbl: "/ medal",   title: "Hackathon Santé Numérique",  sub: "2025 · CareCircle",               placement: "3rd Place"   },
   { num: "03", lbl: "/ datathon",title: "PolyFinances Datathon",      sub: "2025 · ReguAI",                    placement: "Finalist"    },
   { num: "04", lbl: "/ quantum", title: "Mil'HaQ Fest",               sub: "Mila Quantum ML Hackathon",        placement: "Participant"  },
   { num: "05", lbl: "/ ml",      title: "PolyAI Code ML Hackathon",   sub: "Oil Forecasting · NLP + XGBoost",  placement: "Participant"  },

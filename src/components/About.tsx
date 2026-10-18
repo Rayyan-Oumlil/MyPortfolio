@@ -71,7 +71,7 @@ const About = () => {
           <div>
             <div className="label">LinkedIn</div>
             <div className="val">
-              <a href="https://www.linkedin.com/in/rayyan-oumlil-871b192b6/" target="_blank" rel="noopener">rayyan-oumlil ↗</a>
+              <a href="https://www.linkedin.com/in/rayyan-oumlil/" target="_blank" rel="noopener">rayyan-oumlil ↗</a>
             </div>
           </div>
         </div>

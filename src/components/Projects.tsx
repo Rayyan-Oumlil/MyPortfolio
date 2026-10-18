@@ -68,12 +68,12 @@ const Projects = () => {
             image: "/photos/buybuddy/logo5.png"
         },
         {
-            title: "AgentCareAI — Multi-Agent Mental Health System",
+            title: "CareCircle — Multi-Agent Mental Health System",
             description:
                 "Comprehensive multi-agent AI system designed to support mental health first-line workers in early detection, assessment, and referral of students in psychological distress. The system features 6 specialized agents: Red Flag Agent (determines need for higher authority referral), Coaching Agent (provides treatment guidance), Clinical Interview Agent (suggests questions for assessment), De-escalation Agent (manages crises), Stat Agent (provides regional statistics), and Global Impact Agent (tracks interaction patterns for policy insights). Built with CrewAI for agent collaboration, Groq API for fast inference, Chroma for vector storage, and React + Tailwind CSS for the frontend. Won 3rd Place in Hackathon en Santé Numérique 2025, demonstrating real-world impact in healthcare technology.",
             technologies: ["CrewAI", "Groq API", "Chroma", "React", "Tailwind CSS", "Multi-Agent Systems", "Python"],
             period: "Nov 2025",
-            github: "https://github.com/Rayyan-Oumlil/AgentCareAI"
+            github: "https://github.com/Rayyan-Oumlil/CareCircle"
         },
         {
             title: "FlexiShop — Full-Stack E-Commerce Platform",
